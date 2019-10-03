@@ -1,0 +1,66 @@
+PODS:
+  - Alamofire (4.8.1)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
+  - CodableAlamofire (1.1.1):
+    - Alamofire (~> 4.0)
+  - Cosmos (18.0.1)
+  - DLRadioButton (1.4.12)
+  - IQKeyboardManagerSwift (6.2.0)
+  - Kingfisher (5.3.0)
+  - LGViews (1.0.1)
+  - MaterialTextField (1.0.1)
+  - MOLH (0.8)
+  - SkyFloatingLabelTextField (3.6.0)
+  - SVProgressHUD (2.2.5)
+  - SwipeCellKit (2.5.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage (~> 3.5)
+  - CodableAlamofire
+  - Cosmos
+  - DLRadioButton
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 5.0)
+  - LGViews (~> 1.0.0)
+  - MaterialTextField
+  - MOLH
+  - SkyFloatingLabelTextField
+  - SVProgressHUD
+  - SwipeCellKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - CodableAlamofire
+    - Cosmos
+    - DLRadioButton
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - LGViews
+    - MaterialTextField
+    - MOLH
+    - SkyFloatingLabelTextField
+    - SVProgressHUD
+    - SwipeCellKit
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  CodableAlamofire: b587c1198562824abb1f468aed34feb00d6cecd8
+  Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  Kingfisher: 4692c783ffb99e9e2e40a6eb3e518c3b96c6fa8c
+  LGViews: 3ee13095c137e41cb6f08cd717fa185d2cc30c7f
+  MaterialTextField: f1a0786588e4d3610cb9bb62d2adbe9777cebbf9
+  MOLH: b9766efe89be975ce82a8d5642f681da23c876fc
+  SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwipeCellKit: 30fd6a4f8a8b8ac864ea389c8b4c8bac5ba5471a
+
+PODFILE CHECKSUM: d3ad1a3042484ef1fdae8f2a20ad312664d639da
+
+COCOAPODS: 1.6.1
