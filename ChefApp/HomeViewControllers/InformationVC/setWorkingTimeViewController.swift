@@ -8,7 +8,7 @@
 
 import UIKit
 
-class setWorkingTimeViewController: InformationViewController {
+class setWorkingTimeViewController: KitchenInformationViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,9 +14,9 @@ class AddDishesViewController: UIViewController {
     @IBOutlet weak var foodNameTxtField: UITextField!
     @IBOutlet weak var ingredientsTxtField: UITextField!
     @IBOutlet weak var priceTxtField: UITextField!
-    @IBOutlet weak var categoryTxtField: UITextField!
     @IBOutlet weak var nextOutlet: ButtonCornerRadious!
     let userToke = UserDefaultData.get_user_string_data(key: "userToken")
+    var dishArray = [DishDataArray]()
 
     
     
@@ -29,50 +29,45 @@ class AddDishesViewController: UIViewController {
     }
     
     @IBAction func extraItemsButton(_ sender: ButtonCornerRadious) {
-//        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "extraItemsPopUp") as! ExtraItemsPopUpViewController
-//
-//        self.addChild(popvc)
-//
-//        popvc.view.frame = self.view.frame
-//
-//        self.view.addSubview(popvc.view)
-//
-//        popvc.didMove(toParent: self)
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "extraItemsPopUp") as! ExtraItemsPopUpViewController
+
+        self.addChild(popvc)
+
+        popvc.view.frame = self.view.frame
+
+        self.view.addSubview(popvc.view)
+
+        popvc.didMove(toParent: self)
         
     }
     @IBAction func saveButton(_ sender: ButtonCornerRadious) {
-//
-        guard let dishName = foodNameTxtField.text , !dishName.isEmpty,  let dishIngredients = ingredientsTxtField.text , !dishIngredients.isEmpty , let dishPrice = priceTxtField.text , !dishPrice.isEmpty , let dishCategory = categoryTxtField.text , !dishCategory.isEmpty else{
+
+        guard let dishName = foodNameTxtField.text , !dishName.isEmpty,  let dishIngredients = ingredientsTxtField.text , !dishIngredients.isEmpty , let dishPrice = priceTxtField.text , !dishPrice.isEmpty else{
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All Requested Data".localize, selfDismissing: false)
             return
         }
-        
-}
+        API.SetDish(title: dishName, titleEng: dishName, description: dishIngredients, descriptionEng: dishIngredients, smallPrice: dishPrice, mediumPrice: dishPrice, largePrice: dishPrice) { (sucess , id) in
+            if sucess!{
+                print("dish added sucessufully")
+
+            }else{
+                self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+            }
+    }
        
-        
-        
-        
-//        //go to next view controller
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goKitchenVC") as! HomeKitchenViewController
-//        self.present(nextViewController, animated: true, completion: nil)
-        
-    
-    
-    
-    
-    
+}
     
     @IBAction func priceButton(_ sender: Any) {
-//        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pricePopUp") as! PricePopUpViewController
-//        
-//        self.addChild(popvc)
-//        
-//        popvc.view.frame = self.view.frame
-//        
-//        self.view.addSubview(popvc.view)
-//        
-//        popvc.didMove(toParent: self)
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pricePopUp") as! PricePopUpViewController
+        
+        self.addChild(popvc)
+        
+        popvc.view.frame = self.view.frame
+        
+        self.view.addSubview(popvc.view)
+        
+        popvc.didMove(toParent: self)
+        print("go price")
         
     }
     @IBAction func categoryButton(_ sender: Any) {
@@ -85,7 +80,7 @@ class AddDishesViewController: UIViewController {
         self.view.addSubview(popvc.view)
         
         popvc.didMove(toParent: self)
-        
+        print("go category")
         
     }
     

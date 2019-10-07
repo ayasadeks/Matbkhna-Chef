@@ -38,6 +38,12 @@ class OrderViewController: UIViewController {
 }
 
 
+
+
+
+
+
+
 extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             print("orderArray.count  \(orderArray.count)")
@@ -49,19 +55,22 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrderTableViewCell
         cell.timeLabel.text = orderArray[indexPath.row].createdAt
-        cell.orderStatus.text = orderArray[indexPath.row].status
-        
-        
+       // cell.statusLabel.text = orderArray[indexPath.row].status
+        if cell.statusLabel.text == "3"  {
+            cell.statusLabel.text = orderArray[indexPath.row].status
+            cell.statusOfOrder.text = orderArray[indexPath.row].status
+        }else if cell.statusLabel.text == "6" {
+            cell.statusLabel.text = orderArray[indexPath.row].status
+            cell.statusOfOrder.text = orderArray[indexPath.row].status
+            
+        }
+      
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 180
     }
   
-   
-    
-    
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if tableView == tableView{
@@ -72,6 +81,6 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
             
         }
     }
-    }
+}
     
 }

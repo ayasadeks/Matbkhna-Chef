@@ -15,13 +15,15 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
-    @IBOutlet weak var preparingButton: ButtonCornerRadious!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        viewOfCell.dropShadow(color: .black, alpha: 0.14, x: 0, y: 5, blur: 20, spread: 0)
+        viewOfCell.dropShadow(color: .black, alpha: 0.14, x: 0, y: 8, blur: 20, spread: 0)
+        statusLabel.layer.cornerRadius = 8
+        statusLabel.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

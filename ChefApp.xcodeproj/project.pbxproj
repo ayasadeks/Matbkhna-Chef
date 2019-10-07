@@ -60,7 +60,7 @@
 		84940FD6233FB5BE00D0A50F /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84940FD5233FB5BE00D0A50F /* HistoryDetailsViewController.swift */; };
 		84940FD8233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84940FD7233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift */; };
 		849FFF572333C9E800961E6B /* AddDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FFF562333C9E800961E6B /* AddDishesViewController.swift */; };
-		849FFF592333CB1700961E6B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FFF582333CB1700961E6B /* InformationViewController.swift */; };
+		849FFF592333CB1700961E6B /* KitchenInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */; };
 		84AEC32B233E5F12006B67FF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEC32A233E5F12006B67FF /* AboutViewController.swift */; };
 		84AF652C233A857E007FE38F /* AddCategoryPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */; };
 		84AF652E233A90B2007FE38F /* ExtraItemsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF652D233A90B2007FE38F /* ExtraItemsPopUpViewController.swift */; };
@@ -162,7 +162,7 @@
 		84940FD5233FB5BE00D0A50F /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		84940FD7233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItemPopUpViewController.swift; sourceTree = "<group>"; };
 		849FFF562333C9E800961E6B /* AddDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishesViewController.swift; sourceTree = "<group>"; };
-		849FFF582333CB1700961E6B /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenInformationViewController.swift; sourceTree = "<group>"; };
 		84AEC32A233E5F12006B67FF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryPopUpViewController.swift; sourceTree = "<group>"; };
 		84AF652D233A90B2007FE38F /* ExtraItemsPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraItemsPopUpViewController.swift; sourceTree = "<group>"; };
@@ -324,7 +324,7 @@
 		84AF6530233A9229007FE38F /* InformationVC */ = {
 			isa = PBXGroup;
 			children = (
-				849FFF582333CB1700961E6B /* InformationViewController.swift */,
+				849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */,
 				84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */,
 				84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */,
 				8464A1F723410A1C0095F516 /* SetWorkingDaysViewController.swift */,
@@ -792,7 +792,7 @@
 				8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */,
 				843B671523355C3D002635EC /* MoreMenuViewController.swift in Sources */,
 				84FD362023393F1F006D7CB1 /* setWorkingTimeViewController.swift in Sources */,
-				849FFF592333CB1700961E6B /* InformationViewController.swift in Sources */,
+				849FFF592333CB1700961E6B /* KitchenInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
