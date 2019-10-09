@@ -31,7 +31,6 @@ extension API {
                 return
             }
             do {
-                	
                 let decoder = JSONDecoder()
                 let modules = try decoder.decode(decoderr, from: data)
                 API.dismissSVProgress()

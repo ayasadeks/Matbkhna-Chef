@@ -2,18 +2,17 @@
 //  Dishes_Model.swift
 //  Mtbakhna
 //
-//  Created by Rania on 9/14/19.
-//  Copyright © 2019  All rights reserved.
+//  Created by Admin on 9/14/19.
+//  Copyright © 2019 All rights reserved.
 //
 
 struct AllDishResponseData : Codable{
-   // let message : String?
+    let message : String?
     let imageUrl : String?
     let data: [DishDataArray]?
     let status_code : Int?
     let status_message : String?
     let paginate : dishPaginate?
-    
 }
 struct DishDataArray : Codable{
     let id : Int?
@@ -37,9 +36,6 @@ struct dishPaginate : Codable {
     let current_page: Int?
     let limit : Int?
 }
-
-
-
 struct DishesExtras : Codable {
     let id : Int?
     let title : String?
