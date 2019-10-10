@@ -28,6 +28,8 @@ static let addDish = main + "dishes/add"
         ///POST(TO SET DISHES PHOTOS)
 static let addDishesPhoto = main + "dishes/addPhotos/"
     
+    ///POST(TO SET WORK TIME)
+    static let setWorkTime = main + "users/setWorkHours"
    
     
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x6A-vh-OU6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XH7-2a-9nc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,13 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
-            <string>URWDINArabic-Regular</string>
-        </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Black.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -25,6 +22,9 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
+        </array>
+        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
+            <string>URWDINArabic-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -3066,7 +3066,7 @@ Chicken Rice Salad</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mohamed ALi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3d-lD-ehh">
-                                        <rect key="frame" x="140" y="101" width="175" height="23.5"/>
+                                        <rect key="frame" x="140" y="101" width="175" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="zJZ-f5-P01"/>
                                         </constraints>
@@ -3075,7 +3075,7 @@ Chicken Rice Salad</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cameron@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-Gn-Wmh">
-                                        <rect key="frame" x="141" y="126.5" width="175" height="14"/>
+                                        <rect key="frame" x="141" y="129" width="175" height="15.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="qhI-65-Dr8"/>
                                         </constraints>
@@ -3137,7 +3137,7 @@ Chicken Rice Salad</string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTt-Hz-h6Q">
-                                                            <rect key="frame" x="71" y="30" width="95.5" height="20"/>
+                                                            <rect key="frame" x="71" y="30" width="97.5" height="22"/>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="17"/>
                                                             <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -3189,7 +3189,7 @@ Chicken Rice Salad</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capi Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILc-6g-ufb">
-                                        <rect key="frame" x="109" y="37" width="152" height="24.5"/>
+                                        <rect key="frame" x="109" y="37" width="153" height="27"/>
                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="21"/>
                                         <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -5251,6 +5251,7 @@ Chicken Rice Salad</string>
                                         </constraints>
                                         <state key="normal" title="Button" image="close-icon"/>
                                         <connections>
+                                            <action selector="closeBtnAction:" destination="x7I-ab-ZYH" eventType="touchUpInside" id="QVL-5z-dQA"/>
                                             <action selector="closeButton:" destination="x7I-ab-ZYH" eventType="touchUpInside" id="5r4-Jw-nRa"/>
                                         </connections>
                                     </button>
@@ -5280,6 +5281,9 @@ Chicken Rice Salad</string>
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="chooseDayBtn:" destination="x7I-ab-ZYH" eventType="touchUpInside" id="GWx-lv-IcT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0G-tE-hZY" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
                                         <rect key="frame" x="208" y="303" width="140" height="44"/>
@@ -5297,6 +5301,9 @@ Chicken Rice Salad</string>
                                                 <real key="value" value="22"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveBtnAction:" destination="x7I-ab-ZYH" eventType="touchUpInside" id="x7D-4A-Yt0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5331,6 +5338,11 @@ Chicken Rice Salad</string>
                         <viewLayoutGuide key="safeArea" id="PQZ-8u-D29"/>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="firstPickerView" destination="lWU-Nn-ZUz" id="2nn-5C-6Su"/>
+                        <outlet property="saveBtn" destination="c0G-tE-hZY" id="eSs-Ig-M5O"/>
+                        <outlet property="secondPickerView" destination="nAr-ui-GIs" id="2x2-dI-wah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNY-RG-e07" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -7198,6 +7210,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="vFi-Zf-4bw"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="eoL-tx-E7g"/>
                                                         </connections>
                                                     </button>
@@ -7218,6 +7231,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="fjc-yd-CCL"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="heo-Dw-AUr"/>
                                                         </connections>
                                                     </button>
@@ -7238,6 +7252,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="kln-34-SvP"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="YFd-K2-9X5"/>
                                                         </connections>
                                                     </button>
@@ -7258,6 +7273,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="NZ7-Sx-CpT"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="FX2-5O-P5L"/>
                                                         </connections>
                                                     </button>
@@ -7283,6 +7299,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="G0m-0k-2C7"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="x5e-7J-9RO"/>
                                                         </connections>
                                                     </button>
@@ -7303,6 +7320,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="334-AV-LKv"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="Rhf-RG-a7k"/>
                                                         </connections>
                                                     </button>
@@ -7323,6 +7341,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="dayBtnAction:" destination="XH7-2a-9nc" eventType="touchUpInside" id="oob-fs-Tqf"/>
                                                             <action selector="daysBtnAction:" destination="t9u-1c-CiI" eventType="touchUpInside" id="MYu-Td-dHZ"/>
                                                         </connections>
                                                     </button>
@@ -7351,6 +7370,7 @@ to refuse order</string>
                                         <connections>
                                             <action selector="confirmButton:" destination="Gxv-pk-FK0" eventType="touchUpInside" id="5GF-sw-kas"/>
                                             <action selector="confirmButton:" destination="TV8-BQ-GnS" eventType="touchUpInside" id="pH4-7v-tad"/>
+                                            <action selector="continuBtn:" destination="XH7-2a-9nc" eventType="touchUpInside" id="V8I-Bm-d8Z"/>
                                             <action selector="saveButton:" destination="x6A-vh-OU6" eventType="touchUpInside" id="JXa-de-5Oj"/>
                                         </connections>
                                     </button>
@@ -7393,6 +7413,16 @@ to refuse order</string>
                         <viewLayoutGuide key="safeArea" id="CdR-oU-bV3"/>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="SaturdayBtn" destination="I1Q-A8-UUJ" id="eUi-h7-okL"/>
+                        <outlet property="continueBtn" destination="QZ4-JI-HgW" id="vv5-7S-Lbs"/>
+                        <outlet property="fridayBtn" destination="tda-eS-rTy" id="GGg-LF-P3M"/>
+                        <outlet property="mondayBtn" destination="P26-Eg-uWg" id="eng-Ks-xZ5"/>
+                        <outlet property="sunDayBtn" destination="T1M-C9-Avd" id="gCP-6d-2Br"/>
+                        <outlet property="thursdayBtn" destination="7W5-Ep-yDk" id="Ap4-Gm-R3h"/>
+                        <outlet property="tuesdayBtn" destination="dvG-H2-HhN" id="t4U-JR-1zo"/>
+                        <outlet property="wednesdayBtn" destination="nim-Uy-XFt" id="oQ0-bc-lw4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBM-XN-4vD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -72,22 +72,26 @@ class AddDishesViewController: UIViewController {
             "descriptionEng" : dishIngredients,
             "api_token": api_token
         ]
-        API.GetData(AllDishResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters as [String : Any] , userToken: nil) {[weak self] (result) in
+
+        API.GetData(AllDishData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters as [String : Any] , userToken: nil) {[weak self] (result) in
             guard let self = self else {return}
             print(result)
             switch result {
             case .success(let model):
                 if model.status_code == 200{
                     print("dish added sucess")
-//                    API.AddDishPhoto(dishImage: self.dishImage, dishId: 22, completion: { (sucess) in
-//                        if sucess!{
-//                            self.showToast(message: "Dish Added Sucessufly".localize)
-//                        }else{
-//                            self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
-//                        }
-//                    })
+                     print("model = \(model)")
+                    let dishId = model.data?[0].id
+                        
+                    API.AddDishPhoto(dishImage: self.dishImage, dishId: dishId!, completion: { (sucess) in
+                        if sucess!{
+                              self.showAlert(title: "Error".localize, messages: nil, message: "Dish Added sucess ".localize , selfDismissing: false)
+                        }else{
+                            self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection00".localize , selfDismissing: false)
+                        }
+                    })
                 }else{
-                    self.showAlert(title: "Error11".localize, messages: nil, message:" status message is \(model.status_message!)", selfDismissing: false)
+                    self.showAlert(title: "Error11".localize, messages: nil, message:" status message is \(model.status_message)", selfDismissing: false)
                 }
                 break
             case .failure(let err):
@@ -99,27 +103,6 @@ class AddDishesViewController: UIViewController {
 
     
 }
-        
-        
-    
-       
-//
-//       API.SetDish(title: dishName, titleEng: dishName, description: dishIngredients, descriptionEng: dishIngredients, smallPrice: smallPrice, mediumPrice: mediumPrice, largePrice: largePrice) { (sucess , id) in
-//            if sucess!{
-//                print("hiii")
-//                API.AddDishPhoto(dishImage: self.dishImage, dishId: id!, completion: { (sucess) in
-//                    if sucess!{
-//                        print("Dish Added Sucessufly")
-//                       // self.showToast(message: "Dish Added Sucessufly".localize)
-//                    }else{
-//                        self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
-//                    }
-//                })
-//            }else{
-//                self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
-//            }
-//    }
-//}
 
 
     

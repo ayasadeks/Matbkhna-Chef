@@ -80,10 +80,6 @@ class SignUpViewController: UIViewController {
     
         let emailTest = isValidEmail(testStr: email)
 
-//           if password.count >= 5 {
-//              self.showAlert(title: "Error".localize, messages: nil, message: "Your password is too short.".localize, selfDismissing: false)
-//
-//            }else
                 if  confirmPassword != password{
                 self.showAlert(title: "Error".localize, messages: nil, message: "enter the same password".localize, selfDismissing: false)
             }else if emailTest == false{

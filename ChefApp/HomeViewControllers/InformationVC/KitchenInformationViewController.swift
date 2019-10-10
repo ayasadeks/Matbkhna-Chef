@@ -47,19 +47,14 @@ class KitchenInformationViewController: UIViewController {
     
     let height: CGFloat = 350
 
-    @IBAction func timeButton(_ sender: Any) {
+    @IBAction func timeButton(_ sender: UIButton) {
         print("ay haga")
+
         
-        //go to next view controller
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "setWorkingTimeVC") as! setWorkingTimeViewController
+        let timeViewController =  self.storyboard!.instantiateViewController(withIdentifier: "setWorkingTimeVC") as! setWorkingTimeViewController
+      //  timeViewController.delegate = self
         
-        self.addChild(popvc)
-        
-        popvc.view.frame = self.view.frame
-        
-        self.view.addSubview(popvc.view)
-        
-        popvc.didMove(toParent: self)
+        navigationController?.pushViewController(timeViewController, animated: true)
     }
     
     @IBAction func saveAndNextButton(_ sender: Any) {
