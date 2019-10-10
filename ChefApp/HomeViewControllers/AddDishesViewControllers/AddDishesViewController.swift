@@ -18,18 +18,18 @@ class AddDishesViewController: UIViewController {
     @IBOutlet weak var mediumPriceTxtField: UITextField!
     @IBOutlet weak var largePriceTxtField: UITextField!
     @IBOutlet weak var nextOutlet: ButtonCornerRadious!
-    let userToke = UserDefaultData.get_user_string_data(key: "userToken")
+   // let userToke = UserDefaultData.get_user_string_data(key: "userToken")
     var dishArray = [DishDataArray]()
     var dishImage = UIImage()
-     let api_token = UserDefaultData.get_user_string_data(key: "userToken")
+    let api_token = UserDefaultData.get_user_string_data(key: "userToken")
 
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
-
+        viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
+        nextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
     }
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -70,10 +70,13 @@ class AddDishesViewController: UIViewController {
             "titleEng" : dishName,
             "description" : dishIngredients,
             "descriptionEng" : dishIngredients,
-            "api_token": api_token
+            "api_token": api_token,
+            "smallPrice" : smallPrice,
+            "mediumPrice" : mediumPrice,
+            "largePrice" : largePrice
         ]
 
-        API.GetData(AllDishData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters as [String : Any] , userToken: nil) {[weak self] (result) in
+        API.GetData(AllDishData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters , userToken: api_token) {[weak self] (result) in
             guard let self = self else {return}
             print(result)
             switch result {
@@ -125,8 +128,6 @@ class AddDishesViewController: UIViewController {
             self.dishPhoto.image = dishImage
         }
     }
-    
-    
     
 }
 

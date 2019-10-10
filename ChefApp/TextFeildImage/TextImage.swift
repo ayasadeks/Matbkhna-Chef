@@ -42,7 +42,7 @@ class leftImage_cornerRadious: UITextField {
         didSet{
             self.layer.masksToBounds = false
             
-            self.layer.borderColor = UIColor(red: 160.0 / 255.0, green: 204.0 / 255.0, blue: 68.0 / 255.0, alpha: 1.0).cgColor
+            self.layer.borderColor = UIColor(red: 234 / 255.0, green: 236 / 255.0, blue: 239 / 255.0, alpha: 0).cgColor
             self.layer.borderWidth = 1.0
             self.layer.cornerRadius = cornerRadious
             self.clipsToBounds = true

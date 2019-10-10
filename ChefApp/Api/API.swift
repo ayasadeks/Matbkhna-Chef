@@ -18,7 +18,7 @@ class API: NSObject {
     class func showSVProgress() {
         let svColor = #colorLiteral(red: 1, green: 0.8745098039, blue: 0, alpha: 1)
         SVProgressHUD.setForegroundColor(svColor)
-        SVProgressHUD.setBorderColor(UIColor.white)
+        SVProgressHUD.setBorderColor(UIColor.clear)
         SVProgressHUD.show()
         SVProgressHUD.setDefaultMaskType(.clear)
     }//end of showSVProgress

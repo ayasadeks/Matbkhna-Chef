@@ -125,15 +125,15 @@ class SignUpViewController: UIViewController {
     @IBAction func selectAreaButton(_ sender: Any) {
         
         //go to next view controller
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaPopUpViewController
-        
-        self.addChild(popvc)
-        
-        popvc.view.frame = self.view.frame
-        
-        self.view.addSubview(popvc.view)
-        
-        popvc.didMove(toParent: self)
+//        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaPopUpViewController
+//        
+//        self.addChild(popvc)
+//        
+//        popvc.view.frame = self.view.frame
+//        
+//        self.view.addSubview(popvc.view)
+//        
+//        popvc.didMove(toParent: self)
     }
 }
     
