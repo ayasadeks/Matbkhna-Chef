@@ -63,9 +63,9 @@ class setWorkingTimeViewController: KitchenInformationViewController {
                     print("hi")
                     self.showToast(message: "Time Added Sucessufly".localize)
                     self.dismiss(animated: true, completion: nil)
-                    //                let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "getWorkingTimeVC") as! RAGetWorkingTime
-                    //
-                    //                self.navigationController?.pushViewController(getWorkingTimeVC, animated: true)
+                let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+                    
+            self.navigationController?.pushViewController(getWorkingTimeVC, animated: true)
                 }else{
                     self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
                 }
@@ -77,7 +77,6 @@ class setWorkingTimeViewController: KitchenInformationViewController {
         }
         func Localize(){
             saveBtn.setTitle("Save".localize, for: .normal)
-           // enterTimeTextLabel.text = "Please Enter Your Working Time".localize
             
         }
         

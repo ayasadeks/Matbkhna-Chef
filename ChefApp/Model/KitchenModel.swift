@@ -1,10 +1,11 @@
 //
 //  KitchenModel.swift
-//  Mtbakhna
+//  ChefApp
 //
-//  Created by Rania on 8/31/19.
-//  Copyright © 2019 Rania. All rights reserved.
+//  Created by Admin on 9/17/19.
+//  Copyright © 2019 Admin. All rights reserved.
 //
+
 struct AllKitchenResponseData: Codable {
     let imageUrl : String?
     let data: [KitchenDataArray]?

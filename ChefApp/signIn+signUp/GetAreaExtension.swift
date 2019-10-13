@@ -21,7 +21,7 @@ extension SelectAreaViewController {
         if keyFlag == "city" {
             API.Country(key: "", countryId: countryId) { (sucess, countryArray, last_page) in
                 if sucess && countryArray != nil{
-                    print("its ok")
+                    print("running")
                     self.isLoading = false
                     if let countryArray = countryArray{
                         self.countryArray = countryArray

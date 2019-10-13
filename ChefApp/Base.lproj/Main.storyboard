@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x6A-vh-OU6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jj8-EF-UCh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
         <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -5331,6 +5331,7 @@ Chicken Rice Salad</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="T5E-3i-e4q" firstAttribute="centerX" secondItem="tuF-zV-3TD" secondAttribute="centerX" id="3Vq-oW-8qI"/>
                                     <constraint firstAttribute="trailing" secondItem="zLp-45-79u" secondAttribute="trailing" constant="45" id="48L-rb-BKv"/>
                                     <constraint firstItem="kRO-w7-DVO" firstAttribute="leading" secondItem="tuF-zV-3TD" secondAttribute="leading" constant="30" id="E4r-0A-Jky"/>
                                     <constraint firstItem="zLp-45-79u" firstAttribute="top" secondItem="Zlp-2r-SRv" secondAttribute="bottom" constant="40" id="E4t-v1-UCL"/>
@@ -5348,6 +5349,8 @@ Chicken Rice Salad</string>
                                     <constraint firstItem="Zlp-2r-SRv" firstAttribute="centerX" secondItem="tuF-zV-3TD" secondAttribute="centerX" id="hP7-ST-785"/>
                                     <constraint firstItem="c0G-tE-hZY" firstAttribute="top" secondItem="T5E-3i-e4q" secondAttribute="bottom" constant="28" id="k7Z-u7-wWY"/>
                                     <constraint firstItem="4g0-ZG-qx8" firstAttribute="top" secondItem="tuF-zV-3TD" secondAttribute="top" constant="20" id="rff-h4-drZ"/>
+                                    <constraint firstItem="slN-bt-Lh1" firstAttribute="centerX" secondItem="tuF-zV-3TD" secondAttribute="centerX" id="rvM-Me-yqc"/>
+                                    <constraint firstItem="zLp-45-79u" firstAttribute="centerX" secondItem="tuF-zV-3TD" secondAttribute="centerX" id="s8G-fS-llY"/>
                                     <constraint firstItem="slN-bt-Lh1" firstAttribute="top" secondItem="tuF-zV-3TD" secondAttribute="top" constant="137" id="wdl-1K-LG3"/>
                                 </constraints>
                             </view>
@@ -7104,21 +7107,21 @@ to refuse order</string>
                                 <rect key="frame" x="0.0" y="275" width="375" height="392"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qj6-Wp-aDm">
-                                        <rect key="frame" x="20" y="112.5" width="335" height="174.5"/>
+                                        <rect key="frame" x="15" y="117.5" width="345" height="169.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" rowHeight="159" id="EcU-T9-iXM" customClass="SelectAreaTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="335" height="159"/>
+                                                <rect key="frame" x="0.0" y="28" width="345" height="159"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EcU-T9-iXM" id="U0P-CL-FW0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="158.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="158.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sx-Hm-Ff9" customClass="ViewCornerRadious">
-                                                            <rect key="frame" x="10" y="10" width="315" height="60"/>
+                                                            <rect key="frame" x="0.0" y="10" width="345" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6Y-dq-hs9">
-                                                                    <rect key="frame" x="10" y="10" width="295" height="40"/>
+                                                                    <rect key="frame" x="10" y="10" width="325" height="40"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="18"/>
                                                                     <nil key="highlightedColor"/>
@@ -7143,9 +7146,9 @@ to refuse order</string>
                                                     <constraints>
                                                         <constraint firstItem="8Sx-Hm-Ff9" firstAttribute="top" secondItem="U0P-CL-FW0" secondAttribute="top" constant="10" id="g60-B4-IvE"/>
                                                         <constraint firstItem="8Sx-Hm-Ff9" firstAttribute="centerX" secondItem="U0P-CL-FW0" secondAttribute="centerX" id="j84-tB-CIv"/>
-                                                        <constraint firstItem="8Sx-Hm-Ff9" firstAttribute="leading" secondItem="U0P-CL-FW0" secondAttribute="leading" constant="10" id="t1g-5X-Qs5"/>
+                                                        <constraint firstItem="8Sx-Hm-Ff9" firstAttribute="leading" secondItem="U0P-CL-FW0" secondAttribute="leading" id="t1g-5X-Qs5"/>
                                                         <constraint firstAttribute="bottom" secondItem="8Sx-Hm-Ff9" secondAttribute="bottom" constant="10" id="tfc-5y-rXq"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8Sx-Hm-Ff9" secondAttribute="trailing" constant="10" id="yN7-2N-dbR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8Sx-Hm-Ff9" secondAttribute="trailing" id="yN7-2N-dbR"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -7196,16 +7199,16 @@ to refuse order</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moJ-np-55t">
-                                        <rect key="frame" x="132.5" y="21" width="110" height="19.5"/>
+                                        <rect key="frame" x="133" y="21" width="109" height="17.5"/>
                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="15"/>
                                         <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IRH-NP-Npw">
-                                        <rect key="frame" x="22" y="62.5" width="331" height="50"/>
+                                        <rect key="frame" x="20" y="60.5" width="335" height="57"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your SearchKey" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugi-7I-oc5" customClass="leftImage_cornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="331" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
                                                 <color key="tintColor" red="0.58431372549019611" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Ofh-HQ-gzw"/>
@@ -7217,20 +7220,23 @@ to refuse order</string>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                        <real key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Search"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vus-fe-smh">
-                                                <rect key="frame" x="0.0" y="48" width="331" height="2"/>
+                                                <rect key="frame" x="0.0" y="55" width="335" height="2"/>
                                                 <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.43493150684931509" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="YpH-8V-dND"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vus-fe-smh" firstAttribute="top" secondItem="Ugi-7I-oc5" secondAttribute="bottom" constant="15" id="zxn-PO-DPt"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -7242,12 +7248,12 @@ to refuse order</string>
                                     <constraint firstAttribute="height" constant="392" id="WOV-i1-Tzr"/>
                                     <constraint firstItem="r04-gH-ifv" firstAttribute="top" secondItem="thu-wX-V3i" secondAttribute="top" constant="20" id="YCQ-fZ-erO"/>
                                     <constraint firstItem="Qj6-Wp-aDm" firstAttribute="top" secondItem="IRH-NP-Npw" secondAttribute="bottom" id="cSe-A8-zx5"/>
-                                    <constraint firstItem="IRH-NP-Npw" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="22" id="cwY-Rs-1Ja"/>
+                                    <constraint firstItem="IRH-NP-Npw" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="20" id="cwY-Rs-1Ja"/>
                                     <constraint firstItem="Puy-Fn-ofq" firstAttribute="centerX" secondItem="thu-wX-V3i" secondAttribute="centerX" id="mFw-PT-7HQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qj6-Wp-aDm" secondAttribute="trailing" constant="20" id="opN-Ad-VkF"/>
-                                    <constraint firstItem="Qj6-Wp-aDm" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="20" id="rTD-hl-kAL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qj6-Wp-aDm" secondAttribute="trailing" constant="15" id="opN-Ad-VkF"/>
+                                    <constraint firstItem="Qj6-Wp-aDm" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="15" id="rTD-hl-kAL"/>
                                     <constraint firstAttribute="trailing" secondItem="r04-gH-ifv" secondAttribute="trailing" constant="32" id="sA6-bi-s7V"/>
-                                    <constraint firstAttribute="trailing" secondItem="IRH-NP-Npw" secondAttribute="trailing" constant="22" id="t01-d0-439"/>
+                                    <constraint firstAttribute="trailing" secondItem="IRH-NP-Npw" secondAttribute="trailing" constant="20" id="t01-d0-439"/>
                                     <constraint firstAttribute="bottom" secondItem="Puy-Fn-ofq" secondAttribute="bottom" constant="45" id="vaT-Ad-97r"/>
                                     <constraint firstItem="moJ-np-55t" firstAttribute="top" secondItem="thu-wX-V3i" secondAttribute="top" constant="21" id="vt6-NR-DJ8"/>
                                     <constraint firstItem="Puy-Fn-ofq" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="27" id="wWk-5Q-4We"/>
@@ -7281,7 +7287,7 @@ to refuse order</string>
         <!--Set Working Days View Controller-->
         <scene sceneID="6h9-hw-dN1">
             <objects>
-                <viewController id="XH7-2a-9nc" customClass="SetWorkingDaysViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="workingDays" id="XH7-2a-9nc" customClass="SetWorkingDaysViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fwb-TL-QVI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7507,13 +7513,16 @@ to refuse order</string>
                                     <constraint firstAttribute="trailing" secondItem="Dj5-hK-yBY" secondAttribute="trailing" constant="45" id="HPt-o0-lfx"/>
                                     <constraint firstItem="Dj5-hK-yBY" firstAttribute="top" secondItem="nLJ-ho-wf6" secondAttribute="bottom" constant="40" id="LBs-iq-nb0"/>
                                     <constraint firstItem="QZ4-JI-HgW" firstAttribute="leading" secondItem="zQh-B8-cHj" secondAttribute="leading" constant="27" id="N07-m5-EkB"/>
+                                    <constraint firstItem="Dj5-hK-yBY" firstAttribute="centerX" secondItem="zQh-B8-cHj" secondAttribute="centerX" id="QuD-JD-gk9"/>
                                     <constraint firstItem="nLJ-ho-wf6" firstAttribute="top" secondItem="zQh-B8-cHj" secondAttribute="top" constant="22" id="TcE-IQ-53O"/>
                                     <constraint firstAttribute="height" constant="392" id="Wpm-VR-clY"/>
+                                    <constraint firstItem="9fP-X2-gbA" firstAttribute="centerX" secondItem="zQh-B8-cHj" secondAttribute="centerX" id="ibd-8g-mUI"/>
                                     <constraint firstItem="Dj5-hK-yBY" firstAttribute="leading" secondItem="zQh-B8-cHj" secondAttribute="leading" constant="45" id="jVi-ho-3Mh"/>
                                     <constraint firstAttribute="trailing" secondItem="QZ4-JI-HgW" secondAttribute="trailing" constant="27" id="ju1-2M-ARl"/>
                                     <constraint firstAttribute="trailing" secondItem="QZ4-JI-HgW" secondAttribute="trailing" constant="27" id="kDd-Mt-uea"/>
                                     <constraint firstAttribute="trailing" secondItem="9fP-X2-gbA" secondAttribute="trailing" constant="26" id="oQu-1z-ea0"/>
                                     <constraint firstItem="oFM-2a-Dbk" firstAttribute="top" secondItem="zQh-B8-cHj" secondAttribute="top" constant="20" id="p0y-Fb-Gje"/>
+                                    <constraint firstItem="QZ4-JI-HgW" firstAttribute="centerX" secondItem="zQh-B8-cHj" secondAttribute="centerX" id="s43-9a-Gco"/>
                                     <constraint firstAttribute="trailing" secondItem="oFM-2a-Dbk" secondAttribute="trailing" constant="32" id="sj2-nF-RqY"/>
                                 </constraints>
                             </view>
@@ -8280,7 +8289,7 @@ to order is done?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0M-jW-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-633" y="2696"/>
+            <point key="canvasLocation" x="-575" y="2477"/>
         </scene>
         <!--Delete Item Pop Up View Controller-->
         <scene sceneID="pQv-Hc-wec">

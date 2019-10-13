@@ -45,7 +45,6 @@ extension API {
         API.showSVProgress()
         let decoder = JSONDecoder()
         Alamofire.request(url,method: .get , parameters: parameters).responseDecodableObject(decoder: decoder) { (response: DataResponse<AllResponseData> ) in
-            // print("rania\(response)")
             let responseStatus = response.result
             print("responseStatus\(responseStatus)")
             ///ResponseStatus check there is connection or not

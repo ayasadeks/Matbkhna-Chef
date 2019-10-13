@@ -31,7 +31,6 @@ class SelectAreaViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.backBtn()
         
         //to delete extra cells in table view
         self.title = "Choose City".localize
@@ -44,13 +43,9 @@ class SelectAreaViewController: UIViewController {
         searchTextFeild.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         HandelRefresh()
     }
+
     
 }
-
-
-
-
-
 
 
 extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{

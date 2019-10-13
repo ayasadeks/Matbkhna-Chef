@@ -18,11 +18,8 @@ class AddDishesViewController: UIViewController {
     @IBOutlet weak var mediumPriceTxtField: UITextField!
     @IBOutlet weak var largePriceTxtField: UITextField!
     @IBOutlet weak var nextOutlet: ButtonCornerRadious!
-   // let userToke = UserDefaultData.get_user_string_data(key: "userToken")
     var dishArray = [DishDataArray]()
     var dishImage = UIImage()
-    let api_token = UserDefaultData.get_user_string_data(key: "userToken")
-
 
     
     
@@ -51,7 +48,7 @@ class AddDishesViewController: UIViewController {
         var smallPrice = smallPricTxtFielde.text
         var mediumPrice = mediumPriceTxtField.text
         var largePrice = largePriceTxtField.text
-
+        guard let api_token = UserDefaultData.get_user_string_data(key: "userToken")  else{return}
         guard let dishName = foodNameTxtField.text , !dishName.isEmpty,  let dishIngredients = ingredientsTxtField.text , !dishIngredients.isEmpty  else{
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All Required Data".localize, selfDismissing: false)
             return
@@ -75,8 +72,9 @@ class AddDishesViewController: UIViewController {
             "mediumPrice" : mediumPrice,
             "largePrice" : largePrice
         ]
+      
 
-        API.GetData(AllDishData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters , userToken: api_token) {[weak self] (result) in
+        API.GetData(AllDishData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters as [String : Any] , userToken: nil) {[weak self] (result) in
             guard let self = self else {return}
             print(result)
             switch result {
@@ -84,11 +82,11 @@ class AddDishesViewController: UIViewController {
                 if model.status_code == 200{
                     print("dish added sucess")
                      print("model = \(model)")
-                    let dishId = model.data?[0].id
-                        
+                    let dishId = model.data?.id
+
                     API.AddDishPhoto(dishImage: self.dishImage, dishId: dishId!, completion: { (sucess) in
                         if sucess!{
-                              self.showAlert(title: "Error".localize, messages: nil, message: "Dish Added sucess ".localize , selfDismissing: false)
+                              self.showAlert(title: "Done".localize, messages: nil, message: "Dish Added sucess ".localize , selfDismissing: false)
                         }else{
                             self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection00".localize , selfDismissing: false)
                         }

@@ -52,7 +52,7 @@ class KitchenInformationViewController: UIViewController {
         print("select working days")
         
         //go to next view controller
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "setWorkingTimeVC") as! setWorkingTimeViewController
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
         
         self.addChild(popvc)
         

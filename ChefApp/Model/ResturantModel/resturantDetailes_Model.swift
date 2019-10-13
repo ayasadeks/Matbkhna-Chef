@@ -1,10 +1,11 @@
 //
-//  resturantDetailes_Model.swift
-//  Mtbakhna
+//  resturantDetailes_Model.Swift
+//  ChefApp
 //
-//  Created by Rania on 9/14/19.
-//  Copyright © 2019 . All rights reserved.
+//  Created by Admin on 9/20/19.
+//  Copyright © 2019 Admin. All rights reserved.
 //
+
 
 struct AllResturantsDetailesResponseData: Codable {
     let imageUrl : String?

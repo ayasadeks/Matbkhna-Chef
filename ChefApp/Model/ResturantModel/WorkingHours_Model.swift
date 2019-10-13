@@ -1,9 +1,10 @@
+
+//  WorkingHours_Model.Swift
+//  ChefApp
 //
-//  WorkingHours_Model.swift
-//  Mtbkhna_Cooker
+//  Created by Admin on 9/20/19.
+//  Copyright © 2019 Admin. All rights reserved.
 //
-//  Created by apple on 6/15/19.
-//  Copyright © 2019 Mobileaders. All rights reserved.
 //
 
 struct AllWorkingHoursResponseData : Codable{

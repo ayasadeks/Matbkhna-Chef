@@ -104,7 +104,7 @@
 		84FB8579233287F9002B9BF4 /* APIResturantDetailes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB8572233287F9002B9BF4 /* APIResturantDetailes.swift */; };
 		84FB857A233287F9002B9BF4 /* collectionResturantDetailes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB8574233287F9002B9BF4 /* collectionResturantDetailes.swift */; };
 		84FB857B233287F9002B9BF4 /* ResturantDetailes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB8576233287F9002B9BF4 /* ResturantDetailes.swift */; };
-		84FB857E23328815002B9BF4 /* Dishes_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB857C23328815002B9BF4 /* Dishes_Model.swift */; };
+		84FB857E23328815002B9BF4 /* GetDishes_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB857C23328815002B9BF4 /* GetDishes_Model.swift */; };
 		84FB857F23328815002B9BF4 /* resturantDetailes_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB857D23328815002B9BF4 /* resturantDetailes_Model.swift */; };
 		84FB8581233288AE002B9BF4 /* KitchenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB8580233288AE002B9BF4 /* KitchenModel.swift */; };
 		84FB858323328936002B9BF4 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB858223328935002B9BF4 /* ToastMessage.swift */; };
@@ -216,7 +216,7 @@
 		84FB8572233287F9002B9BF4 /* APIResturantDetailes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResturantDetailes.swift; sourceTree = "<group>"; };
 		84FB8574233287F9002B9BF4 /* collectionResturantDetailes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionResturantDetailes.swift; sourceTree = "<group>"; };
 		84FB8576233287F9002B9BF4 /* ResturantDetailes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantDetailes.swift; sourceTree = "<group>"; };
-		84FB857C23328815002B9BF4 /* Dishes_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dishes_Model.swift; sourceTree = "<group>"; };
+		84FB857C23328815002B9BF4 /* GetDishes_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDishes_Model.swift; sourceTree = "<group>"; };
 		84FB857D23328815002B9BF4 /* resturantDetailes_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resturantDetailes_Model.swift; sourceTree = "<group>"; };
 		84FB8580233288AE002B9BF4 /* KitchenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KitchenModel.swift; sourceTree = "<group>"; };
 		84FB858223328935002B9BF4 /* ToastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
@@ -363,8 +363,8 @@
 				84940FD7233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift */,
 				8474724E233BAC1800F5E2D7 /* SearchViewController.swift */,
 				84747250233BAC3E00F5E2D7 /* SearchTableViewCell.swift */,
-				84AF6530233A9229007FE38F /* InformationVC */,
 				84AF652F233A91C4007FE38F /* AddDishesViewControllers */,
+				84AF6530233A9229007FE38F /* InformationVC */,
 			);
 			path = HomeViewControllers;
 			sourceTree = "<group>";
@@ -442,17 +442,17 @@
 		84F7456F2330F1CD00C00AD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84FB857C23328815002B9BF4 /* Dishes_Model.swift */,
+				84FB857C23328815002B9BF4 /* GetDishes_Model.swift */,
 				84526CAB2343588E000E7B50 /* AddDishImage+Model.swift */,
+				84B95C2A234E10DE00A9830E /* AddDishesModel.swift */,
 				846EC5A1233CED0B00B63BC8 /* ResturantModel */,
 				84FB8580233288AE002B9BF4 /* KitchenModel.swift */,
+				84526CB323436C2F000E7B50 /* GetOrderModel.swift */,
 				84F745702330F1E200C00AD8 /* LoginModel.swift */,
 				84E4DC21233112C7001B935A /* RegisterModel.swift */,
 				8492BB7C2332676000540887 /* AskVerficationModel.swift */,
 				8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */,
 				8492BB802332681500540887 /* ChangePasswordModel.swift */,
-				84526CB323436C2F000E7B50 /* GetOrderModel.swift */,
-				84B95C2A234E10DE00A9830E /* AddDishesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -773,7 +773,7 @@
 				84FB857A233287F9002B9BF4 /* collectionResturantDetailes.swift in Sources */,
 				84EDDA69233A5CF10075D4C7 /* changePassPopUpViewController.swift in Sources */,
 				8464A1F823410A1C0095F516 /* SetWorkingDaysViewController.swift in Sources */,
-				84FB857E23328815002B9BF4 /* Dishes_Model.swift in Sources */,
+				84FB857E23328815002B9BF4 /* GetDishes_Model.swift in Sources */,
 				8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */,
 				84747255233BCF8E00F5E2D7 /* HistoryViewController.swift in Sources */,
 				8464A1F42340C7B70095F516 /* MyWalletViewController.swift in Sources */,

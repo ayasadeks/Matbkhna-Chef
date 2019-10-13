@@ -23,7 +23,7 @@ class RADishesCVC: UICollectionViewCell {
             dishPrice.text = "\(item[index.row].smallPrice!)"
     
             //product image
-            let url = imageUrl + "/\(item[index.row].photos![0].url!)"
+        let url = imageUrl + "/\(item[index.row].photos![0].url!)"
             dishImage.kf.indicatorType = .activity
             dishImage.kf.setImage(with: URL(string: url))
     }

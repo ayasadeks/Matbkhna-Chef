@@ -10,9 +10,8 @@ import Foundation
 
 struct AllDishData : Codable{
     let message : String?
-   // let imageUrl : String?
-    let data: [DishDataArray]?
+    let data: DishDataArray?
     let status_code : Int?
     let status_message : String?
-   // let paginate : dishPaginate?
 }
+
