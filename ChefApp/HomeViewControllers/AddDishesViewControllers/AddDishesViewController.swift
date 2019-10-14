@@ -45,62 +45,39 @@ class AddDishesViewController: UIViewController {
         
     }
     @IBAction func saveButton(_ sender: ButtonCornerRadious) {
-        var smallPrice = smallPricTxtFielde.text
-        var mediumPrice = mediumPriceTxtField.text
-        var largePrice = largePriceTxtField.text
+        let smallPrice : Int? = Int(smallPricTxtFielde.text!)
+        let mediumPrice : Int? = Int(mediumPriceTxtField.text!)
+        let largePrice : Int? = Int(largePriceTxtField.text!)
         guard let api_token = UserDefaultData.get_user_string_data(key: "userToken")  else{return}
+     //   let api_token =  "UzJMtttbYhAbfsD4GbChQjtf4KgYQPTPCSUKESBGgcGCQnCQ0zS5PTU6oQSwlmZDSoso9EBmNa5cklmAwIn5i8X9Ftw1Hnk9UuQsS1pGAU8wZWs7dPA3IsGFx4KTZNlSyKNN0AouUzruj2QTMFA73H"
         guard let dishName = foodNameTxtField.text , !dishName.isEmpty,  let dishIngredients = ingredientsTxtField.text , !dishIngredients.isEmpty  else{
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All Required Data".localize, selfDismissing: false)
             return
         }
-        if smallPrice?.isEmpty == true{
-            smallPrice = nil
+        if smallPricTxtFielde.text!.isEmpty == true{
+            smallPricTxtFielde.text = nil
         }
-        if mediumPrice?.isEmpty == true{
-            mediumPrice = nil
+        if mediumPriceTxtField.text!.isEmpty == true{
+            mediumPriceTxtField.text = nil
         }
-        if largePrice?.isEmpty == true{
-            largePrice = nil
+        if largePriceTxtField.text!.isEmpty == true{
+            largePriceTxtField.text = nil
         }
-        let parameters = [
-            "title" : dishName,
-            "titleEng" : dishName,
-            "description" : dishIngredients,
-            "descriptionEng" : dishIngredients,
-            "api_token": api_token,
-            "smallPrice" : smallPrice,
-            "mediumPrice" : mediumPrice,
-            "largePrice" : largePrice
-        ]
-      
+   API.SetDish(title: dishName, titleEng: dishName, description: dishIngredients, descriptionEng: dishIngredients, smallPrice: smallPrice, mediumPrice: mediumPrice, largePrice: largePrice) { (sucess , id) in
+            if sucess!{
+            print("dish added sucess")
 
-        API.GetData(AllDishData.self,language: self.getCurrentDeviceLanguage(), url: URLS.addDish, method: .post, parameters : parameters as [String : Any] , userToken: nil) {[weak self] (result) in
-            guard let self = self else {return}
-            print(result)
-            switch result {
-            case .success(let model):
-                if model.status_code == 200{
-                    print("dish added sucess")
-                     print("model = \(model)")
-                    let dishId = model.data?.id
-
-                    API.AddDishPhoto(dishImage: self.dishImage, dishId: dishId!, completion: { (sucess) in
-                        if sucess!{
-                              self.showAlert(title: "Done".localize, messages: nil, message: "Dish Added sucess ".localize , selfDismissing: false)
-                        }else{
-                            self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection00".localize , selfDismissing: false)
-                        }
-                    })
-                }else{
-                    self.showAlert(title: "Error11".localize, messages: nil, message:" status message is \(model.status_message)", selfDismissing: false)
-                }
-                break
-            case .failure(let err):
-                print(err!.localizedDescription)
-            case .noConnection(let Message):
-                self.showAlert(title: "Error".localize, messages: nil, message: Message, selfDismissing: false)
-          }
-    }
+//                API.AddDishPhoto(dishImage: self.dishImage, dishId: id!, completion: { (sucess) in
+//                    if sucess!{
+//                        self.showToast(message: "Dish Added Sucessufly".localize)
+//                    }else{
+//                        self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+//                    }
+//                })
+            }else{
+                self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+            }
+        }
 
     
 }
@@ -152,4 +129,8 @@ extension AddDishesViewController : UIImagePickerControllerDelegate , UINavigati
     
     
 }//end of extension
+
+
+
+
 

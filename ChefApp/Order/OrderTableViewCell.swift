@@ -21,14 +21,14 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var statusOfOrder: UILabel!
     @IBOutlet weak var orderSubName: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        viewOfCell.dropShadow(color: .black, alpha: 0.14, x: 0, y: 8, blur: 20, spread: 0)
+        viewOfCell.dropShadow(color: .black, alpha: 0.14, x: 0, y: 5, blur: 20, spread: 0)
         statusLabel.layer.cornerRadius = 8
         statusLabel.layer.masksToBounds = true
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

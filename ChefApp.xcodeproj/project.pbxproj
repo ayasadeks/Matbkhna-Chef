@@ -65,7 +65,6 @@
 		8492BB832332811F00540887 /* CircleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB822332811F00540887 /* CircleShape.swift */; };
 		84940FD6233FB5BE00D0A50F /* HistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84940FD5233FB5BE00D0A50F /* HistoryDetailsViewController.swift */; };
 		84940FD8233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84940FD7233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift */; };
-		849FFF572333C9E800961E6B /* AddDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FFF562333C9E800961E6B /* AddDishesViewController.swift */; };
 		849FFF592333CB1700961E6B /* KitchenInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */; };
 		84AD3FD2234F6D0F001CF107 /* SelectAreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AD3FD1234F6D0F001CF107 /* SelectAreaTableViewCell.swift */; };
 		84AEC32B233E5F12006B67FF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEC32A233E5F12006B67FF /* AboutViewController.swift */; };
@@ -110,6 +109,7 @@
 		84FB858323328936002B9BF4 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB858223328935002B9BF4 /* ToastMessage.swift */; };
 		84FB858723328A23002B9BF4 /* CodeTextFeild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB858523328A23002B9BF4 /* CodeTextFeild.swift */; };
 		84FB858823328A23002B9BF4 /* TextImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB858623328A23002B9BF4 /* TextImage.swift */; };
+		84FC94BA2354CF3D00EAA8AC /* AddDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */; };
 		84FD362023393F1F006D7CB1 /* setWorkingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */; };
 		84FE891A233A134D00868140 /* verifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE8919233A134D00868140 /* verifyPhoneViewController.swift */; };
 /* End PBXBuildFile section */
@@ -175,7 +175,6 @@
 		8492BB822332811F00540887 /* CircleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleShape.swift; sourceTree = "<group>"; };
 		84940FD5233FB5BE00D0A50F /* HistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewController.swift; sourceTree = "<group>"; };
 		84940FD7233FC2EE00D0A50F /* DeleteItemPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItemPopUpViewController.swift; sourceTree = "<group>"; };
-		849FFF562333C9E800961E6B /* AddDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishesViewController.swift; sourceTree = "<group>"; };
 		849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenInformationViewController.swift; sourceTree = "<group>"; };
 		84AD3FD1234F6D0F001CF107 /* SelectAreaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAreaTableViewCell.swift; sourceTree = "<group>"; };
 		84AEC32A233E5F12006B67FF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +221,7 @@
 		84FB858223328935002B9BF4 /* ToastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		84FB858523328A23002B9BF4 /* CodeTextFeild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTextFeild.swift; sourceTree = "<group>"; };
 		84FB858623328A23002B9BF4 /* TextImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextImage.swift; sourceTree = "<group>"; };
+		84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishesViewController.swift; sourceTree = "<group>"; };
 		84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setWorkingTimeViewController.swift; sourceTree = "<group>"; };
 		84FE8919233A134D00868140 /* verifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyPhoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,19 +261,12 @@
 		84526CAD23436045000E7B50 /* AddDishes */ = {
 			isa = PBXGroup;
 			children = (
+				84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */,
 				84526CB023436045000E7B50 /* API+AddDish.swift */,
-				84526CAE23436045000E7B50 /* AddDishesPhoto */,
+				84526CAF23436045000E7B50 /* API+DishPhoto.swift */,
 			);
 			name = AddDishes;
 			path = "../../../../Mtbkhna_Cooker/API Service/AddDishes";
-			sourceTree = "<group>";
-		};
-		84526CAE23436045000E7B50 /* AddDishesPhoto */ = {
-			isa = PBXGroup;
-			children = (
-				84526CAF23436045000E7B50 /* API+DishPhoto.swift */,
-			);
-			path = AddDishesPhoto;
 			sourceTree = "<group>";
 		};
 		84681DF6232FCAF200BB3CA3 /* Fonts */ = {
@@ -335,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				84526CAD23436045000E7B50 /* AddDishes */,
-				849FFF562333C9E800961E6B /* AddDishesViewController.swift */,
 				84AF652D233A90B2007FE38F /* ExtraItemsPopUpViewController.swift */,
 				84747242233B782D00F5E2D7 /* PricePopUpViewController.swift */,
 			);
@@ -738,6 +730,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FB858723328A23002B9BF4 /* CodeTextFeild.swift in Sources */,
+				84FC94BA2354CF3D00EAA8AC /* AddDishesViewController.swift in Sources */,
 				84F745782330F8C400C00AD8 /* ApiGetData.swift in Sources */,
 				84EDDA67233A5C770075D4C7 /* VerficationAlertViewController.swift in Sources */,
 				845E99C62343BDB7004872CF /* GetDishes+APi.swift in Sources */,
@@ -753,7 +746,6 @@
 				84EDDA63233A53E70075D4C7 /* AcceptPopUpViewController.swift in Sources */,
 				84526CB6234385BD000E7B50 /* GetOrders+APi.swift in Sources */,
 				84F745732330F3E100C00AD8 /* URLs.swift in Sources */,
-				849FFF572333C9E800961E6B /* AddDishesViewController.swift in Sources */,
 				84B95C2B234E10DE00A9830E /* AddDishesModel.swift in Sources */,
 				84681E16232FCF6200BB3CA3 /* ImageCornerRadious.swift in Sources */,
 				84747251233BAC3E00F5E2D7 /* SearchTableViewCell.swift in Sources */,

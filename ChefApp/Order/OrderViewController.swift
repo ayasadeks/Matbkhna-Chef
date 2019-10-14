@@ -55,6 +55,8 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrderTableViewCell
         cell.timeLabel.text = orderArray[indexPath.row].createdAt
+      //  cell.orderID.text = (orderArray[indexPath.row].id) as? String
+        
        // cell.statusLabel.text = orderArray[indexPath.row].status
         if cell.statusLabel.text == "3"  {
             cell.statusLabel.text = orderArray[indexPath.row].status

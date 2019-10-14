@@ -45,7 +45,7 @@ extension OrderViewController {
         
         guard current_page < last_page else {return}
         isLoading = true
-        API.GetData(AllOrderResponseData.self, language: self.getCurrentDeviceLanguage(), url: URLS.getOrder, method: .get, parameters: ["api_token" : "UzJMtttbYhAbfsD4GbChQjtf4KgYQPTPCSUKESBGgcGCQnCQ0zS5PTU6oQSwlmZDSoso9EBmNa5cklmAwIn5i8X9Ftw1Hnk9UuQsS1pGAU8wZWs7dPA3IsGFx4KTZNlSyKNN0AouUzruj2QTMFA73H"], userToken: nil) {[weak self] (result) in
+        API.GetData(AllOrderResponseData.self, language: self.getCurrentDeviceLanguage(), url: URLS.getOrder, method: .get, parameters: ["api_token" : "3plXfUPL1oUjLzulCjbFB6eAjQyM03ybxfKwIazTZv8RSLZeto2zILz5G4Ud0sIdDOmKb6yDKEpohNJIAF4RE6aDrl4WrmF4ZPaLibhAvVIRCGnzdjbJWHKhYNaWJ9upCRvxROqT5a6o551uK2kWVt"], userToken: nil) {[weak self] (result) in
             guard let self = self else {return}
             switch result {
             case .success(let model):
@@ -78,32 +78,4 @@ extension OrderViewController {
 
     
     
-    
-    //UzJMtttbYhAbfsD4GbChQjtf4KgYQPTPCSUKESBGgcGCQnCQ0zS5PTU6oQSwlmZDSoso9EBmNa5cklmAwIn5i8X9Ftw1Hnk9UuQsS1pGAU8wZWs7dPA3IsGFx4KTZNlSyKNN0AouUzruj2QTMFA73H
-    
-//    func loadMore(){
-//        guard !isLoading else{ return}
-//        
-//        guard current_page < last_page else {return}
-//        print("current_page\(current_page),last_page\(last_page)")
-//        isLoading = true
-//        API.GetAllOrderData(api_token: api_token!) { (sucess, orderArray, last_page) in
-//            if !sucess!{
-//                API.dismissSVProgress()
-//                self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
-//            }else{
-//                self.isLoading = false
-//                if let orderArr = orderArray{
-//                    self.orderArray.append(contentsOf: orderArr)
-//                    API.dismissSVProgress()
-//                    
-//                    self.tableView.reloadData()
-//                    self.current_page += 1
-//                    self.last_page = last_page!
-//                    
-//                }
-//            }
-//
-//        }
-//    }
 
