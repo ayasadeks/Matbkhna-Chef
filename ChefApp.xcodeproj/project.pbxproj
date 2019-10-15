@@ -25,6 +25,7 @@
 		84526CB223436045000E7B50 /* API+AddDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84526CB023436045000E7B50 /* API+AddDish.swift */; };
 		84526CB423436C2F000E7B50 /* GetOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84526CB323436C2F000E7B50 /* GetOrderModel.swift */; };
 		84526CB6234385BD000E7B50 /* GetOrders+APi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84526CB5234385BD000E7B50 /* GetOrders+APi.swift */; };
+		8456249E235603AA008FEE23 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456249D235603AA008FEE23 /* ForgotPasswordModel.swift */; };
 		845A8882232FA76D00DCB46F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A8881232FA76D00DCB46F /* SignUpViewController.swift */; };
 		845BE488234F7A51001825D3 /* RACountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BE487234F7A50001825D3 /* RACountry.swift */; };
 		845E99C62343BDB7004872CF /* GetDishes+APi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E99C52343BDB7004872CF /* GetDishes+APi.swift */; };
@@ -135,6 +136,7 @@
 		84526CB023436045000E7B50 /* API+AddDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+AddDish.swift"; sourceTree = "<group>"; };
 		84526CB323436C2F000E7B50 /* GetOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderModel.swift; sourceTree = "<group>"; };
 		84526CB5234385BD000E7B50 /* GetOrders+APi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GetOrders+APi.swift"; sourceTree = "<group>"; };
+		8456249D235603AA008FEE23 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
 		845A8881232FA76D00DCB46F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		845BE487234F7A50001825D3 /* RACountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACountry.swift; sourceTree = "<group>"; };
 		845E99C52343BDB7004872CF /* GetDishes+APi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GetDishes+APi.swift"; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 				8492BB7C2332676000540887 /* AskVerficationModel.swift */,
 				8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */,
 				8492BB802332681500540887 /* ChangePasswordModel.swift */,
+				8456249D235603AA008FEE23 /* ForgotPasswordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				84FE891A233A134D00868140 /* verifyPhoneViewController.swift in Sources */,
 				846EC59E233CE60700B63BC8 /* WorkingHours_Model.swift in Sources */,
 				84FB857B233287F9002B9BF4 /* ResturantDetailes.swift in Sources */,
+				8456249E235603AA008FEE23 /* ForgotPasswordModel.swift in Sources */,
 				84FB858823328A23002B9BF4 /* TextImage.swift in Sources */,
 				8474724B233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift in Sources */,
 				8474724F233BAC1800F5E2D7 /* SearchViewController.swift in Sources */,

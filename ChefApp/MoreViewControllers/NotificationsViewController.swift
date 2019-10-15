@@ -29,7 +29,12 @@ class NotificationsViewController: UIViewController {
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        //go to next view controller
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "moreVC") as! MoreMenuViewController
+        self.present(nextViewController, animated: true, completion: nil)
+
+
     }
     
 

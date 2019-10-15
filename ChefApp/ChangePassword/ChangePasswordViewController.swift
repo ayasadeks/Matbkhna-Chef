@@ -13,7 +13,7 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTxtField: UITextField!
     let userToke = UserDefaultData.get_user_string_data(key: "userToken")
-
+    let phone = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,9 +23,13 @@ class ChangePasswordViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func changePasswordButton(_ sender: ButtonCornerRadious) {
+        guard let password = passwordTextField.text , !password.isEmpty, let newPassword = confirmPasswordTxtField.text , !newPassword.isEmpty  else{
+            self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter empty field".localize, selfDismissing: false)
+            return
+        }
+        let parameters = ["verify_token" : userToke, "password" : password, "phone" : phone]
         
-        
-        API.GetData(AllChangePasswordResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.changePassword, method: .post, parameters : ["oldPassword" : passwordTextField.text!,"newPassword" : confirmPasswordTxtField.text!, "api_token" : userToke! ], userToken: userToke) {[weak self] (result) in
+        API.GetData(AllChangePasswordResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.resetPassword, method: .post, parameters: parameters , userToken: userToke) {[weak self] (result) in
             guard let self = self else {return}
             print(result)
             switch result {

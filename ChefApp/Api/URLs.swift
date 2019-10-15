@@ -20,12 +20,15 @@ struct URLS {
             //send code
         static let sendVerficationCode = main + "users/verify"
     
-        static let changePassword = main + "users/updatePassword"
+         // Forget password POST
+        static let forgetPassword = main + "users/forget_password"
 
-         //to add dish
+        // reset password  POST
+        static let resetPassword = main + "users/verify_reset_password"
+        //to add dish  POST
         static let addDish = main + "dishes/add"
 
-                ///POST(TO SET DISHES PHOTOS)
+        ///POST(TO SET DISHES PHOTOS)
         static let addDishesPhoto = main + "dishes/addPhotos/"
     
         ///POST(TO SET WORK TIME)

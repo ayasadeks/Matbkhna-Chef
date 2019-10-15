@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fTR-JD-7Np">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
+            <string>URWDINArabic-Regular</string>
+        </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -22,9 +25,6 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
-        </array>
-        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
-            <string>URWDINArabic-Regular</string>
         </array>
         <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
@@ -127,7 +127,6 @@
                                 </state>
                                 <connections>
                                     <action selector="forgetPassButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="92m-cW-E4v"/>
-                                    <segue destination="hBA-ad-isw" kind="show" id="bab-gJ-cXC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEv-ub-T3A" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
@@ -228,7 +227,7 @@
                                 <rect key="frame" x="6" y="100" width="135" height="28"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIO-wV-YAo">
-                                <rect key="frame" x="27" y="78" width="138" height="51.5"/>
+                                <rect key="frame" x="27" y="78" width="144" height="47"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="40"/>
                                 <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -240,13 +239,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="316" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs4-Sk-Dd1">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="14"/>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Regular" family="URW DIN Arabic" pointSize="12"/>
                                                 <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Matbkhna" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHt-9G-rQo">
-                                                <rect key="frame" x="0.0" y="16.5" width="316" height="30"/>
+                                                <rect key="frame" x="0.0" y="15" width="316" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="XHG-wb-3pI"/>
                                                 </constraints>
@@ -996,7 +995,7 @@ Click </string>
         <!--Verify Phone View Controller-->
         <scene sceneID="Apa-Ak-kgp">
             <objects>
-                <viewController id="hBA-ad-isw" customClass="verifyPhoneViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goVerfiyPhone" id="hBA-ad-isw" customClass="verifyPhoneViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uls-NL-MU4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1069,9 +1068,6 @@ Click </string>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Regular" family="URW DIN Arabic" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="phoneTxtField:" destination="hBA-ad-isw" eventType="editingDidEnd" id="dgi-HK-NYl"/>
-                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkW-uL-8tG">
                                                 <rect key="frame" x="1" y="58" width="319" height="1"/>
@@ -1175,7 +1171,7 @@ Click </string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="cahngePasswordButton:" destination="Mq7-d6-xv3" eventType="touchUpInside" id="6jN-tI-abA"/>
+                                    <action selector="changePasswordButton:" destination="Mq7-d6-xv3" eventType="touchUpInside" id="x7y-i9-MNw"/>
                                     <action selector="confirmButton:" destination="Gxv-pk-FK0" eventType="touchUpInside" id="MK8-zX-sdh"/>
                                     <action selector="confirmButton:" destination="iMJ-kS-A7T" eventType="touchUpInside" id="Qvr-VH-ab1"/>
                                 </connections>
@@ -3059,7 +3055,7 @@ Chicken Rice Salad</string>
         <!--More Menu View Controller-->
         <scene sceneID="JkX-hz-T6V">
             <objects>
-                <viewController id="Njz-Ff-L0V" customClass="MoreMenuViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="moreVC" id="Njz-Ff-L0V" customClass="MoreMenuViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VWS-yp-Ova">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3292,7 +3288,7 @@ Chicken Rice Salad</string>
                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FG4-XR-gkG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FG4-XR-gkG">
                                 <rect key="frame" x="28" y="147" width="319" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -3300,11 +3296,11 @@ Chicken Rice Salad</string>
                                         <rect key="frame" x="0.0" y="28" width="319" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJH-9L-STJ" id="oai-SB-BTx">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-wn-2hc" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="149.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="150"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#120900 " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-Rh-jE6">
                                                             <rect key="frame" x="16" y="11" width="74" height="20.5"/>
@@ -4745,7 +4741,7 @@ Chicken Rice Salad</string>
         <!--Tab Bar Controller-->
         <scene sceneID="4Z9-QB-HJa">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fTR-JD-7Np" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="multiVC" automaticallyAdjustsScrollViewInsets="NO" id="fTR-JD-7Np" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Rg-I4-PTq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

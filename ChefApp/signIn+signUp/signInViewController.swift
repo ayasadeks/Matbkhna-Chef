@@ -36,7 +36,7 @@ class signInViewController: UIViewController {
     @IBAction func forgetPassButton(_ sender: Any) {
         //go to next view controller
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "changePassword") as! ChangePasswordViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goVerfiyPhone") as! verifyPhoneViewController
         self.present(nextViewController, animated: true, completion: nil)
     }
     
@@ -49,60 +49,56 @@ class signInViewController: UIViewController {
         }
         if (phone.isPhoneNumberValid) {
             
-        API.GetData(AllLoginResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.login, method: .post, parameters : ["username" : phone,"password" : password], userToken: nil) {[weak self] (result) in
-                    guard let self = self else {return}
-            print(result)
-            switch result {
-                    case .success(let model):
-                       // print("model = \(model)")
-                        if model.status_message == nil{
-
-                            let userName = model.data?.name
-                            let userEmail = model.data?.email
-                            let userId = model.data?.id
-                            let userPhone = model.data?.phone
-                            let userVerfied = model.data?.verified
-                            let userToken = model.token
-////                            let logoImage = model.data?.logo
-////                            let userLat = model.data?.latitude
-////                            let userLong = model.data?.longitude
-//01224929187
-                            UserDefaultData.save_user_data(token: userToken, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
-                            
-                            //go to next view controller
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goKitchenVC") as! HomeKitchenViewController
-                            self.present(nextViewController, animated: true, completion: nil)
-
-                        }else{
-                            self.showAlert(title: "Error11".localize, messages: nil, message:" status msg is \(model.status_message!)", selfDismissing: false)
-                        }
-                        break
-                    case .failure(let err):
-                        print(err!.localizedDescription)
-                    case .noConnection(let Message):
-                        self.showAlert(title: "Error".localize, messages: nil, message: Message, selfDismissing: false)
+            API.GetData(AllLoginResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.login, method: .post, parameters : ["username" : phone,"password" : password], userToken: nil) {[weak self] (result) in
+                guard let self = self else {return}
+                switch result {
+                case .success(let model):
+                    print("model = \(model)")
+                    if model.status_message == nil{
+                        
+                        let userName = model.data?.name
+                        let userEmail = model.data?.email
+                        let userId = model.data?.id
+                        let userPhone = model.data?.phone
+                        let userVerfied = model.data?.verified
+                        let userToken = model.token
+//                        let logoImage = model.data?.logo
+//                        let userLat = model.data?.latitude
+//                        let userLong = model.data?.longitude
+//
+                        UserDefaultData.save_user_data(token: userToken, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
+                        //go to next view controller
+                //     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        //  let nextViewController = storyBoard.instantiateViewController(withIdentifier: "multiVC") as! UITabBarController
+                        //self.present(nextViewController, animated: true, completion: nil)
+                        //  }else{
+                        self.showAlert(title: "Error".localize, messages: nil, message: model.status_message!, selfDismissing: false)
                     }
+                    break
+                case .failure(let err):
+                    print(err!.localizedDescription)
+                case .noConnection(let Message):
+                    self.showAlert(title: "Error".localize, messages: nil, message: Message!, selfDismissing: false)
                 }
-        }else{
-            showAlert(title: "error", messages: nil, message: "please enter the correct phone", selfDismissing: false)
+            }
         }
-    }
-    
+        
+ }
+
     @IBAction func showPasswordButton(_ sender: UIButton) {
         let showImage = UIImage(named: "active_eye")
         let unShowImage = UIImage(named: "b-preview-outline-24")
-        
+
         if passwordTxtField.isSecureTextEntry == true{
             passwordTxtField.isSecureTextEntry = false
             showPassOutlet.setImage(showImage, for: .normal)
         }else if passwordTxtField.isSecureTextEntry == false{
             passwordTxtField.isSecureTextEntry = true
             showPassOutlet.setImage(unShowImage, for: .normal)
-            
+
         }
     }
-    
+//
     func Localize(){
         phoneTxtField.placeholder = "+974 000 000 00".localize
         passwordTxtField.placeholder = "password".localize
@@ -110,14 +106,13 @@ class signInViewController: UIViewController {
         forgetPassOutlet.setTitle("Forget Your Password?", for: .normal)
         signUpOutlet.setTitle("Sign Up", for: .normal)
         dontHaveAccLabel.text = "Don't Have Account?".localize
-        
+
     }
-    
+
     @IBAction func signUpButton(_ sender: Any) {
    performSegue(withIdentifier: "signUp", sender: self)
-        
+
     }
-    
 }
 
 
