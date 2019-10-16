@@ -16,7 +16,10 @@ class changePassPopUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func doneButton(_ sender: Any) {
-        
+        //   go to next view controller
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "multiVC") as! UITabBarController
+        self.present(nextViewController, animated: true, completion: nil)
     }
   
 }

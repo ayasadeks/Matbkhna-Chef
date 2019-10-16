@@ -8,105 +8,107 @@
 
 import Foundation
 
-import UIKit
 extension SelectAreaViewController {
-    //            keyFlag = "countryKey"
-    //    keyFlag = "country"
-    
     @objc func HandelRefresh(){
         self.refresher.endRefreshing()
         guard !isLoading else {return}
         isLoading = true
-        API.showSVProgress()
-        if keyFlag == "city" {
-            API.Country(key: "", countryId: countryId) { (sucess, countryArray, last_page) in
-                if sucess && countryArray != nil{
-                    print("running")
+        if keyFlag == "country" {
+            API.GetData(AllResponseData.self, language: self.getCurrentDeviceLanguage(), url: URLS.country, method: .get, parameters: ["page": 1], userToken: nil) {[weak self] (result) in
+                guard let self = self else {return}
+                switch result {
+                case .success(let model):
                     self.isLoading = false
-                    if let countryArray = countryArray{
-                        self.countryArray = countryArray
+                    if model.data?.count != 0{
+                        print("model = \(model)")
+                        self.countryArray = model.data!
                         self.tableView.reloadData()
                         self.current_page = 1
-                        self.last_page = last_page
-                        API.dismissSVProgress()
+                        self.last_page = (model.paginate?.total_pages!)!
                     }
-                }else if sucess && countryArray == nil{
-                    self.showToast(message: "There Is Error".localize)
-                }else{
-                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+                    break
+                case .failure(let err):
+                    print(err!.localizedDescription)
+                case .noConnection(let Message):
+                    self.showAlert(title: "Error".localize, messages: nil, message: Message!, selfDismissing: false)
                 }
             }
+            
         }//end of if key flag
-        else if keyFlag == "cityKey"{
-            API.Country(key: searchKey, countryId: countryId!) { (sucess, countryArray, last_page) in
-                if sucess && countryArray != nil{
-                    print("its ok")
+        else if keyFlag == "countryKey"{
+            API.GetData(AllResponseData.self, language: self.getCurrentDeviceLanguage(), url: URLS.country, method: .get, parameters: ["page": 1 , "keyword" : searchKey ], userToken: nil) {[weak self] (result) in
+                guard let self = self else {return}
+                switch result {
+                case .success(let model):
                     self.isLoading = false
-                    if let countryArray = countryArray{
-                        self.countryArray = countryArray
+                    
+                    if model.data?.count != 0{
+                        print("model = \(model)")
+                        self.countryArray = model.data!
                         self.tableView.reloadData()
                         self.current_page = 1
-                        self.last_page = last_page
-                        API.dismissSVProgress()
+                        self.last_page = (model.paginate?.total_pages!)!
                     }
-                }else if sucess && countryArray == nil{
-                    self.showToast(message: "There Is Error".localize)
-                }else{
-                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+                    break
+                case .failure(let err):
+                    print(err!.localizedDescription)
+                case .noConnection(let Message):
+                    self.showAlert(title: "Error".localize, messages: nil, message: Message!, selfDismissing: false)
                 }
             }
         }
-        
     }//end of handel refresh
     //to handel refresh for frist time
     func LoadMore(){
         guard !isLoading else{ return}
+        print("current_page\(current_page)")
+        print("last_page\(last_page)")
         
         guard current_page < last_page else {return}
-        print("current_page\(current_page),last_page\(last_page)")
         isLoading = true
-        if keyFlag == "city" {
-            API.Country(page: current_page+1, key: "", countryId: countryId!) { (sucess, countryArray, last_page) in
-                if sucess && countryArray != nil{
-                    print("its ok")
+        if keyFlag == "country" {
+            API.GetData(AllResponseData.self, language: self.getCurrentDeviceLanguage(), url: URLS.country, method: .get, parameters: ["page": current_page+1], userToken: nil) {[weak self] (result) in
+                guard let self = self else {return}
+                switch result {
+                case .success(let model):
                     self.isLoading = false
-                    self.isLoading = false
-                    if let countryArray = countryArray{
-                        self.countryArray.append(contentsOf: countryArray)
-                        API.dismissSVProgress()
+                    if model.data?.count != 0{
+                        print("model = \(model)")
+                        self.countryArray.append(contentsOf: model.data!)
                         self.tableView.reloadData()
                         self.current_page += 1
-                        self.last_page = last_page
+                        self.last_page = (model.paginate?.total_pages!)!
                     }
-                }else if sucess && countryArray == nil{
-                    self.showToast(message: "There Is Error".localize)
-                }else{
-                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+                    break
+                case .failure(let err):
+                    print(err!.localizedDescription)
+                case .noConnection(let Message):
+                    self.showAlert(title: "Error".localize, messages: nil, message: Message!, selfDismissing: false)
                 }
             }
             
-        }//end of key flag if
-        else if keyFlag == "cityKey"{
-            API.Country(page: current_page+1, key: searchKey, countryId: countryId!) { (sucess, countryArray, last_page) in
-                if sucess && countryArray != nil{
-                    print("its ok")
+        }//end of if key flag
+        else if keyFlag == "countryKey"{
+            API.GetData(AllResponseData.self, language: self.getCurrentDeviceLanguage(), url: URLS.country, method: .get, parameters: ["page": current_page+1 , "keyword" : searchKey ], userToken: nil) {[weak self] (result) in
+                guard let self = self else {return}
+                switch result {
+                case .success(let model):
                     self.isLoading = false
-                    self.isLoading = false
-                    if let countryArray = countryArray{
-                        self.countryArray.append(contentsOf: countryArray)
-                        API.dismissSVProgress()
+                    if model.data?.count != 0{
+                        print("model = \(model)")
+                        self.countryArray.append(contentsOf: model.data!)
                         self.tableView.reloadData()
                         self.current_page += 1
-                        self.last_page = last_page
+                        self.last_page = (model.paginate?.total_pages!)!
+                        
                     }
-                }else if sucess && countryArray == nil{
-                    self.showToast(message: "There Is Error".localize)
-                }else{
-                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+                    break
+                case .failure(let err):
+                    print(err!.localizedDescription)
+                case .noConnection(let Message):
+                    self.showAlert(title: "Error".localize, messages: nil, message: Message!, selfDismissing: false)
                 }
             }
         }
-    }
-    
-    
+    }//end of load more function
 }//end of extension

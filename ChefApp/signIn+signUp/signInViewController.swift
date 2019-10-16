@@ -67,11 +67,11 @@ class signInViewController: UIViewController {
 //                        let userLong = model.data?.longitude
 //
                         UserDefaultData.save_user_data(token: userToken, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
-                        //go to next view controller
-                //     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        //  let nextViewController = storyBoard.instantiateViewController(withIdentifier: "multiVC") as! UITabBarController
-                        //self.present(nextViewController, animated: true, completion: nil)
-                        //  }else{
+                //   go to next view controller
+                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                          let nextViewController = storyBoard.instantiateViewController(withIdentifier: "multiVC") as! UITabBarController
+                        self.present(nextViewController, animated: true, completion: nil)
+                          }else{
                         self.showAlert(title: "Error".localize, messages: nil, message: model.status_message!, selfDismissing: false)
                     }
                     break

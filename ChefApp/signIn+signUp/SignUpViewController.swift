@@ -125,15 +125,15 @@ class SignUpViewController: UIViewController {
     @IBAction func selectAreaButton(_ sender: Any) {
         
         //go to next view controller
-//        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaPopUpViewController
-//        
-//        self.addChild(popvc)
-//        
-//        popvc.view.frame = self.view.frame
-//        
-//        self.view.addSubview(popvc.view)
-//        
-//        popvc.didMove(toParent: self)
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+        
+        self.addChild(popvc)
+        
+        popvc.view.frame = self.view.frame
+        
+        self.view.addSubview(popvc.view)
+        
+        popvc.didMove(toParent: self)
     }
 }
     
@@ -146,80 +146,3 @@ class SignUpViewController: UIViewController {
 //    }
    
 
-
-//extension API {
-//    class func Register(name: String, email:String , phone: String ,user_type: Int, password:String, completion:  @escaping ( _ success: Bool , _ ErrorMessage: String?) -> Void){
-//        let url = URLS.register
-//        let parameters = [
-//            "name": name,
-//            "email" : email,
-//           // "area" : area,
-//            "phone" : phone,
-//            "user_type" : user_type,
-//            "password" : password
-//            ] as [String : Any]
-//        API.showSVProgress()
-//        let decoder = JSONDecoder()
-//        Alamofire.request(url,method: .post , parameters: parameters).responseDecodableObject(decoder: decoder) { (response: DataResponse<AllRegisterResponseData> ) in
-//            print("response is\(response)")
-//            let responseStatus = response.result
-//            print("responseStatus\(responseStatus)")
-//            ///ResponseStatus check there is connection or not
-//            ///SUCCESS--> there is connection
-//            ///FAILOUR--> there is no connection
-//            if "\(responseStatus)" == "SUCCESS"{
-//
-//                print("there is connection")
-//                let responseValue = response.result.value
-//                if responseValue?.status_code == 200{
-//                    print("there is no errors")
-//
-//                    let userName = responseValue?.data?.name
-//                    let userEmail = responseValue?.data?.email
-//                    let userId = responseValue?.data?.id
-//                    let userPhone = responseValue?.data?.phone
-//                    let userVerfied = responseValue?.data?.verified
-//                    let userToken = responseValue?.token
-//                    let logoImage = responseValue?.data?.logo
-//                    let userLat = responseValue?.data?.latitude
-//                    let userLong = responseValue?.data?.longitude
-//
-//                    UserDefaultData.save_user_data(token: userToken, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied, image: logoImage, lat: userLat, long: userLong)
-//
-//
-//                    API.dismissSVProgress()
-//                    completion( true, "no error")
-//
-//                }else if responseValue?.status_code == 422{
-//                        print("there is errors")
-//                        let EmailerrorMessage = responseValue?.errors?.email
-//                        if EmailerrorMessage == nil{
-//                            let phoneerrorMessage = responseValue?.errors?.phone
-//                            if phoneerrorMessage?.count == 0{
-//                                return
-//                            }else{
-//                                print("phoneerrorMessage\(String(describing: phoneerrorMessage))")
-//                                API.dismissSVProgress()
-//                                completion(true, phoneerrorMessage![0])
-//
-//                            }
-//                        }else{
-//                            print("EmailerrorMessage\(String(describing: EmailerrorMessage))")
-//                            API.dismissSVProgress()
-//                            completion(true, EmailerrorMessage![0])
-//                        }
-//                }else{
-//                    print("there is no connection")
-//                    API.dismissSVProgress()
-//                    completion(false,nil)
-//                }
-////
-////            case .failure(let encodingError):
-////            print(encodingError)
-//
-//
-//
-//            }
-//        }//end of alamofire
-//    }//end of class function
-//}//end of extension

@@ -12,17 +12,16 @@ class SelectAreaViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextFeild: leftImage_cornerRadious!
-    //use protocol&delegate (to pass data from city to location view controller... to pass data from C -> A we pass it from C -> B then from B -> c)
-    var countryName : String?
-    var delegate : setCityAndCountryNameDelegate?
-    var cityName : String?
-    var countryId : Int?
-    //pagination variables i used
+  
+    var delegat : sendCountryId?
     var countryArray = [AreaArrayData]()
     var searchKey = String()
     var current_page = 1
     var last_page = 1
     var isLoading : Bool = false
+    var keyFlag = String()
+    var countryId = Int()
+    var countryName = String()
     //to make table view refresh
     lazy var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
@@ -31,7 +30,6 @@ class SelectAreaViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //to delete extra cells in table view
         self.title = "Choose City".localize
         self.searchTextFeild.placeholder = "Search".localize
@@ -39,15 +37,31 @@ class SelectAreaViewController: UIViewController {
         tableView.separatorInset = .zero
         tableView.contentInset = .zero
         tableView.addSubview(refresher)
-        keyFlag = "city"
+        keyFlag = "country"
         searchTextFeild.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         HandelRefresh()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    func sendCountryId_Name(CountryId: Int, CountryName: String) {
+        countryId = CountryId
+        countryName = CountryName
+        searchTextFeild.text = CountryName
+    }
     
 }
 
 
+
+// search area tableView Cell
 extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print("countryArray.count\(countryArray.count)")
@@ -58,35 +72,32 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath) as! SelectAreaTableViewCell
         if self.getCurrentDeviceLanguage() == "ar" {
             cell.cityLabel.text = countryArray[indexPath.row].title
-            
+
         }else if self.getCurrentDeviceLanguage() == "en"{
             cell.cityLabel.text = countryArray[indexPath.row].titleEng
         }
         return cell
     }//end of cellForRowAt
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 80
+        return 50
         
     }//end of heightForRowAt
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if self.getCurrentDeviceLanguage() == "ar" {
-            cityName = countryArray[indexPath.row].title
+            delegat?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].title!)
             
         }else if self.getCurrentDeviceLanguage() == "en"{
-            cityName = countryArray[indexPath.row].titleEng
+            delegat?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].titleEng!)
         }
-        if delegate != nil{
-            delegate?.setCityAndCountryNameFunc(cityName: cityName! , countryName: self.countryName!, locationID: countryId!)
-            //print("countryId\(countryId)")
-        }
-        navigationController?.popToRootViewController(animated: true)
-        
+        self.navigationController?.popViewController(animated: true)
         
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        cellToDeSelect.contentView.backgroundColor = UIColor.white
+//        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+//        cellToDeSelect.contentView.backgroundColor = UIColor.white
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

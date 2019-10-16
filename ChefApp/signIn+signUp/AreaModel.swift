@@ -7,6 +7,14 @@
 //
 
 import Foundation
+
+struct AllResponseData : Codable{
+    let data: [AreaArrayData]?
+    let paginate: Paginate?
+    let status_code : Int?
+    let status_message : String?
+}
+
 struct AreaArrayData: Codable {
     let id : Int?
     let title : String?
@@ -20,8 +28,4 @@ struct Paginate : Codable {
     let limit : Int?
     
 }
-struct AllResponseData : Codable{
-    let data: [AreaArrayData]?
-    let paginate: Paginate?
-    let status_code : Int?
-}
+

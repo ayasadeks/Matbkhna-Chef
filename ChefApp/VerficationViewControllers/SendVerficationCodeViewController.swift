@@ -61,7 +61,7 @@ class SendVerficationCodeViewController: UIViewController {
     }
     func AskCode(){
 
-        API.GetData(AllAskVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.askVerficationCode, method: .post, parameters: ["api_token": userToke!], userToken: userToke) {[weak self] (result) in
+        API.GetData(AllAskVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.askVerficationCode, method: .post, parameters: ["api_token": userToke], userToken: userToke) {[weak self] (result) in
             guard let self = self else {return}
 
             switch result {
@@ -101,7 +101,7 @@ extension SendVerficationCodeViewController{
                     
                     self.code = "\(self.textField1.text!)\(self.textField2.text!)\(self.textField3.text!)\(self.textField4.text!)\(self.textField5.text!)\(self.textField6.text!)"
                     
-                    API.GetData(AllSendVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.sendVerficationCode, method: .post, parameters: ["verify_token" : phone! ,"api_token": userToke!], userToken: userToke) {[weak self] (result) in
+                    API.GetData(AllSendVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.sendVerficationCode, method: .post, parameters: ["verify_token" : phone ,"api_token": userToke], userToken: userToke) {[weak self] (result) in
                         guard let self = self else {return}
 
                         switch result {
@@ -168,7 +168,7 @@ extension SendVerficationCodeViewController{
                     textField1.resignFirstResponder()
                     self.code = "\(self.textField6.text!)\(self.textField5.text!)\(self.textField4.text!)\(self.textField3.text!)\(self.textField2.text!)\(self.textField1.text!)"
                     print("code\(code)")
-                    API.GetData(AllSendVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.sendVerficationCode, method: .post, parameters: ["verify_token" : code,"api_token": userToke!], userToken: userToke) {[weak self] (result) in
+                    API.GetData(AllSendVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.sendVerficationCode, method: .post, parameters: ["verify_token" : code,"api_token": userToke], userToken: userToke) {[weak self] (result) in
                         guard let self = self else {return}
 
                         switch result {

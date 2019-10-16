@@ -27,7 +27,7 @@ class ChangePasswordViewController: UIViewController {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter empty field".localize, selfDismissing: false)
             return
         }
-        let parameters = ["verify_token" : userToke, "password" : password, "phone" : phone]
+        let parameters : [String : Any] = ["verify_token" : userToke!, "password" : password, "phone" : phone]
         
         API.GetData(AllChangePasswordResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.resetPassword, method: .post, parameters: parameters , userToken: userToke) {[weak self] (result) in
             guard let self = self else {return}
@@ -37,17 +37,17 @@ class ChangePasswordViewController: UIViewController {
                 print("model = \(model)")
                 if model.status_code == 200 {
                     print("donnnne")
-//                    let userName = model.data?.name
-//                    let userEmail = model.data?.email
-//                    let userId = model.data?.id
-//                    let userPhone = model.data?.phone
-//                    let userVerfied = model.data?.verified
-//                   // let userToken = model.da
-//                    ////                            let logoImage = model.data?.logo
-//                    ////                            let userLat = model.data?.latitude
-//                    ////                            let userLong = model.data?.longitude
-//                    //
-//                    UserDefaultData.save_user_data(token: userToken, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
+                    let userName = model.data?.name
+                    let userEmail = model.data?.email
+                    let userId = model.data?.id
+                    let userPhone = model.data?.phone
+                    let userVerfied = model.data?.verified
+                   // let userToken = model.da
+                    ////                            let logoImage = model.data?.logo
+                    ////                            let userLat = model.data?.latitude
+                    ////                            let userLong = model.data?.longitude
+                    //
+                    UserDefaultData.save_user_data(token: self.userToke, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
                     
                     
                     //go to next view controller

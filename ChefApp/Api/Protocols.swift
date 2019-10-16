@@ -9,9 +9,6 @@
 import Foundation
 
 import UIKit
-protocol setCityAndCountryNameDelegate {
-    func setCityAndCountryNameFunc(cityName: String , countryName: String , locationID: Int)
-}
-protocol passCityNameTofirstView {
-    func passCityNameTofirstViewFunc(cityName: String , countryName: String , LocatioID : Int)
+protocol sendCountryId {
+    func sendCountryId_Name(CountryId: Int , CountryName : String)
 }

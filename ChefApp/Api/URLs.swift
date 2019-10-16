@@ -47,6 +47,10 @@ struct URLS {
         ///GET(TO GET USER WORK HOURS)
         static let getWorkHour = main + "users/"
     
+    ///POST(TO SET DISHES EXETRAS)
+    static let addDishesExetra = main + "extras/add"
+    
+    
     
     
 

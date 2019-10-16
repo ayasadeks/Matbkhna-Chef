@@ -28,7 +28,7 @@ class SendPhoneNumViewController: UIViewController {
     @IBAction func confirmButton(_ sender: Any) {
         
        //  send phone to get the code
-        API.GetData(AllSendVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.sendVerficationCode, method: .post, parameters: ["verify_token": phoneTxtField.text!], userToken: userToke) {[weak self] (result) in
+        API.GetData(AllSendVerficationCode.self, language: self.getCurrentDeviceLanguage(), url: URLS.sendVerficationCode, method: .post, parameters: ["verify_token": phoneTxtField.text], userToken: userToke) {[weak self] (result) in
             guard let self = self else {return}
 
             switch result {

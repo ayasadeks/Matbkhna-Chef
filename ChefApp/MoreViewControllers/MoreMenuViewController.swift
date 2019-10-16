@@ -40,7 +40,7 @@ class MoreMenuViewController: UIViewController {
     @objc func someAction(_ sender:UITapGestureRecognizer){
         // do task
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "nextView") as! EditProfileViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "resturantDetailesVC") as! ResturantDetailes
         self.present(nextViewController, animated:true, completion:nil)
     }
     
