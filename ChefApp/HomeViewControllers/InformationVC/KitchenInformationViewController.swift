@@ -29,7 +29,7 @@ class KitchenInformationViewController: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     @IBAction func categoryButton(_ sender: Any) {

@@ -27,7 +27,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBAction func backButton(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     

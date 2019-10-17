@@ -1,9 +1,9 @@
 //
-//  GetDishes+APi.swift
-//  Mtbkhna_Cooker
+//  GetDishes+Api.swift
+//  ChefApp
 //
-//  Created by apple on 6/15/19.
-//  Copyright © 2019 Mobileaders. All rights reserved.
+//  Created by Admin on 9/19/19.
+//  Copyright © 2019 Admin. All rights reserved.
 //
 
 import UIKit

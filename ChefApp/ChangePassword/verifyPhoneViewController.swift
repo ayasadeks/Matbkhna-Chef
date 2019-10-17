@@ -16,6 +16,10 @@ class verifyPhoneViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+    }
+    
     @IBOutlet weak var phoneTxtField: UITextField!
     
     @IBAction func nextButton(_ sender: Any) {
@@ -37,7 +41,7 @@ class verifyPhoneViewController: UIViewController {
                     print("model\(model)")
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "changePassword") as! ChangePasswordViewController
-                    self.present(nextViewController, animated: true, completion: nil)
+                    self.present(nextViewController, animated: false, completion: nil)
                     self.showAlert(title: "DONE", messages: nil, message: "go change password", selfDismissing: true)
                 }
                 break

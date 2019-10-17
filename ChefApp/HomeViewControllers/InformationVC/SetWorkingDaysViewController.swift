@@ -48,7 +48,7 @@ class SetWorkingDaysViewController: UIViewController {
         let setWorkingTimeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "setWorkingTimeVC") as! setWorkingTimeViewController
         setWorkingTimeVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         setWorkingTimeVC.dayId = dayId
-        self.present(setWorkingTimeVC, animated: true)
+        self.present(setWorkingTimeVC, animated: false)
     }
 }
 

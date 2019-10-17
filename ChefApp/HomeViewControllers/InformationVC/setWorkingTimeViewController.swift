@@ -65,7 +65,7 @@ class setWorkingTimeViewController: KitchenInformationViewController {
                     self.dismiss(animated: true, completion: nil)
                 let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
                     
-            self.navigationController?.pushViewController(getWorkingTimeVC, animated: true)
+            self.navigationController?.pushViewController(getWorkingTimeVC, animated: false)
                 }else{
                     self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
                 }

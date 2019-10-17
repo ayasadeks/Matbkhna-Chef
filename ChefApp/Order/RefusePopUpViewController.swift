@@ -20,8 +20,6 @@ class RefusePopUpViewController: UIViewController {
     @IBAction func NoButton(_ sender: Any) {
     }
     
-    @IBAction func noButton(_ sender: Any) {
-    }
-    
+
 
 }

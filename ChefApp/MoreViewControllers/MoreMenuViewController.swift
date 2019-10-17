@@ -41,14 +41,14 @@ class MoreMenuViewController: UIViewController {
         // do task
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "resturantDetailesVC") as! ResturantDetailes
-        self.present(nextViewController, animated:true, completion:nil)
+        self.present(nextViewController, animated:false, completion:nil)
     }
     
     @objc func doAction(_ sender:UITapGestureRecognizer){
         // do task
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "resturantDetailesVC") as! ResturantDetailes
-        self.present(nextViewController, animated:true, completion:nil)
+        self.present(nextViewController, animated:false, completion:nil)
     }
     
 }

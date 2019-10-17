@@ -49,7 +49,8 @@ struct URLS {
     
     ///POST(TO SET DISHES EXETRAS)
     static let addDishesExetra = main + "extras/add"
-    
+    //GET to get extra items
+    static let getExtraItems = main + "extras/get"
     
     
     

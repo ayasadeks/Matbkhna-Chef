@@ -32,7 +32,7 @@ class NotificationsViewController: UIViewController {
         //go to next view controller
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "moreVC") as! MoreMenuViewController
-        self.present(nextViewController, animated: true, completion: nil)
+        self.present(nextViewController, animated: false, completion: nil)
 
 
     }

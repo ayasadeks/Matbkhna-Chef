@@ -20,7 +20,7 @@ class ChangePasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func backButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     @IBAction func changePasswordButton(_ sender: ButtonCornerRadious) {
         guard let password = passwordTextField.text , !password.isEmpty, let newPassword = confirmPasswordTxtField.text , !newPassword.isEmpty  else{

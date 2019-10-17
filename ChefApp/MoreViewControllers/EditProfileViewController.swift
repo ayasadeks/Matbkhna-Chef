@@ -28,7 +28,7 @@ class EditProfileViewController: UIViewController {
         viewShadow.dropShadow(color: .lightGray, alpha: 0.8, x: 0, y: 10, blur: 30, spread: 0)
     }
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     @IBAction func doneButton(_ sender: Any) {
     }

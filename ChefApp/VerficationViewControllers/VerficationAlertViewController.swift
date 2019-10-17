@@ -20,7 +20,7 @@ class VerficationAlertViewController: UIViewController {
         //go to next view
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
-        self.present(nextViewController, animated: true, completion: nil)
+        self.present(nextViewController, animated: false, completion: nil)
         
     }
     

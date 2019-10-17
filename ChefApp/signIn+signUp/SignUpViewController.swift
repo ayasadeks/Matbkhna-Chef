@@ -107,7 +107,7 @@ class SignUpViewController: UIViewController {
                             //go to next view
                             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "verfication") as! SendVerficationCodeViewController
-                            self.present(nextViewController, animated: true, completion: nil)
+                            self.present(nextViewController, animated: false, completion: nil)
 
                         }else{
                             self.showAlert(title: "Error11".localize, messages: nil, message: model.status_message!, selfDismissing: false)
@@ -123,17 +123,17 @@ class SignUpViewController: UIViewController {
    }
     
     @IBAction func selectAreaButton(_ sender: Any) {
-        
-        //go to next view controller
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
-        
-        self.addChild(popvc)
-        
-        popvc.view.frame = self.view.frame
-        
-        self.view.addSubview(popvc.view)
-        
-        popvc.didMove(toParent: self)
+//
+//        //go to next view controller
+//        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+//
+//        self.addChild(popvc)
+//
+//        popvc.view.frame = self.view.frame
+//
+//        self.view.addSubview(popvc.view)
+//
+//        popvc.didMove(toParent: self)
     }
 }
     

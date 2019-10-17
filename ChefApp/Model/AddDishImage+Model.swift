@@ -1,9 +1,10 @@
 //
+
 //  AddDishImage+Model.swift
-//  Mtbkhna_Cooker
+//  ChefApp
 //
-//  Created by apple on 6/14/19.
-//  Copyright © 2019 Mobileaders. All rights reserved.
+//  Created by Admin on 9/29/19.
+//  Copyright © 2019 All rights reserved.
 //
 
 struct AllAddDishImageResponseData: Codable {

@@ -1,9 +1,9 @@
 //
 //  ViewCornerRadios.swift
-//  DalelMoshia
+//  ChefApp
 //
-//  Created by apple on 6/29/19.
-//  Copyright © 2019 panorama. All rights reserved.
+//  Created by Admin on 0/21/19.
+//  Copyright © 2019 Admin. All rights reserved.
 //
 
 

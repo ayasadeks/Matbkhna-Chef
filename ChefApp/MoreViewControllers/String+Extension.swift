@@ -1,10 +1,3 @@
-//
-//  String+Extension.swift
-//  DalelMoshia
-//
-//  Created by apple on 6/29/19.
-//  Copyright © 2019 panorama. All rights reserved.
-//
 
 import UIKit
 

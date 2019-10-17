@@ -41,12 +41,12 @@ class HomeKitchenViewController: UIViewController{
         //go to next view controller
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goSearch") as! SearchViewController
-        self.present(nextViewController, animated: true, completion: nil)
+        self.present(nextViewController, animated: false, completion: nil)
     }
     @IBAction func addButton(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goMenu") as! AddDishesViewController
-        self.present(nextViewController, animated: true, completion: nil)
+        self.present(nextViewController, animated: false, completion: nil)
     }
 }
     
