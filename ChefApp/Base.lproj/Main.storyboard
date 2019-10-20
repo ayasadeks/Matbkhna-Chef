@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fTR-JD-7Np">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,13 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
-            <string>URWDINArabic-Regular</string>
-        </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Black.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -25,6 +22,9 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
+        </array>
+        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
+            <string>URWDINArabic-Regular</string>
         </array>
         <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
@@ -2961,7 +2961,7 @@ Chicken Rice Salad</string>
                                                             <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYt-c7-ZjA">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYt-c7-ZjA">
                                                             <rect key="frame" x="207" y="18" width="81" height="18"/>
                                                             <color key="backgroundColor" red="0.015686274509803921" green="0.6470588235294118" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
@@ -2972,8 +2972,8 @@ Chicken Rice Salad</string>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-ew-3Qf">
-                                                            <rect key="frame" x="63" y="107" width="48" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-ew-3Qf">
+                                                            <rect key="frame" x="63" y="107" width="37" height="17"/>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="13"/>
                                                             <color key="textColor" red="0.17254901959999999" green="0.76078431369999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -3952,10 +3952,10 @@ Chicken Rice Salad</string>
             </objects>
             <point key="canvasLocation" x="-1257" y="2073"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Order Details View Controller-->
         <scene sceneID="WLW-ks-3Nt">
             <objects>
-                <viewController storyboardIdentifier="orderDetails" id="SjA-bJ-kpA" customClass="DetailsViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="orderDetails" id="SjA-bJ-kpA" customClass="OrderDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cff-ef-naC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4270,6 +4270,9 @@ Chicken Rice Salad</string>
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="foodDetailsLabel" destination="7Zf-aJ-1Es" id="0it-4P-2y6"/>
+                        <outlet property="foodNameLabel" destination="SHP-UP-jqx" id="KHO-D6-jfv"/>
+                        <outlet property="orderName" destination="eaa-q4-KLe" id="PUF-07-SXt"/>
                         <outlet property="shadowView" destination="UES-BT-tzK" id="kQc-nd-c8p"/>
                     </connections>
                 </viewController>

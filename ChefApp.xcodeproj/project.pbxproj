@@ -87,7 +87,6 @@
 		84E4DC22233112C7001B935A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4DC21233112C7001B935A /* RegisterModel.swift */; };
 		84EB008823312A5E00388892 /* ShadowClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB008723312A5E00388892 /* ShadowClass.swift */; };
 		84EB008A23313C7F00388892 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB008923313C7F00388892 /* ChangePasswordViewController.swift */; };
-		84EDDA61233A3D270075D4C7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDA60233A3D270075D4C7 /* DetailsViewController.swift */; };
 		84EDDA63233A53E70075D4C7 /* AcceptPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDA62233A53E70075D4C7 /* AcceptPopUpViewController.swift */; };
 		84EDDA65233A5A720075D4C7 /* RefusePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDA64233A5A720075D4C7 /* RefusePopUpViewController.swift */; };
 		84EDDA67233A5C770075D4C7 /* VerficationAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDDA66233A5C770075D4C7 /* VerficationAlertViewController.swift */; };
@@ -116,6 +115,7 @@
 		84FC94BA2354CF3D00EAA8AC /* AddDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */; };
 		84FD362023393F1F006D7CB1 /* setWorkingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */; };
 		84FE891A233A134D00868140 /* verifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE8919233A134D00868140 /* verifyPhoneViewController.swift */; };
+		84FF2BD7235CA26700529ACF /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF2BD6235CA26700529ACF /* OrderDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,7 +203,6 @@
 		84E4DC21233112C7001B935A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		84EB008723312A5E00388892 /* ShadowClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowClass.swift; sourceTree = "<group>"; };
 		84EB008923313C7F00388892 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
-		84EDDA60233A3D270075D4C7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		84EDDA62233A53E70075D4C7 /* AcceptPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptPopUpViewController.swift; sourceTree = "<group>"; };
 		84EDDA64233A5A720075D4C7 /* RefusePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefusePopUpViewController.swift; sourceTree = "<group>"; };
 		84EDDA66233A5C770075D4C7 /* VerficationAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerficationAlertViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +231,7 @@
 		84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishesViewController.swift; sourceTree = "<group>"; };
 		84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setWorkingTimeViewController.swift; sourceTree = "<group>"; };
 		84FE8919233A134D00868140 /* verifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyPhoneViewController.swift; sourceTree = "<group>"; };
+		84FF2BD6235CA26700529ACF /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,12 +430,12 @@
 				84CFF303233A361C00717753 /* OrderViewController.swift */,
 				84526CB5234385BD000E7B50 /* GetOrders+APi.swift */,
 				84CFF305233A364100717753 /* OrderTableViewCell.swift */,
-				84EDDA60233A3D270075D4C7 /* DetailsViewController.swift */,
 				84EDDA62233A53E70075D4C7 /* AcceptPopUpViewController.swift */,
 				84EDDA64233A5A720075D4C7 /* RefusePopUpViewController.swift */,
 				84747248233BA67B00F5E2D7 /* FinishOrderPopUpViewController.swift */,
 				8474724A233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift */,
 				8474724C233BA9D300F5E2D7 /* RefuseOrderReasonViewController.swift */,
+				84FF2BD6235CA26700529ACF /* OrderDetailsViewController.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -789,7 +789,6 @@
 				84F7457C2331045C00C00AD8 /* SendVerficationCodeViewController.swift in Sources */,
 				84F745712330F1E200C00AD8 /* LoginModel.swift in Sources */,
 				844367A0234F746E0083DEBC /* GetAreaExtension.swift in Sources */,
-				84EDDA61233A3D270075D4C7 /* DetailsViewController.swift in Sources */,
 				84F745762330F7BD00C00AD8 /* API.swift in Sources */,
 				8439A902233678780081484A /* SettingsViewController.swift in Sources */,
 				84E4DC1C23310F91001B935A /* UserDefaultData.swift in Sources */,
@@ -810,6 +809,7 @@
 				8492BB7D2332676000540887 /* AskVerficationModel.swift in Sources */,
 				84FB857F23328815002B9BF4 /* resturantDetailes_Model.swift in Sources */,
 				84FB856D233287DD002B9BF4 /* RAReviewsCVC.swift in Sources */,
+				84FF2BD7235CA26700529ACF /* OrderDetailsViewController.swift in Sources */,
 				845DB47D23575442001C03B2 /* AddExtraDishes.swift in Sources */,
 				84526CB423436C2F000E7B50 /* GetOrderModel.swift in Sources */,
 				84FB8581233288AE002B9BF4 /* KitchenModel.swift in Sources */,

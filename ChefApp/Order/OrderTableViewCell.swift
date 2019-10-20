@@ -36,17 +36,17 @@ class OrderTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
  
     @IBAction func viewOrderButton(_ sender: Any) {
      //   go to next view controller
 //        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "orderDetails") as! DetailsViewController
-//        self.present(nextViewController, animated: true, completion: nil)
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "orderDetails") as! OrderDetailsViewController
+//        present(nextViewController, animated: false, completion: nil)
 
-        
-//        let newViewController = DetailsViewController()
-//        UINavigationController?.pushViewController(newViewController, animated: true)
-//        
+//        let orderDetailsVC = UIStoryboard.instantiateViewController("orderDetails") as! OrderDetailsViewController
+//        UINavigationController?.pushViewController(orderDetailsVC, animated: true)
+
     }
     
 }

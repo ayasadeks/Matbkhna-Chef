@@ -17,6 +17,7 @@ class OrderViewController: UIViewController {
     var last_page = 1
     var isLoading : Bool = false
     var api_token = UserDefaultData.get_user_string_data(key: "userToken")
+    var status = String()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -55,17 +56,20 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrderTableViewCell
         cell.timeLabel.text = orderArray[indexPath.row].createdAt
-      //  cell.orderID.text = (orderArray[indexPath.row].id) as? String
         
-       // cell.statusLabel.text = orderArray[indexPath.row].status
-        if cell.statusLabel.text == "3"  {
-            cell.statusLabel.text = orderArray[indexPath.row].status
-            cell.statusOfOrder.text = orderArray[indexPath.row].status
-        }else if cell.statusLabel.text == "6" {
-            cell.statusLabel.text = orderArray[indexPath.row].status
-            cell.statusOfOrder.text = orderArray[indexPath.row].status
-            
-        }
+        cell.statusLabel.text = orderArray[indexPath.row].status
+//        if orderArray[indexPath.row].status == "2" {
+//            cell.statusOfOrder.text = orderArray[indexPath.row].status
+//        }
+//        }else if cell.statusLabel.text == "3" {
+//            cell.statusLabel.text = orderArray[indexPath.row].status
+//            cell.statusOfOrder.text = orderArray[indexPath.row].status
+//
+//        }else if cell.statusLabel.text == "6" {
+//            cell.statusLabel.text = orderArray[indexPath.row].status
+//            cell.statusOfOrder.text = orderArray[indexPath.row].status
+//        }
+
       
         return cell
     }
@@ -84,5 +88,16 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
         }
     }
 }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let orderDetailsVC =  self.storyboard!.instantiateViewController(withIdentifier: "orderDetails") as! OrderDetailsViewController
+        orderDetailsVC.orderName = (orderArray[indexPath.row].id) as! UILabel
+      //  orderDetailsVC.status = orderArray[indexPath.row].status!
+        orderDetailsVC.totalPriceLabel = orderArray[indexPath.row].totalPrice as! UILabel
+       // orderDetailsVC.orderDate = orderArray[indexPath.row].createdAt!
+       // orderDetailsVC.orderNumber = orderArray[indexPath.row].id!
+        navigationController?.pushViewController(orderDetailsVC, animated: true)
+    
+    }
     
 }
