@@ -12,6 +12,8 @@ import CodableAlamofire
 
 class SignUpViewController: UIViewController {
 
+    var countryryId = -1
+
     @IBOutlet weak var nameTxtField: UITextField!
  
     @IBOutlet weak var emailTxtField: UITextField!
@@ -122,8 +124,15 @@ class SignUpViewController: UIViewController {
        }
    }
     
-    @IBAction func selectAreaButton(_ sender: Any) {
-//
+    @IBAction func selectAreaButton(_ sender: UIButton) {
+
+        print("Select Area")
+        //   go to next view controller
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+                self.present(nextViewController, animated: true, completion: nil)
+
+        
 //        //go to next view controller
 //        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
 //
@@ -136,13 +145,6 @@ class SignUpViewController: UIViewController {
 //        popvc.didMove(toParent: self)
     }
 }
-    
-//    func localize(){
-//        nameTxtField.placeholder = "Full Name".localize
-//        idNumberTxtField.placeholder = "please enter your id ".localize
-//        areaTxtField.placeholder = "please select your area".localize
-//        emailTxtField.placeholder = "Email".localize
-//        nextOutlet.setTitle("Next".localize, for: .normal)
-//    }
+
    
 

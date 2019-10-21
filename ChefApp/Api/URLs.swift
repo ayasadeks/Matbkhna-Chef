@@ -43,6 +43,8 @@ struct URLS {
         static let addDishesExetra = main + "extras/add"
         //GET to get extra items
         static let getExtraItems = main + "extras/get"
+    // change order status
+    static let changeOrderStatus = main + "orders/changeStatus"
     
     
     

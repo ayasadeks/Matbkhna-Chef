@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class OrderViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +18,8 @@ class OrderViewController: UIViewController {
     var isLoading : Bool = false
     var api_token = UserDefaultData.get_user_string_data(key: "userToken")
     var status = String()
+    var id = Int()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -28,7 +30,11 @@ class OrderViewController: UIViewController {
         tableView.dataSource = self
        LoadMore()
        HandelRefresh()
+        
     }
+   
+    
+    
    // to make table view refresh
     lazy var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
@@ -40,41 +46,32 @@ class OrderViewController: UIViewController {
 
 
 
-
-
-
-
-
 extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             print("orderArray.count  \(orderArray.count)")
             return orderArray.count
         }//end of numberOfRowsInSection
-  
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrderTableViewCell
         cell.timeLabel.text = orderArray[indexPath.row].createdAt
+      //  cell.orderName.text = "\(orderArray[indexPath.row].id!)" // >> number
+
+        if  orderArray[indexPath.row].status == "2" {
+            cell.statusLabel.text = "pending"
+        }else if  orderArray[indexPath.row].status == "3" {
+            cell.statusLabel.text = "preparing"
+        }else if  orderArray[indexPath.row].status == "6" {
+            cell.statusLabel.text = "Done"
+        }
         
-        cell.statusLabel.text = orderArray[indexPath.row].status
-//        if orderArray[indexPath.row].status == "2" {
-//            cell.statusOfOrder.text = orderArray[indexPath.row].status
-//        }
-//        }else if cell.statusLabel.text == "3" {
-//            cell.statusLabel.text = orderArray[indexPath.row].status
-//            cell.statusOfOrder.text = orderArray[indexPath.row].status
-//
-//        }else if cell.statusLabel.text == "6" {
-//            cell.statusLabel.text = orderArray[indexPath.row].status
-//            cell.statusOfOrder.text = orderArray[indexPath.row].status
-//        }
 
       
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 185
     }
   
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -91,9 +88,8 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let orderDetailsVC =  self.storyboard!.instantiateViewController(withIdentifier: "orderDetails") as! OrderDetailsViewController
-        orderDetailsVC.orderName = (orderArray[indexPath.row].id) as! UILabel
-      //  orderDetailsVC.status = orderArray[indexPath.row].status!
-        orderDetailsVC.totalPriceLabel = orderArray[indexPath.row].totalPrice as! UILabel
+        orderDetailsVC.orderName.text = "\(orderArray[indexPath.row].id!)"
+        orderDetailsVC.totalPriceLabel.text = orderArray[indexPath.row].totalPrice
        // orderDetailsVC.orderDate = orderArray[indexPath.row].createdAt!
        // orderDetailsVC.orderNumber = orderArray[indexPath.row].id!
         navigationController?.pushViewController(orderDetailsVC, animated: true)

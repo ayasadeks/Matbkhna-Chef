@@ -16,6 +16,10 @@
 		843B671723355C6B002635EC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671623355C6B002635EC /* MenuTableViewCell.swift */; };
 		843B671923356CB5002635EC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671823356CB5002635EC /* EditProfileViewController.swift */; };
 		843EBBBD23324CC600C75BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843EBBBC23324CC600C75BC8 /* LaunchScreen.storyboard */; };
+		84411462235DC8A9002929B8 /* ChangeOrderStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */; };
+		84411464235DC991002929B8 /* ChangeOrderStatusAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84411463235DC991002929B8 /* ChangeOrderStatusAPI.swift */; };
+		84411466235DDA33002929B8 /* SearchAreaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84411465235DDA33002929B8 /* SearchAreaAPI.swift */; };
+		84411468235DF30B002929B8 /* GetArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84411467235DF30B002929B8 /* GetArea.swift */; };
 		8443679C234F733A0083DEBC /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443679B234F733A0083DEBC /* AreaModel.swift */; };
 		8443679E234F740E0083DEBC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443679D234F740E0083DEBC /* Protocols.swift */; };
 		844367A0234F746E0083DEBC /* GetAreaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443679F234F746E0083DEBC /* GetAreaExtension.swift */; };
@@ -130,6 +134,10 @@
 		843B671623355C6B002635EC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		843B671823356CB5002635EC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		843EBBBC23324CC600C75BC8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeOrderStatusModel.swift; sourceTree = "<group>"; };
+		84411463235DC991002929B8 /* ChangeOrderStatusAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeOrderStatusAPI.swift; sourceTree = "<group>"; };
+		84411465235DDA33002929B8 /* SearchAreaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAreaAPI.swift; sourceTree = "<group>"; };
+		84411467235DF30B002929B8 /* GetArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArea.swift; sourceTree = "<group>"; };
 		8443679B234F733A0083DEBC /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		8443679D234F740E0083DEBC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		8443679F234F746E0083DEBC /* GetAreaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAreaExtension.swift; sourceTree = "<group>"; };
@@ -330,6 +338,8 @@
 				84AD3FD1234F6D0F001CF107 /* SelectAreaTableViewCell.swift */,
 				8443679B234F733A0083DEBC /* AreaModel.swift */,
 				8443679F234F746E0083DEBC /* GetAreaExtension.swift */,
+				84411465235DDA33002929B8 /* SearchAreaAPI.swift */,
+				84411467235DF30B002929B8 /* GetArea.swift */,
 			);
 			path = "signIn+signUp";
 			sourceTree = "<group>";
@@ -436,6 +446,7 @@
 				8474724A233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift */,
 				8474724C233BA9D300F5E2D7 /* RefuseOrderReasonViewController.swift */,
 				84FF2BD6235CA26700529ACF /* OrderDetailsViewController.swift */,
+				84411463235DC991002929B8 /* ChangeOrderStatusAPI.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -457,6 +468,7 @@
 				8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */,
 				8492BB802332681500540887 /* ChangePasswordModel.swift */,
 				8456249D235603AA008FEE23 /* ForgotPasswordModel.swift */,
+				84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -756,6 +768,7 @@
 				84940FD6233FB5BE00D0A50F /* HistoryDetailsViewController.swift in Sources */,
 				84747247233B88B600F5E2D7 /* SelectAreaViewController.swift in Sources */,
 				84EDDA63233A53E70075D4C7 /* AcceptPopUpViewController.swift in Sources */,
+				84411462235DC8A9002929B8 /* ChangeOrderStatusModel.swift in Sources */,
 				84526CB6234385BD000E7B50 /* GetOrders+APi.swift in Sources */,
 				84F745732330F3E100C00AD8 /* URLs.swift in Sources */,
 				84B95C2B234E10DE00A9830E /* AddDishesModel.swift in Sources */,
@@ -773,12 +786,15 @@
 				84747243233B782D00F5E2D7 /* PricePopUpViewController.swift in Sources */,
 				84681E17232FCF6200BB3CA3 /* ViewCornerRadios.swift in Sources */,
 				8443679E234F740E0083DEBC /* Protocols.swift in Sources */,
+				84411468235DF30B002929B8 /* GetArea.swift in Sources */,
 				8443679C234F733A0083DEBC /* AreaModel.swift in Sources */,
 				84FB857A233287F9002B9BF4 /* collectionResturantDetailes.swift in Sources */,
 				84EDDA69233A5CF10075D4C7 /* changePassPopUpViewController.swift in Sources */,
+				84411466235DDA33002929B8 /* SearchAreaAPI.swift in Sources */,
 				84FA68AC235764A300564C38 /* ExtraItemsTableViewCell.swift in Sources */,
 				8464A1F823410A1C0095F516 /* SetWorkingDaysViewController.swift in Sources */,
 				84FB857E23328815002B9BF4 /* GetDishes_Model.swift in Sources */,
+				84411464235DC991002929B8 /* ChangeOrderStatusAPI.swift in Sources */,
 				8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */,
 				84747255233BCF8E00F5E2D7 /* HistoryViewController.swift in Sources */,
 				8464A1F42340C7B70095F516 /* MyWalletViewController.swift in Sources */,

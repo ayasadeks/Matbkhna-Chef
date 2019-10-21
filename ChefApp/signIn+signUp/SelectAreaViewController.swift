@@ -13,7 +13,7 @@ class SelectAreaViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextFeild: leftImage_cornerRadious!
   
-    var delegat : sendCountryId?
+    var delegate : sendCountryId?
     var countryArray = [AreaArrayData]()
     var searchKey = String()
     var current_page = 1
@@ -31,7 +31,6 @@ class SelectAreaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //to delete extra cells in table view
-        self.title = "Choose City".localize
         self.searchTextFeild.placeholder = "Search".localize
         tableView.tableFooterView = UIView()
         tableView.separatorInset = .zero
@@ -56,6 +55,7 @@ class SelectAreaViewController: UIViewController {
         countryName = CountryName
         searchTextFeild.text = CountryName
     }
+   
     
 }
 
@@ -64,7 +64,6 @@ class SelectAreaViewController: UIViewController {
 // search area tableView Cell
 extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print("countryArray.count\(countryArray.count)")
         return countryArray.count
     }//end of numberOfRowsInSection
     
@@ -76,6 +75,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         }else if self.getCurrentDeviceLanguage() == "en"{
             cell.cityLabel.text = countryArray[indexPath.row].titleEng
         }
+        
         return cell
     }//end of cellForRowAt
     
@@ -86,13 +86,24 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     }//end of heightForRowAt
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if self.getCurrentDeviceLanguage() == "ar" {
-            delegat?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].title!)
-            
-        }else if self.getCurrentDeviceLanguage() == "en"{
-            delegat?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].titleEng!)
+//
+        let searchResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
+        countryId = countryArray[indexPath.row].id!
+        if delegate != nil{
+            delegate?.sendCountryId_Name(CountryId: countryArray[indexPath.row].id!, CountryName: countryArray[indexPath.row].title!)
         }
+        searchResult.countryryId = countryArray[indexPath.row].id!
         self.navigationController?.popViewController(animated: true)
+
+//        if self.getCurrentDeviceLanguage() == "ar" {
+//            delegate?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].title!)
+//
+//        }else if self.getCurrentDeviceLanguage() == "en"{
+//            delegate?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].titleEng!)
+//        }
+//        self.navigationController?.popViewController(animated: true)
+//
+       
         
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

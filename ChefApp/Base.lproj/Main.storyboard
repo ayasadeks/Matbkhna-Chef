@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fTR-JD-7Np">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xAF-76-zQa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -218,7 +218,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="G6F-iC-daN">
             <objects>
-                <viewController id="aRD-8B-A5I" customClass="SignUpViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goSIgnUp" id="aRD-8B-A5I" customClass="SignUpViewController" customModule="ChefApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRT-aR-NSs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3024,6 +3024,7 @@ Chicken Rice Salad</string>
                                             <outlet property="statusOfOrder" destination="4TI-ew-3Qf" id="RMg-O6-0Bw"/>
                                             <outlet property="timeLabel" destination="keC-DT-9Ii" id="SNZ-wx-YKe"/>
                                             <outlet property="viewOfCell" destination="Hql-3E-vvh" id="PWS-60-jba"/>
+                                            <outlet property="vieworderBtn" destination="WMV-Ch-SXY" id="65z-jb-Csw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -4270,10 +4271,13 @@ Chicken Rice Salad</string>
                     </view>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="deliveryPriceLabel" destination="wpt-JB-NpD" id="l5H-hu-gKf"/>
                         <outlet property="foodDetailsLabel" destination="7Zf-aJ-1Es" id="0it-4P-2y6"/>
                         <outlet property="foodNameLabel" destination="SHP-UP-jqx" id="KHO-D6-jfv"/>
+                        <outlet property="foodPriceLabel" destination="bC8-Z6-Nn3" id="Vmz-p0-SBo"/>
                         <outlet property="orderName" destination="eaa-q4-KLe" id="PUF-07-SXt"/>
                         <outlet property="shadowView" destination="UES-BT-tzK" id="kQc-nd-c8p"/>
+                        <outlet property="totalPriceLabel" destination="vnu-ZX-b4K" id="BBU-Jc-HuR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkh-oZ-kkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
