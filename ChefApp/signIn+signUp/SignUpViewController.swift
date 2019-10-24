@@ -12,7 +12,9 @@ import CodableAlamofire
 
 class SignUpViewController: UIViewController {
 
-    var countryryId = -1
+  //  var countryryId = -1
+    var countryId = Int()
+    var countryName = String()
 
     @IBOutlet weak var nameTxtField: UITextField!
  
@@ -124,25 +126,32 @@ class SignUpViewController: UIViewController {
        }
    }
     
+    
+    func sendCountryId_Name(CountryId: Int, CountryName: String) {
+        countryId = CountryId
+        countryName = CountryName
+        areaTxtField.text = CountryName
+    }
+    
+    
     @IBAction func selectAreaButton(_ sender: UIButton) {
 
         print("Select Area")
-        //   go to next view controller
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
-                self.present(nextViewController, animated: true, completion: nil)
-
         
-//        //go to next view controller
-//        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
-//
-//        self.addChild(popvc)
-//
-//        popvc.view.frame = self.view.frame
-//
-//        self.view.addSubview(popvc.view)
-//
-//        popvc.didMove(toParent: self)
+        //go to next view controller
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+
+        self.addChild(popvc)
+
+        popvc.view.frame = self.view.frame
+
+        self.view.addSubview(popvc.view)
+        popvc.delegate = self as? sendCountryId
+
+        popvc.didMove(toParent: self)
+//        let countryVC =  self.storyboard!.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+//        countryVC.delegate = self as? sendCountryId
+//        self.navigationController?.pushViewController(countryVC, animated: true)
     }
 }
 

@@ -30,7 +30,15 @@ class AddCategoryPopUpViewController: KitchenInformationViewController {
     }
     
     @IBAction func savecontinueButton(_ sender: Any) {
-    }
+        API.SetCategory(categories: [10]) { (sucess) in
+            if sucess! {
+                print("sucess category")
+            }else{
+                print("erooorrrr")
+            }
+        }
+}
+
     
     @IBAction func categoryActionsBtns(_ sender: UIButton ) {
         if sender.tag == 0 {

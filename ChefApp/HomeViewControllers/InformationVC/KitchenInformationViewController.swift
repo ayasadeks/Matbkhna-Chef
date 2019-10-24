@@ -25,7 +25,7 @@ class KitchenInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //     saveAndnextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
-  //      viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
+   // viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -61,13 +61,6 @@ class KitchenInformationViewController: UIViewController {
         self.view.addSubview(popvc.view)
         
         popvc.didMove(toParent: self)
-        
-
-        
-//        let timeViewController =  self.storyboard!.instantiateViewController(withIdentifier: "setWorkingTimeVC") as! setWorkingTimeViewController
-//      //  timeViewController.delegate = self
-//
-//        navigationController?.pushViewController(timeViewController, animated: true)
     }
     
     @IBAction func saveAndNextButton(_ sender: Any) {

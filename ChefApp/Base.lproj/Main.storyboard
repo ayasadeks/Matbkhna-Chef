@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xAF-76-zQa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdN-d8-1dn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
+            <string>URWDINArabic-Regular</string>
+        </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
@@ -22,9 +25,6 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
-        </array>
-        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
-            <string>URWDINArabic-Regular</string>
         </array>
         <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
@@ -521,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0f-Q2-3Hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="2"/>
+            <point key="canvasLocation" x="1408.8" y="1.7991004497751126"/>
         </scene>
         <!--Send Phone Num View Controller-->
         <scene sceneID="RQS-5c-bD8">
@@ -990,7 +990,7 @@ Click </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfm-M6-3ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="-95"/>
+            <point key="canvasLocation" x="2061.5999999999999" y="-95.802098950524751"/>
         </scene>
         <!--Verify Phone View Controller-->
         <scene sceneID="Apa-Ak-kgp">
@@ -2493,6 +2493,7 @@ Click </string>
                             <constraint firstItem="Trk-f4-TmS" firstAttribute="top" secondItem="uGC-nN-OWn" secondAttribute="top" constant="58" id="jOI-jo-gXA"/>
                             <constraint firstItem="cx5-bP-VWH" firstAttribute="top" secondItem="uGC-nN-OWn" secondAttribute="top" constant="50" id="l2D-n1-D60"/>
                             <constraint firstItem="Trk-f4-TmS" firstAttribute="leading" secondItem="cx5-bP-VWH" secondAttribute="trailing" constant="44" id="oFF-kO-GUS"/>
+                            <constraint firstItem="DB9-jw-w7e" firstAttribute="centerX" secondItem="uGC-nN-OWn" secondAttribute="centerX" id="q3S-gE-a7U"/>
                             <constraint firstAttribute="trailing" secondItem="Is3-sX-eTE" secondAttribute="trailing" id="rQL-jR-I2Y"/>
                             <constraint firstAttribute="trailing" secondItem="TTm-jg-DvA" secondAttribute="trailing" constant="28" id="rdx-CW-cNf"/>
                             <constraint firstAttribute="trailing" secondItem="YDm-QS-HpX" secondAttribute="trailing" id="vVK-7D-w3B"/>
@@ -7075,11 +7076,11 @@ to refuse order</string>
                                         <rect key="frame" x="15" y="119.5" width="345" height="167.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" rowHeight="159" id="EcU-T9-iXM" customClass="SelectAreaTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="345" height="159"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" rowHeight="144" id="EcU-T9-iXM" customClass="SelectAreaTableViewCell" customModule="ChefApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="345" height="144"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EcU-T9-iXM" id="U0P-CL-FW0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="158.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="143.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sx-Hm-Ff9" customClass="ViewCornerRadious">
@@ -7148,6 +7149,7 @@ to refuse order</string>
                                         <connections>
                                             <action selector="confirmButton:" destination="TV8-BQ-GnS" eventType="touchUpInside" id="6an-Nx-Ypb"/>
                                             <action selector="confirmButton:" destination="Gxv-pk-FK0" eventType="touchUpInside" id="edB-Oa-5sL"/>
+                                            <action selector="saveAndNextBtn:" destination="Jj8-EF-UCh" eventType="touchUpInside" id="IPZ-AQ-OIb"/>
                                             <action selector="saveButton:" destination="x6A-vh-OU6" eventType="touchUpInside" id="kSa-Jb-y59"/>
                                             <action selector="savecontinueButton:" destination="Jj8-EF-UCh" eventType="touchUpInside" id="0uw-dj-3Nb"/>
                                         </connections>
@@ -7206,14 +7208,16 @@ to refuse order</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="IRH-NP-Npw" firstAttribute="centerX" secondItem="thu-wX-V3i" secondAttribute="centerX" id="AFd-O8-ANX"/>
                                     <constraint firstAttribute="trailing" secondItem="Puy-Fn-ofq" secondAttribute="trailing" constant="27" id="BHq-2e-paf"/>
                                     <constraint firstItem="IRH-NP-Npw" firstAttribute="top" secondItem="moJ-np-55t" secondAttribute="bottom" constant="22" id="FWR-qI-IeR"/>
-                                    <constraint firstItem="Puy-Fn-ofq" firstAttribute="top" secondItem="Qj6-Wp-aDm" secondAttribute="bottom" constant="15" id="Fc8-je-RTL"/>
                                     <constraint firstItem="moJ-np-55t" firstAttribute="centerX" secondItem="thu-wX-V3i" secondAttribute="centerX" id="LNa-Hq-H36"/>
                                     <constraint firstAttribute="height" constant="392" id="WOV-i1-Tzr"/>
                                     <constraint firstItem="r04-gH-ifv" firstAttribute="top" secondItem="thu-wX-V3i" secondAttribute="top" constant="20" id="YCQ-fZ-erO"/>
+                                    <constraint firstItem="Qj6-Wp-aDm" firstAttribute="centerX" secondItem="thu-wX-V3i" secondAttribute="centerX" id="bMg-D8-1Aj"/>
                                     <constraint firstItem="Qj6-Wp-aDm" firstAttribute="top" secondItem="IRH-NP-Npw" secondAttribute="bottom" id="cSe-A8-zx5"/>
                                     <constraint firstItem="IRH-NP-Npw" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="20" id="cwY-Rs-1Ja"/>
+                                    <constraint firstItem="Puy-Fn-ofq" firstAttribute="top" secondItem="Qj6-Wp-aDm" secondAttribute="bottom" constant="15" id="djE-7W-S30"/>
                                     <constraint firstItem="Puy-Fn-ofq" firstAttribute="centerX" secondItem="thu-wX-V3i" secondAttribute="centerX" id="mFw-PT-7HQ"/>
                                     <constraint firstAttribute="trailing" secondItem="Qj6-Wp-aDm" secondAttribute="trailing" constant="15" id="opN-Ad-VkF"/>
                                     <constraint firstItem="Qj6-Wp-aDm" firstAttribute="leading" secondItem="thu-wX-V3i" secondAttribute="leading" constant="15" id="rTD-hl-kAL"/>
@@ -7230,7 +7234,7 @@ to refuse order</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.60621789380000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.44868364722465759" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="thu-wX-V3i" secondAttribute="bottom" id="16k-jQ-IY0"/>
                             <constraint firstItem="thu-wX-V3i" firstAttribute="leading" secondItem="zR1-0U-Y11" secondAttribute="leading" id="iya-jR-ngH"/>

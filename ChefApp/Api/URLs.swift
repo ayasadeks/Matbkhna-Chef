@@ -45,6 +45,9 @@ struct URLS {
         static let getExtraItems = main + "extras/get"
     // change order status
     static let changeOrderStatus = main + "orders/changeStatus"
+    ///POST(TO SET CATEGORY)
+    static let setCategory = main + "users/setCategories"
+    
     
     
     
