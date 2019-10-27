@@ -73,7 +73,7 @@ class SelectAreaViewController: UIViewController {
 
 
     }
-    
+ 
     
 }
 
@@ -86,7 +86,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     }//end of numberOfRowsInSection
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath) as! SelectAreaTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cityCell" , for: indexPath) as! SelectAreaTableViewCell
 
         if self.getCurrentDeviceLanguage() == "ar" {
             cell.cityLabel.text = countryArray[indexPath.row].title
@@ -117,13 +117,13 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
        
         if self.getCurrentDeviceLanguage() == "ar" {
             delegate?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].title!)
-            
+
         }else if self.getCurrentDeviceLanguage() == "en"{
             delegate?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].titleEng!)
         }
         self.navigationController?.popViewController(animated: true)
-        
-        
+
+
         
         
     }
@@ -133,10 +133,16 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let count = self.countryArray.count
-        if indexPath.row == count-1 {
-            LoadMore()
+        if tableView == tableView{
+            let count = self.countryArray.count
+            if indexPath.row == count-1 {
+                LoadMore()
+                print("loadmore")
+                
+            }
         }
+}
+
 
         
      
@@ -155,7 +161,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
 //        }
         
         
-  }
+  
 }//end of extension
 
 

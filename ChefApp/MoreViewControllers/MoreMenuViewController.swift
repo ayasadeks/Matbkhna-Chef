@@ -15,17 +15,21 @@ class MoreMenuViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var menuTableView: UITableView!
-    @IBOutlet weak var kitchenProfileView: ViewCornerRadious!
+    @IBOutlet weak var kitchenProfileView: CircleImageView!
     
     var images = ["Notification", "Settings", "wallet", "history", "Help", "About"]
     var names = ["Notifications", "Settings", "My wallet", "History", "Help center", "About us"]
     var segueIdentifiers = ["goNotifications", "goSettings","goWallet", "goHistory" ,"" , "goAbout"]
     
+    var passData = ResturantDetailes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         menuTableView.delegate = self
         menuTableView.dataSource = self
+        
+        passData.ReNameLabel == nameOfChef
+
         
     kitchenProfileView.dropShadow(color: .black, alpha: 0.12, x: 0, y: 5, blur: 6, spread: 0)
         

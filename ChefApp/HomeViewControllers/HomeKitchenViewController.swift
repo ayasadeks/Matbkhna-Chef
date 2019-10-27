@@ -27,6 +27,7 @@ class HomeKitchenViewController: UIViewController{
         tableView.addSubview(refresher)
         tableView.delegate = self
         tableView.dataSource = self
+        
 
         HandelRefresh()
     }
@@ -45,7 +46,7 @@ class HomeKitchenViewController: UIViewController{
     }
     @IBAction func addButton(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goMenu") as! AddDishesViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "addDish") as! AddDishesViewController
         self.present(nextViewController, animated: false, completion: nil)
     }
 }
