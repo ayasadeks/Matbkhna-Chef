@@ -1,64 +1,156 @@
+////
+////  Category+API.swift
+////  ChefApp
+////
+////  Created by Admin on 10/24/19.
+////  Copyright © 2019 Admin. All rights reserved.
+////
 //
-//  Category+API.swift
-//  ChefApp
-//
-//  Created by Admin on 10/24/19.
-//  Copyright © 2019 Admin. All rights reserved.
-//
-
 import Foundation
+var categoryFlag = ""
+//extension AddCategoryPopUpViewController{
+//    @objc func HandelRefresh(){
+//        self.refresher.endRefreshing()
+//        guard !isLoading else {return}
+//        isLoading = true
+//        API.showSVProgress()
+//        if categoryFlag == "cate"{
+//            API.GetCategory(serachKey: "") { (sucess, categoryArray, last_page) in
+//                if sucess! && categoryArray != nil{
+//                    print("its ok")
+//                    self.isLoading = false
+//                    if let categoryArray = categoryArray{
+//                        self.categoryArray = categoryArray
+//                        self.current_page = 1
+//                        self.last_page = last_page
+//                        API.dismissSVProgress()
+//
+//                    }
+//                }else if sucess! && categoryArray == nil{
+//                    self.showToast(message: "There Is Error".localize)
+//                }else{
+//                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+//                }
+//            }
+//        }else if categoryFlag == "cateKey"{
+//            API.GetCategory(serachKey: searchKey) { (sucess, categoryArray, last_page) in
+//                if sucess! && categoryArray != nil{
+//                    print("its ok")
+//                    self.isLoading = false
+//                    if let categoryArray = categoryArray{
+//                        self.categoryArray = categoryArray
+//                        self.current_page = 1
+//                        self.last_page = last_page
+//                        API.dismissSVProgress()
+//
+//                    }
+//                }else if sucess! && categoryArray == nil{
+//                    self.showToast(message: "There Is Error".localize)
+//                }else{
+//                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+//                }
+//            }
+//        }
+//    }//end of handel refresh
+//    //to handel refresh for frist time
+//
+//    func LoadMore(){
+//        guard !isLoading else{ return}
+//
+//        guard current_page < last_page else {return}
+//        print("current_page\(current_page),last_page\(last_page)")
+//        isLoading = true
+//        if categoryFlag == "cate"{
+//            API.GetCategory(page: current_page+1, serachKey: "") { (sucess, categoryArray, last_page) in
+//                if sucess! && categoryArray != nil{
+//                    print("its ok")
+//                    self.isLoading = false
+//                    self.isLoading = false
+//                    if let categoryArray = categoryArray{
+//                        self.categoryArray.append(contentsOf: categoryArray)
+//                        API.dismissSVProgress()
+//                        self.current_page += 1
+//                        self.last_page = last_page
+//                    }
+//                }else if sucess! && categoryArray == nil{
+//                    self.showToast(message: "There Is Error".localize)
+//                }else{
+//                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+//                }
+//            }
+//
+//        }//end of key flag if
+//        else if  categoryFlag == "cateKey"{
+//            API.GetCategory(page: current_page+1, serachKey: searchKey) { (sucess, categoryArray, last_page) in
+//                if sucess! && categoryArray != nil{
+//                    print("its ok")
+//                    self.isLoading = false
+//                    self.isLoading = false
+//                    if let categoryArray = categoryArray{
+//                        self.categoryArray.append(contentsOf: categoryArray)
+//                        API.dismissSVProgress()
+//                        self.current_page += 1
+//                        self.last_page = last_page
+//                    }
+//                }else if sucess! && categoryArray == nil{
+//                    self.showToast(message: "There Is Error".localize)
+//                }else{
+//                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+//                }
+//            }
+//        }
+//    }
+//}//end of extension
+//}
 
-import CodableAlamofire
-import Alamofire
-extension API {
-    class func SetCategory(categories : [Int]? ,completion: @escaping (_ sucess: Bool? ) -> Void){
-        
-        let url = URLS.setCategory
-        guard let api_token = UserDefaultData.get_user_string_data(key: "userToken")  else{return}
-        print("categories \(categories!.count) api_token\(api_token)")
-        var parameters = [
-            //"categories[0]" : 1,
-            "categories" : categories!,
-            "api_token" : api_token
-            ] as [String : Any] 
-        
-        for (index, element) in categories!.enumerated() {
-            parameters["categories[\(index)]"] = element
-            print("Item \(index): \(element)")
-        }
-        for (index, element) in parameters.enumerated() {
-            
-            print("PP \(index): \(element)")
-        }
-        
+
+extension AddCategoryPopUpViewController{
+    @objc func HandelRefresh(){
+        self.refresher.endRefreshing()
+        guard !isLoading else {return}
+        isLoading = true
         API.showSVProgress()
-        let decoder = JSONDecoder()
-        Alamofire.request(url,method: .post , parameters: parameters).responseDecodableObject(decoder: decoder) { (response: DataResponse<AllSetCategoryResponseData> ) in
-            let responseStatus = response.result
-            print("responseStatus\(responseStatus)")
-            ///ResponseStatus check there is connection or not
-            ///SUCCESS--> there is connection
-            ///FAILOUR--> there is no connection
-            if "\(responseStatus)" == "SUCCESS"{
-                print("there is connection")
-                let repo = response.result.value
-                //print("repo\(repo?.data)")
-                if repo?.status_code == 200{
-                    let arrayData = repo?.data
-                    // let totalPages = repo?.paginate!.total_pages
-                    API.dismissSVProgress()
-                    completion(true)
-                }else{
-                    API.dismissSVProgress()
-                    completion(false)
-                }
+        API.Category { (error: Error?, category: [CategoryData]?, last_page: Int ) in
+            if error == nil && category == nil && last_page == 0{
+                
+                API.dismissSVProgress()
                 
             }else{
-                print("there is no connection")
-                API.dismissSVProgress()
-                completion(false)
-                
+                self.isLoading = false
+                if let category = category{
+                    self.categoryArray = category
+                    self.tableView.reloadData()
+                    self.current_page = 1
+                    self.last_page = last_page
+                    API.dismissSVProgress()
+                }
             }
-        }//end of alamofire
-    }//end of class function
+        }
+    }//end of handel refresh
+    
+    
+    //to handel refresh for frist time
+    func LoadMore(){
+        guard !isLoading else{ return}
+        
+        guard current_page < last_page else {return}
+        print("current_page\(current_page),last_page\(last_page)")
+        isLoading = true
+        API.Category(page: current_page+1) { (error: Error?, category: [CategoryData]?, last_page: Int ) in
+            if error == nil && category == nil && last_page == 0{
+                
+                API.dismissSVProgress()
+                
+            }else{
+                self.isLoading = false
+                if let category = category{
+                    self.categoryArray.append(contentsOf: category)
+                    API.dismissSVProgress()
+                    self.tableView.reloadData()
+                    self.current_page += 1
+                    self.last_page = last_page
+                }
+            }
+        }
+    }
 }//end of extension

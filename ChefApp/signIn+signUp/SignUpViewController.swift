@@ -140,13 +140,13 @@ class SignUpViewController: UIViewController {
         
         //go to next view controller
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+        popvc.delegate = self as? sendCountryId
 
         self.addChild(popvc)
 
         popvc.view.frame = self.view.frame
 
         self.view.addSubview(popvc.view)
-        popvc.delegate = self as? sendCountryId
 
         popvc.didMove(toParent: self)
 //        let countryVC =  self.storyboard!.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController

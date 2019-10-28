@@ -17,7 +17,7 @@ extension API {
         guard let api_token = UserDefaultData.get_user_string_data(key: "userToken")  else{return}
         print("api_token\(api_token)")
         let workHours = "[{\"open\":\"\(open)\"," + "\"close\":\"\(close)\"," + "\"day\":\"\(day)\"" + "}]"
-        print("yy\(workHours)")
+        print("workHours\(workHours)")
         let parameters = [
             "workHours" : workHours,
             "api_token": api_token

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		792B9FB97D56158C82699C37 /* Pods_ChefApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096D45848449D0CE885347A5 /* Pods_ChefApp.framework */; };
+		84004E262367263700F5F526 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84004E252367263700F5F526 /* CategoryTableViewCell.swift */; };
 		8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FB233662750081484A /* NotificationsViewController.swift */; };
 		8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FD233668370081484A /* NotificationsTableViewCell.swift */; };
 		8439A900233678640081484A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FF233678640081484A /* SettingsTableViewCell.swift */; };
@@ -66,6 +67,7 @@
 		84747251233BAC3E00F5E2D7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747250233BAC3E00F5E2D7 /* SearchTableViewCell.swift */; };
 		84747253233BCF5900F5E2D7 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747252233BCF5900F5E2D7 /* HistoryTableViewCell.swift */; };
 		84747255233BCF8E00F5E2D7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747254233BCF8E00F5E2D7 /* HistoryViewController.swift */; };
+		847BEC7E2367107A001D1FE7 /* API+GetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */; };
 		8492BB7D2332676000540887 /* AskVerficationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB7C2332676000540887 /* AskVerficationModel.swift */; };
 		8492BB7F2332679B00540887 /* SendVerficationCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */; };
 		8492BB812332681500540887 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB802332681500540887 /* ChangePasswordModel.swift */; };
@@ -126,6 +128,7 @@
 		096D45848449D0CE885347A5 /* Pods_ChefApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChefApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D3C3C60D7C7C6E804B82A3 /* Pods-ChefApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefApp.release.xcconfig"; path = "Target Support Files/Pods-ChefApp/Pods-ChefApp.release.xcconfig"; sourceTree = "<group>"; };
 		629C7E9BAE82C2F95C37DE1D /* Pods-ChefApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefApp.debug.xcconfig"; path = "Target Support Files/Pods-ChefApp/Pods-ChefApp.debug.xcconfig"; sourceTree = "<group>"; };
+		84004E252367263700F5F526 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		8439A8FB233662750081484A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		8439A8FD233668370081484A /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		8439A8FF233678640081484A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		84747250233BAC3E00F5E2D7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		84747252233BCF5900F5E2D7 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		84747254233BCF8E00F5E2D7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+GetCategory.swift"; sourceTree = "<group>"; };
 		8492BB7C2332676000540887 /* AskVerficationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskVerficationModel.swift; sourceTree = "<group>"; };
 		8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerficationCodeModel.swift; sourceTree = "<group>"; };
 		8492BB802332681500540887 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
@@ -381,10 +385,12 @@
 			isa = PBXGroup;
 			children = (
 				849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */,
-				84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */,
 				84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */,
 				8464A1F723410A1C0095F516 /* SetWorkingDaysViewController.swift */,
 				8460FD78234E1A0E0081F2FB /* SetWorkingTimeApi.swift */,
+				84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */,
+				84004E252367263700F5F526 /* CategoryTableViewCell.swift */,
+				847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */,
 				846309172361ED19001C154C /* Category+API.swift */,
 			);
 			path = InformationVC;
@@ -808,6 +814,7 @@
 				84EDDA69233A5CF10075D4C7 /* changePassPopUpViewController.swift in Sources */,
 				84FA68AC235764A300564C38 /* ExtraItemsTableViewCell.swift in Sources */,
 				8464A1F823410A1C0095F516 /* SetWorkingDaysViewController.swift in Sources */,
+				84004E262367263700F5F526 /* CategoryTableViewCell.swift in Sources */,
 				84FB857E23328815002B9BF4 /* GetDishes_Model.swift in Sources */,
 				84411464235DC991002929B8 /* ChangeOrderStatusAPI.swift in Sources */,
 				8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */,
@@ -861,6 +868,7 @@
 				8474724F233BAC1800F5E2D7 /* SearchViewController.swift in Sources */,
 				84FB856C233287DD002B9BF4 /* RADishesCVC.swift in Sources */,
 				8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */,
+				847BEC7E2367107A001D1FE7 /* API+GetCategory.swift in Sources */,
 				843B671523355C3D002635EC /* MoreMenuViewController.swift in Sources */,
 				844FC10123587F4500FC9B2A /* GetExtraDishes.swift in Sources */,
 				84FD362023393F1F006D7CB1 /* setWorkingTimeViewController.swift in Sources */,

@@ -8,7 +8,14 @@
 
 import UIKit
 
-class KitchenInformationViewController: UIViewController {
+class KitchenInformationViewController: UIViewController, sentCategoryId {
+    
+    func setCategoryIdFunc(categoryID: Int) {
+        categoryId = categoryID
+        print("categryIdd\(categoryId)")
+        self.isLoading = false
+        viewDidLoad()
+    }
     
     
     @IBOutlet weak var viewOfImage: UIView!
@@ -20,6 +27,19 @@ class KitchenInformationViewController: UIViewController {
     @IBOutlet weak var timeTxtField: UITextField!
     
     var kitchenPhoto = UIImage()
+    var delegate : sentCategoryId?
+    var categoryId = -1
+    var current_page = 1
+    var last_page = 1
+    var isLoading : Bool = false
+    var imageBaseUrl = String()
+    var searchKey = "nil"
+    var LoadType = true
+
+
+        
+    
+
 
     
     override func viewDidLoad() {
@@ -33,15 +53,21 @@ class KitchenInformationViewController: UIViewController {
     }
     
     @IBAction func categoryButton(_ sender: Any) {
+        
+//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+//        let categoryVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "addCategoryPopUp") as? AddCategoryPopUpViewController
+//        categoryVC?.delegate = self
+//        self.navigationController?.pushViewController(categoryVC!, animated: true)
         //go to next view controller
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addCategoryPopUp") as! AddCategoryPopUpViewController
-        
+        popvc.delegate = self
+
         self.addChild(popvc)
-        
+
         popvc.view.frame = self.view.frame
-        
+
         self.view.addSubview(popvc.view)
-        
+
         popvc.didMove(toParent: self)
         
     }

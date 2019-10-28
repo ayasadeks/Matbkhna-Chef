@@ -12,3 +12,7 @@ import UIKit
 protocol sendCountryId {
     func sendCountryId_Name(CountryId: Int , CountryName : String)
 }
+
+protocol sentCategoryId {
+    func setCategoryIdFunc(categoryID: Int)
+}
