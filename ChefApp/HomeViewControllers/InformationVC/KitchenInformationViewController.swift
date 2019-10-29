@@ -36,12 +36,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     var searchKey = "nil"
     var LoadType = true
 
-
-        
-    
-
-
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 //     saveAndnextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
@@ -53,12 +48,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     }
     
     @IBAction func categoryButton(_ sender: Any) {
-        
-//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//        let categoryVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "addCategoryPopUp") as? AddCategoryPopUpViewController
-//        categoryVC?.delegate = self
-//        self.navigationController?.pushViewController(categoryVC!, animated: true)
-        //go to next view controller
+ 
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addCategoryPopUp") as! AddCategoryPopUpViewController
         popvc.delegate = self
 

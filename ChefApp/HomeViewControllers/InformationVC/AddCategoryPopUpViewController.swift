@@ -30,8 +30,8 @@ class AddCategoryPopUpViewController: UIViewController {
         super.viewDidLoad()
         categoryFlag = "cate"
         tableView.tableFooterView = UIView()
-        tableView.separatorInset = .zero
-        tableView.contentInset = .zero
+//        tableView.separatorInset = .zero
+//        tableView.contentInset = .zero
         tableView.addSubview(refresher)
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
@@ -100,48 +100,49 @@ class AddCategoryPopUpViewController: UIViewController {
 
 extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataSource{
     
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // print("countryArray.count\(countryArray.count)")
-    return categoryArray.count
-}//end of numberOfRowsInSection
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryArray.count
+    }//end of numberOfRowsInSection
 
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
-    cell.categoryName.text = categoryArray[indexPath.row].titleEng
-    return cell
-}//end of cellForRowAt
-func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
+        cell.categoryName.text = categoryArray[indexPath.row].title
+        return cell
+      }//end of cellForRowAt
     
-    return 60
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 60
+        
+    }//end of heightForRowAt
     
-}//end of heightForRowAt
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-    let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
-    categoryId = categoryArray[indexPath.row].id!
-    if delegate != nil{
-        delegate?.setCategoryIdFunc(categoryID: categoryId)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+//        let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
+//        categoryId = categoryArray[indexPath.row].id!
+//        if delegate != nil{
+//            delegate?.setCategoryIdFunc(categoryID: categoryId)
+//        }
+//        categoryResult?.categoryId = categoryArray[indexPath.row].id!
+//        self.navigationController?.popViewController(animated: true)
+//
+        //   self.navigationController?.pushViewController(searchResult!, animated: true)
+        
     }
-    categoryResult?.categoryId = categoryArray[indexPath.row].id!
-    self.navigationController?.popViewController(animated: true)
-    
-    //   self.navigationController?.pushViewController(searchResult!, animated: true)
-    
-}
-func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    var cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
-    cellToDeSelect.contentView.backgroundColor = UIColor.white
-}
-
-func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    let count = self.categoryArray.count
-    if indexPath.row == count-1 {
-        print("loadmore")
-        LoadMore()
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//                var cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+//                cellToDeSelect.contentView.backgroundColor = UIColor.white
     }
-}
 
-}//end of extension
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let count = self.categoryArray.count
+        if indexPath.row == count-1 {
+            print("loadmore")
+            LoadMore()
+        }
+    }
+
+    }//end of extension
 
 
 
