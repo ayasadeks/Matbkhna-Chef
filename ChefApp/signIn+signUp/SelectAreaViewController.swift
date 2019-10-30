@@ -61,15 +61,15 @@ class SelectAreaViewController: UIViewController {
   
     
     @IBAction func saveAndNextBtn(_ sender: UIButton) {
-        let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
-        if countryId == 0 {
-            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
-        }else{
-            homeVC.countryName = self.countryName
-            homeVC.countryId = self.countryId
-            self.navigationController?.pushViewController(homeVC, animated: true)
-            
-        }
+//        let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
+//        if countryId == 0 {
+//            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
+//        }else{
+//            homeVC.countryName = self.countryName
+//            homeVC.countryId = self.countryId
+//            self.navigationController?.pushViewController(homeVC, animated: true)
+        
+     //   }
 
 
     }

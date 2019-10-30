@@ -16,7 +16,8 @@ class HomeKitchenViewController: UIViewController{
     var current_page = 1
     var last_page = 1
     var isLoading : Bool = false
-    var dishImageUrl = String()
+    var dishImageUrl = ""
+
 
     var api_token = UserDefaultData.get_user_string_data(key: "userToken")
     override func viewDidLoad() {
@@ -66,14 +67,17 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeKitchenTableViewCell
         cell.delegate = self
         
-       // cell.configure(item: dishArray, index: indexPath, imageUrl: dishImageUrl)
-        
         
         cell.nameOfFood.text = dishArray[indexPath.row].title
         cell.descriptionOfFood.text = dishArray[indexPath.row].description
         cell.priceOfFood.text = dishArray[indexPath.row].largePrice
-    //    cell.imageOfFood.image = UIImage(named: dishArray[indexPath.row])
-
+        
+//        if dishArray[indexPath.row].photos != nil{
+//            let dishImageName = dishImageUrl  +  "/" + (dishArray[indexPath.row].photos![0].url!)
+//            self.LoadImage(imageName: dishImageName, imageView: cell.imageOfFood)
+//
+//        }
+        
 ////
 //        //there is no image
 //        if dishArray[indexPath.row].photos!.count == 0{
@@ -111,7 +115,7 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
 //                    print("Job failed: \(error.localizedDescription)")
 //                }
 //            }
-//        }
+  //      }
         
         
         return cell

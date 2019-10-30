@@ -66,4 +66,19 @@ extension UIViewController {
         let lang = MOLHLanguage.currentAppleLanguage()
         return lang
     }
+    
+    
+    func LoadImage(imageName: String,imageView : UIImageView ){
+        imageView.image = UIImage(named: imageName)
+        let imageUrl = URL(string: "\(imageName)")
+        imageView.kf.indicatorType = .activity
+        imageView.kf.setImage(
+            with: imageUrl,
+            options: [
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+    }
+    
 }

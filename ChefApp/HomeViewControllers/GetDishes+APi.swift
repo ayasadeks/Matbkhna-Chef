@@ -20,9 +20,9 @@ extension HomeKitchenViewController{
             case .success(let model):
                 self.isLoading = false
                 if model.data?.count != 0{
-                    //                    print("model = \(model)")
+                    //       print("model = \(model)")
                     self.dishArray = model.data!
-                    //                    self.kitchenBaseUrlImage = model.imageUrl!
+                    self.dishImageUrl = model.imageUrl!
                     self.tableView.reloadData()
                     self.current_page = 1
                     self.last_page = (model.paginate?.total_pages!)!
@@ -54,7 +54,7 @@ extension HomeKitchenViewController{
                 if model.data?.count != 0{
                     print("model = \(model)")
                     self.dishArray.append(contentsOf: model.data!)
-                    //                    self.kitchenBaseUrlImage = model.imageUrl!
+                    self.dishImageUrl = model.imageUrl!
                     self.tableView.reloadData()
                     self.current_page += 1
                     self.last_page = (model.paginate?.total_pages!)!

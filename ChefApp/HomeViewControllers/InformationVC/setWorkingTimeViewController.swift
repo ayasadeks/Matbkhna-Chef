@@ -73,7 +73,7 @@ class setWorkingTimeViewController: KitchenInformationViewController {
             
         }
         @IBAction func closeBtnAction(_ sender: Any) {
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: false, completion: nil)
         }
         func Localize(){
             saveBtn.setTitle("Save".localize, for: .normal)
