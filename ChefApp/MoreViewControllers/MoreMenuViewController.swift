@@ -14,19 +14,13 @@ class MoreMenuViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
-    @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var kitchenProfileView: CircleImageView!
-    
-    var images = ["Notification", "Settings", "wallet", "history", "Help", "About"]
-    var names = ["Notifications", "Settings", "My wallet", "History", "Help center", "About us"]
-    var segueIdentifiers = ["goNotifications", "goSettings","goWallet", "goHistory" ,"" , "goAbout"]
     
     var passData = ResturantDetailes()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuTableView.delegate = self
-        menuTableView.dataSource = self
+       
         
         passData.ReNameLabel == nameOfChef
 
@@ -55,30 +49,55 @@ class MoreMenuViewController: UIViewController {
         self.present(nextViewController, animated:false, completion:nil)
     }
     
-}
-
-
-
-extension MoreMenuViewController : UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return images.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuTableViewCell
-        cell.nameLabel.text = names[indexPath.row]
-        cell.imageOfCell.image = UIImage(named: images[indexPath.row])
-        return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    @IBAction func notificationButton(_ sender: UIButton) {
+        print("done")
         
-        performSegue(withIdentifier: segueIdentifiers[indexPath.row], sender: self)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "notifications") as! NotificationsViewController
+        self.present(nextViewController, animated:false, completion:nil)
+    }
+    
+    @IBAction func settingsButton(_ sender: UIButton) {
+        print("done")
+
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "settings") as! SettingsViewController
+        self.present(nextViewController, animated:false, completion:nil)
         
     }
     
+    @IBAction func walletButton(_ sender: Any) {
+        print("done")
+
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "wallet") as! MyWalletViewController
+        self.present(nextViewController, animated:false, completion:nil)
+        
+    }
+    
+    @IBAction func historyButton(_ sender: Any) {
+        print("done")
+
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goHistory") as! HistoryViewController
+        self.present(nextViewController, animated:false, completion:nil)
+        
+        
+    }
+    @IBAction func helpButton(_ sender: Any) {
+    }
+    @IBAction func aboutButton(_ sender: UIButton) {
+        print("done")
+
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "about") as! AboutViewController
+        self.present(nextViewController, animated:false, completion:nil)
+        
+        
+    }
+    
+    
+    
 }
+
+

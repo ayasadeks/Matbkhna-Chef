@@ -63,10 +63,10 @@ class AddCategoryPopUpViewController: UIViewController {
 //        }
 }
     override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
-//        self.tabBarController?.tabBar.isHidden = true
-//        self.title = "Category"
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.tabBarController?.tabBar.isHidden = true
+        self.title = "Category"
     }
 
 
@@ -122,17 +122,16 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
     }//end of heightForRowAt
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
-        categoryId = categoryArray[indexPath.row].id!
-        if delegate != nil{
-            delegate?.setCategoryIdFunc(categoryID: categoryId)
-        }
-        categoryResult?.categoryId = categoryArray[indexPath.row].id!
-        self.navigationController?.popViewController(animated: true)
-
-           self.navigationController?.pushViewController(categoryResult!, animated: true)
-        
+//        let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
+//        categoryId = categoryArray[indexPath.row].id!
+//        if delegate != nil{
+//            delegate?.setCategoryIdFunc(categoryID: categoryId)
+//        }
+//        categoryResult?.categoryId = categoryArray[indexPath.row].id!
+//        self.navigationController?.popViewController(animated: true)
+//
+//           self.navigationController?.pushViewController(categoryResult!, animated: true)
+//
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 //                var cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!

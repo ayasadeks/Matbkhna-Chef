@@ -47,6 +47,8 @@ struct URLS {
         static let changeOrderStatus = main + "orders/changeStatus"
         ///GET(TO GET CATEGORY)
         static let getCategory = main + "categories"
+        ///POST(TO Post user update)
+        static let userUpdate = main + "users/update"
     
     
     

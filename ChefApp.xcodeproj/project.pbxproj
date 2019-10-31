@@ -14,7 +14,6 @@
 		8439A900233678640081484A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FF233678640081484A /* SettingsTableViewCell.swift */; };
 		8439A902233678780081484A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A901233678780081484A /* SettingsViewController.swift */; };
 		843B671523355C3D002635EC /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671423355C3D002635EC /* MoreMenuViewController.swift */; };
-		843B671723355C6B002635EC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671623355C6B002635EC /* MenuTableViewCell.swift */; };
 		843B671923356CB5002635EC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671823356CB5002635EC /* EditProfileViewController.swift */; };
 		843EBBBD23324CC600C75BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843EBBBC23324CC600C75BC8 /* LaunchScreen.storyboard */; };
 		84411462235DC8A9002929B8 /* ChangeOrderStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */; };
@@ -120,6 +119,8 @@
 		84FB858823328A23002B9BF4 /* TextImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB858623328A23002B9BF4 /* TextImage.swift */; };
 		84FC94BA2354CF3D00EAA8AC /* AddDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */; };
 		84FD362023393F1F006D7CB1 /* setWorkingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */; };
+		84FE52AA236B02E1002E8A04 /* Information+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE52A9236B02E1002E8A04 /* Information+API.swift */; };
+		84FE52AC236B032A002E8A04 /* InformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE52AB236B032A002E8A04 /* InformationModel.swift */; };
 		84FE891A233A134D00868140 /* verifyPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE8919233A134D00868140 /* verifyPhoneViewController.swift */; };
 		84FF2BD7235CA26700529ACF /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF2BD6235CA26700529ACF /* OrderDetailsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -134,7 +135,6 @@
 		8439A8FF233678640081484A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		8439A901233678780081484A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		843B671423355C3D002635EC /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
-		843B671623355C6B002635EC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		843B671823356CB5002635EC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		843EBBBC23324CC600C75BC8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeOrderStatusModel.swift; sourceTree = "<group>"; };
@@ -242,6 +242,8 @@
 		84FB858623328A23002B9BF4 /* TextImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextImage.swift; sourceTree = "<group>"; };
 		84FC94B92354CF3C00EAA8AC /* AddDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishesViewController.swift; sourceTree = "<group>"; };
 		84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setWorkingTimeViewController.swift; sourceTree = "<group>"; };
+		84FE52A9236B02E1002E8A04 /* Information+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Information+API.swift"; sourceTree = "<group>"; };
+		84FE52AB236B032A002E8A04 /* InformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationModel.swift; sourceTree = "<group>"; };
 		84FE8919233A134D00868140 /* verifyPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifyPhoneViewController.swift; sourceTree = "<group>"; };
 		84FF2BD6235CA26700529ACF /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				843B671423355C3D002635EC /* MoreMenuViewController.swift */,
-				843B671623355C6B002635EC /* MenuTableViewCell.swift */,
 				843B671823356CB5002635EC /* EditProfileViewController.swift */,
 				8439A8FB233662750081484A /* NotificationsViewController.swift */,
 				8439A8FD233668370081484A /* NotificationsTableViewCell.swift */,
@@ -385,13 +386,9 @@
 			isa = PBXGroup;
 			children = (
 				849FFF582333CB1700961E6B /* KitchenInformationViewController.swift */,
-				84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */,
-				8464A1F723410A1C0095F516 /* SetWorkingDaysViewController.swift */,
-				8460FD78234E1A0E0081F2FB /* SetWorkingTimeApi.swift */,
-				84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */,
-				84004E252367263700F5F526 /* CategoryTableViewCell.swift */,
-				847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */,
-				846309172361ED19001C154C /* Category+API.swift */,
+				84FE52A9236B02E1002E8A04 /* Information+API.swift */,
+				84FE52A8236B019A002E8A04 /* Categories */,
+				84FE52A7236B017B002E8A04 /* WorkingTime */,
 			);
 			path = InformationVC;
 			sourceTree = "<group>";
@@ -491,6 +488,7 @@
 				84FB8580233288AE002B9BF4 /* KitchenModel.swift */,
 				84526CB323436C2F000E7B50 /* GetOrderModel.swift */,
 				84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */,
+				84FE52AB236B032A002E8A04 /* InformationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +574,27 @@
 				84FB858623328A23002B9BF4 /* TextImage.swift */,
 			);
 			path = TextFeildImage;
+			sourceTree = "<group>";
+		};
+		84FE52A7236B017B002E8A04 /* WorkingTime */ = {
+			isa = PBXGroup;
+			children = (
+				84FD361F23393F1F006D7CB1 /* setWorkingTimeViewController.swift */,
+				8464A1F723410A1C0095F516 /* SetWorkingDaysViewController.swift */,
+				8460FD78234E1A0E0081F2FB /* SetWorkingTimeApi.swift */,
+			);
+			path = WorkingTime;
+			sourceTree = "<group>";
+		};
+		84FE52A8236B019A002E8A04 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				84AF652B233A857E007FE38F /* AddCategoryPopUpViewController.swift */,
+				84004E252367263700F5F526 /* CategoryTableViewCell.swift */,
+				847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */,
+				846309172361ED19001C154C /* Category+API.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		84FE6710233E5BC7002810B4 /* Designs */ = {
@@ -780,7 +799,6 @@
 				84F745782330F8C400C00AD8 /* ApiGetData.swift in Sources */,
 				84EDDA67233A5C770075D4C7 /* VerficationAlertViewController.swift in Sources */,
 				845E99C62343BDB7004872CF /* GetDishes+APi.swift in Sources */,
-				843B671723355C6B002635EC /* MenuTableViewCell.swift in Sources */,
 				8492BB832332811F00540887 /* CircleShape.swift in Sources */,
 				84526CAC2343588E000E7B50 /* AddDishImage+Model.swift in Sources */,
 				84EB008823312A5E00388892 /* ShadowClass.swift in Sources */,
@@ -830,6 +848,7 @@
 				84F745762330F7BD00C00AD8 /* API.swift in Sources */,
 				8439A902233678780081484A /* SettingsViewController.swift in Sources */,
 				84E4DC1C23310F91001B935A /* UserDefaultData.swift in Sources */,
+				84FE52AA236B02E1002E8A04 /* Information+API.swift in Sources */,
 				84747249233BA67B00F5E2D7 /* FinishOrderPopUpViewController.swift in Sources */,
 				846309182361ED19001C154C /* Category+API.swift in Sources */,
 				84AF652C233A857E007FE38F /* AddCategoryPopUpViewController.swift in Sources */,
@@ -846,6 +865,7 @@
 				8464A1F62340C7EB0095F516 /* MyWalletTableViewCell.swift in Sources */,
 				84E4DC1E23310FDE001B935A /* String+Extension.swift in Sources */,
 				8492BB7D2332676000540887 /* AskVerficationModel.swift in Sources */,
+				84FE52AC236B032A002E8A04 /* InformationModel.swift in Sources */,
 				84FB857F23328815002B9BF4 /* resturantDetailes_Model.swift in Sources */,
 				84FB856D233287DD002B9BF4 /* RAReviewsCVC.swift in Sources */,
 				84FF2BD7235CA26700529ACF /* OrderDetailsViewController.swift in Sources */,

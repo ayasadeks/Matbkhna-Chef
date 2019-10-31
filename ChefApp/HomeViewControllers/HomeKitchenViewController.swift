@@ -72,6 +72,8 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
         cell.descriptionOfFood.text = dishArray[indexPath.row].description
         cell.priceOfFood.text = dishArray[indexPath.row].largePrice
         
+    
+        
 //        if dishArray[indexPath.row].photos != nil{
 //            let dishImageName = dishImageUrl  +  "/" + (dishArray[indexPath.row].photos![0].url!)
 //            self.LoadImage(imageName: dishImageName, imageView: cell.imageOfFood)

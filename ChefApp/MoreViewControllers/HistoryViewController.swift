@@ -10,11 +10,11 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
-    var orderName = ["C#120900 Chicken Rice Salad"]
-    var secondLabel = ["Chicken World"]
-    var thirdLabel = ["882 Swift Courts Apt. 918"]
-    var statusLbl = ["Status : Pending"]
-    var timeLbl = ["00:00"]
+    var orderName = ["C#120900 Chicken Rice Salad","C#120900 Chicken Rice Salad"]
+    var secondLabel = ["Chicken World","Chicken World"]
+    var thirdLabel = ["882 Swift Courts Apt. 918","882 Swift Courts Apt. 918"]
+    var statusLbl = ["Status : Pending","Status : Pending"]
+    var timeLbl = ["00:00","00:00"]
     
     
     
@@ -46,7 +46,7 @@ extension HistoryViewController : UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 149
+        return 165
     }
     
 }

@@ -17,11 +17,8 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        //go to next view controller
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "moreVC") as! MoreMenuViewController
-        self.present(nextViewController, animated: false, completion: nil)
-        
+        dismiss(animated: false, completion: nil)
+
     }
     
 

@@ -21,7 +21,7 @@ class HistoryTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        viewOfCell.dropShadow(color: .black, alpha: 0.14, x: 0, y: 8, blur: 20, spread: 0)
+        viewOfCell.dropShadow(color: .black, alpha: 0.14, x: 8, y: 8, blur: 20, spread: 0)
         statusLabel.layer.cornerRadius = 8
         statusLabel.layer.masksToBounds = true
     }
