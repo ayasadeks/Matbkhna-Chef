@@ -9,6 +9,9 @@
 import UIKit
 
 class KitchenInformationViewController: UIViewController, sentCategoryId {
+    var api_token = UserDefaultData.get_user_string_data(key: "userToken")
+    var phone : String?
+
     
     func setCategoryIdFunc(categoryID: Int) {
         categoryId = categoryID
@@ -33,7 +36,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     var last_page = 1
     var isLoading : Bool = false
     var imageBaseUrl = String()
-    var searchKey = "nil"
+    var searchKey = String()
     var LoadType = true
 
   
@@ -81,8 +84,38 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     
     @IBAction func saveAndNextButton(_ sender: Any) {
         
-
-    }
+        guard let name = foodNameTxtField.text , !name.isEmpty,  let category = categoryTxtField.text , !category.isEmpty, let about = aboutTxtField.text ,!about.isEmpty, let time = timeTxtField.text ,!time.isEmpty else{
+            self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter empty fields".localize, selfDismissing: false)
+            return
+        }
+        API.GetData(AllUserUpdateResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.userUpdate, method: .post, parameters : ["name" : name,"description" : about, "api_token" : api_token!, "phone" : phone!], userToken: nil) {[weak self] (result) in
+            guard let self = self else {return}
+            switch result {
+            case .success(let model):
+                print("model = \(model)")
+                if model.status_message == nil{
+                    
+                    let userName = model.data?.name
+                    let userEmail = model.data?.email
+                    let userId = model.data?.id
+                    let userPhone = model.data?.phone
+                    let userVerfied = model.data?.verified
+                    UserDefaultData.save_user_data(token: self.api_token, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
+                    
+                }else{
+                    self.showAlert(title: "Error".localize, messages: nil, message: model.status_message!, selfDismissing: false)
+                }
+                break
+            case .failure(let err):
+                print(err!.localizedDescription)
+            case .noConnection(let Message):
+                self.showAlert(title: "Error".localize, messages: nil, message: Message!, selfDismissing: false)
+            }
+      }
+}
+    
+    
+    
     @IBAction func addKitchenImage(_ sender: UIButton) {
         imageHandel()
     }

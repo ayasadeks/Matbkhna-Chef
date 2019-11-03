@@ -15,7 +15,6 @@ class setWorkingTimeViewController: KitchenInformationViewController {
         var closeTime = ""
         @IBOutlet weak var secondPickerView: UIDatePicker!
         @IBOutlet weak var saveBtn: ButtonCornerRadious!
-    
         @IBOutlet weak var firstPickerView: UIDatePicker!
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -24,7 +23,6 @@ class setWorkingTimeViewController: KitchenInformationViewController {
             showDatePicker()
             let firstDate = firstPickerView.date
             let secondDate = secondPickerView.date
-            
             let components = Calendar.current.dateComponents([.hour, .minute ], from: firstDate)
             let hour = components.hour!
             let minute = components.minute!
@@ -73,8 +71,10 @@ class setWorkingTimeViewController: KitchenInformationViewController {
             
         }
         @IBAction func closeBtnAction(_ sender: Any) {
-            self.dismiss(animated: false, completion: nil)
-        }
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
+            self.present(nextViewController, animated: false, completion: nil)
+    }
         func Localize(){
             saveBtn.setTitle("Save".localize, for: .normal)
             

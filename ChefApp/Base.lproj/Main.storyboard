@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qKy-x8-Flk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdN-d8-1dn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1451,7 +1451,7 @@ Click </string>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMI-vC-as6" customClass="CosmosView" customModule="Cosmos">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMI-vC-as6" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="123" y="336" width="129" height="25"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -1463,7 +1463,7 @@ Click </string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J82-RX-ACh">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J82-RX-ACh">
                                                 <rect key="frame" x="100.5" y="378" width="174.5" height="19"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-Nx-qTs" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
@@ -1514,14 +1514,14 @@ Click </string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kma-a9-YJq">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kma-a9-YJq">
                                                 <rect key="frame" x="0.0" y="426" width="375" height="1"/>
                                                 <color key="backgroundColor" red="0.031372549020000001" green="0.0" blue="0.25098039220000001" alpha="0.040000000000000001" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="s42-mQ-E5Z"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xiP-tV-qLi">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xiP-tV-qLi">
                                                 <rect key="frame" x="22" y="435" width="331" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRZ-AA-kzv" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
@@ -1586,14 +1586,14 @@ Click </string>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8p-eZ-ijt">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8p-eZ-ijt">
                                                 <rect key="frame" x="0.0" y="481" width="375" height="1"/>
                                                 <color key="backgroundColor" red="0.031372549020000001" green="0.0" blue="0.25098039220000001" alpha="0.040000000000000001" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="1cu-l0-hFP"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-yb-m21">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZs-yb-m21">
                                                 <rect key="frame" x="0.0" y="499" width="375" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hga-2G-dSy">
@@ -1609,7 +1609,7 @@ Click </string>
                                                     <constraint firstItem="hga-2G-dSy" firstAttribute="centerY" secondItem="TZs-yb-m21" secondAttribute="centerY" id="KtT-6Y-dHl"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-zm-xRW">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-zm-xRW">
                                                 <rect key="frame" x="2" y="539" width="371" height="350"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1721,7 +1721,7 @@ Click </string>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htp-aH-grj">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htp-aH-grj">
                                                 <rect key="frame" x="0.0" y="889" width="375" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKP-il-yLV">
@@ -1737,7 +1737,7 @@ Click </string>
                                                     <constraint firstItem="aKP-il-yLV" firstAttribute="centerX" secondItem="htp-aH-grj" secondAttribute="centerX" id="u0e-NL-xhR"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Enjoy these grilled beef steaks sprinkled with salt and pepper that’s ready in 20 minutes perfect for a dinner." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-fF-p6c">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Enjoy these grilled beef steaks sprinkled with salt and pepper that’s ready in 20 minutes perfect for a dinner." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-fF-p6c">
                                                 <rect key="frame" x="29" y="945" width="317" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1747,7 +1747,7 @@ Click </string>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Regular" family="URW DIN Arabic" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNX-NY-j2W">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNX-NY-j2W">
                                                 <rect key="frame" x="0.0" y="1043" width="375" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time of work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-Kk-tQm">
@@ -1763,7 +1763,7 @@ Click </string>
                                                     <constraint firstItem="dYl-Kk-tQm" firstAttribute="centerY" secondItem="qNX-NY-j2W" secondAttribute="centerY" id="lqd-Yu-lM2"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ASy-BQ-3Vx">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ASy-BQ-3Vx">
                                                 <rect key="frame" x="23.5" y="1108" width="328" height="23"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOD-Qm-t5p" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
@@ -1848,7 +1848,7 @@ Click </string>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-PC-wJc">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-PC-wJc">
                                                 <rect key="frame" x="65.5" y="1152" width="244" height="23"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-bR-sgk" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
@@ -1913,13 +1913,13 @@ Click </string>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="From 10:00 AM TO 12:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CM-Ia-8bR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From 10:00 AM TO 12:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CM-Ia-8bR">
                                                 <rect key="frame" x="89" y="1194" width="197" height="21"/>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcr-19-Vt6">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcr-19-Vt6">
                                                 <rect key="frame" x="0.0" y="1241" width="375" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18M-VA-bXH">
@@ -1935,7 +1935,7 @@ Click </string>
                                                     <constraint firstAttribute="height" constant="40" id="ucA-co-nss"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="81c-sO-MhS">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="81c-sO-MhS">
                                                 <rect key="frame" x="5" y="1291" width="365" height="180"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2519,7 +2519,7 @@ Click </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExS-nc-J9z">
-                                <rect key="frame" x="166" y="50" width="43" height="22"/>
+                                <rect key="frame" x="166" y="50" width="43" height="20"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2536,13 +2536,13 @@ Click </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3X-A8-vYR">
-                                <rect key="frame" x="149.5" y="259" width="76" height="19.5"/>
+                                <rect key="frame" x="148.5" y="257" width="78.5" height="17.5"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="15"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aKW-iM-3en">
-                                <rect key="frame" x="28" y="298.5" width="319" height="250"/>
+                                <rect key="frame" x="28" y="294.5" width="319" height="250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-MV-lbl">
                                         <rect key="frame" x="0.0" y="0.0" width="316" height="80"/>
@@ -2604,7 +2604,7 @@ Click </string>
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Small" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovw-O2-IIJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30.5" height="15.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="14"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="12"/>
                                                         <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2615,7 +2615,7 @@ Click </string>
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EX: 200" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8E-DE-3TZ">
-                                                        <rect key="frame" x="0.0" y="15.5" width="95" height="45"/>
+                                                        <rect key="frame" x="0.0" y="14" width="95" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="IoQ-Oh-whk"/>
                                                         </constraints>
@@ -2642,7 +2642,7 @@ Click </string>
                                                 <rect key="frame" x="110" y="0.0" width="95" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmR-D4-hGp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="15.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="14"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="12"/>
                                                         <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2653,7 +2653,7 @@ Click </string>
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EX: 300" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-3k-3qh">
-                                                        <rect key="frame" x="0.0" y="15.5" width="95" height="45"/>
+                                                        <rect key="frame" x="0.0" y="14" width="95" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="pcB-qe-J6b"/>
                                                         </constraints>
@@ -2680,7 +2680,7 @@ Click </string>
                                                 <rect key="frame" x="220" y="0.0" width="95" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Large" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8P-DF-xaU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="31.5" height="15.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="30.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="12"/>
                                                         <color key="textColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2691,7 +2691,7 @@ Click </string>
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EX: 400" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rtX-9O-rUS">
-                                                        <rect key="frame" x="0.0" y="15.5" width="95" height="45"/>
+                                                        <rect key="frame" x="0.0" y="14" width="95" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="2Yh-KF-Oiu"/>
                                                         </constraints>
@@ -2719,7 +2719,7 @@ Click </string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDB-e7-9HW" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="598.5" width="319" height="44"/>
+                                <rect key="frame" x="28" y="594.5" width="319" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Syl-jd-kWa"/>
                                 </constraints>
@@ -2743,7 +2743,7 @@ Click </string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEO-D0-ns6" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="677.5" width="319" height="45"/>
+                                <rect key="frame" x="28" y="673.5" width="319" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.87450980389999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="yck-RE-FUj"/>
@@ -2767,7 +2767,7 @@ Click </string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-Xf-5Xc" customClass="CircleImageView" customModule="ChefApp" customModuleProvider="target">
-                                <rect key="frame" x="127" y="98" width="121" height="121"/>
+                                <rect key="frame" x="127" y="96" width="121" height="121"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="kv8-UX-Ikh" customClass="CircleImageView" customModule="ChefApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
