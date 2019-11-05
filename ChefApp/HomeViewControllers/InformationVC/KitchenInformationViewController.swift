@@ -11,7 +11,6 @@ import UIKit
 class KitchenInformationViewController: UIViewController, sentCategoryId {
     var api_token = UserDefaultData.get_user_string_data(key: "userToken")
     var phone : String?
-
     
     func setCategoryIdFunc(categoryID: Int) {
         categoryId = categoryID
@@ -19,7 +18,6 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
         self.isLoading = false
         viewDidLoad()
     }
-    
     
     @IBOutlet weak var viewOfImage: UIView!
     @IBOutlet weak var saveAndnextOutlet: ButtonCornerRadious!
@@ -38,12 +36,11 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     var imageBaseUrl = String()
     var searchKey = String()
     var LoadType = true
-
   
     override func viewDidLoad() {
         super.viewDidLoad()
 //     saveAndnextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
-   // viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
+    viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -51,7 +48,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     }
     
     @IBAction func categoryButton(_ sender: Any) {
- 
+        print("set category")
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addCategoryPopUp") as! AddCategoryPopUpViewController
         popvc.delegate = self
 
@@ -88,7 +85,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter empty fields".localize, selfDismissing: false)
             return
         }
-        API.GetData(AllUserUpdateResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.userUpdate, method: .post, parameters : ["name" : name,"description" : about, "api_token" : api_token!, "phone" : phone!], userToken: nil) {[weak self] (result) in
+        API.GetData(AllUserUpdateResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.userUpdate, method: .post, parameters : ["name" : name,"description" : about, "api_token" : api_token, "phone" : phone], userToken: nil) {[weak self] (result) in
             guard let self = self else {return}
             switch result {
             case .success(let model):
@@ -100,7 +97,10 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
                     let userId = model.data?.id
                     let userPhone = model.data?.phone
                     let userVerfied = model.data?.verified
-                    UserDefaultData.save_user_data(token: self.api_token, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied)
+                    let userImage = model.data?.logo
+                    let userLat = model.data?.latitude
+                    let userLong = model.data?.longitude
+                    UserDefaultData.save_user_update_data(token: self.api_token!, id: userId, name: userName, email: userEmail, phone: userPhone, is_active: userVerfied, image: userImage, lat: userLat, long: userLong)
                     
                 }else{
                     self.showAlert(title: "Error".localize, messages: nil, message: model.status_message!, selfDismissing: false)

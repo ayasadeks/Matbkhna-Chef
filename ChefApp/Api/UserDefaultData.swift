@@ -29,7 +29,7 @@ class UserDefaultData: NSObject {
     }
 
     
-    class func save_user_update_data(token: String?, id: Int? ,name: String? ,email: String? ,phone: String? , is_active: Int? , image: String? , lat  : String? , long : String?){
+    class func save_user_update_data(token: String?, id: Int? ,name: String? ,email: String? ,phone: String? , is_active: Bool? , image: String? , lat  : Int? , long : Int?){
         let def = UserDefaults.standard
         def.set(token, forKey: "userToken")
         def.set(id, forKey: "userid")
