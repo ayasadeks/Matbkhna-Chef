@@ -11,7 +11,7 @@ import UIKit
 class SelectAreaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var cellView: ViewCornerRadious!
+    
     
     
     

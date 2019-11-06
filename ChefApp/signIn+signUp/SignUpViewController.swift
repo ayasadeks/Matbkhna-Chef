@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController {
   //  var countryryId = -1
     var countryId = Int()
     var countryName = String()
+    var delegate : sendCountryId?
+
 
     @IBOutlet weak var nameTxtField: UITextField!
  

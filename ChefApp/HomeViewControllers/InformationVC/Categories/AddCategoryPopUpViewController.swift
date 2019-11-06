@@ -32,6 +32,8 @@ class AddCategoryPopUpViewController: UIViewController {
         tableView.separatorInset = .zero
         tableView.contentInset = .zero
         tableView.addSubview(refresher)
+        tableView.delegate = self
+        tableView.dataSource = self
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
         HandelRefresh()

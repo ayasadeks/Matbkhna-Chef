@@ -1,21 +1,20 @@
 //
-//  LoginModel.swift
+//  updatePasswordModel.swift
 //  ChefApp
 //
-//  Created by Admin on 9/17/19.
+//  Created by Admin on 11/6/19.
 //  Copyright © 2019 Admin. All rights reserved.
 //
 
 import Foundation
 
-struct  AllLoginResponseData: Codable {
+struct AllUpdatePassResponseData : Codable{
     let status_code : Int?
-    let data : LoginDataModel?
-    let token : String?
     let status_message : String?
+    let data : UpdatePasswordData?
 }
 
-struct LoginDataModel : Codable{
+struct UpdatePasswordData : Codable {
     let id: Int?
     let name : String?
     let email : String?
@@ -30,4 +29,5 @@ struct LoginDataModel : Codable{
     let openStatus : Bool?
     let rate : String?
     let distance : Int?
+    let lastLoginAt : Int?
 }

@@ -11,7 +11,6 @@
 		84004E262367263700F5F526 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84004E252367263700F5F526 /* CategoryTableViewCell.swift */; };
 		8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FB233662750081484A /* NotificationsViewController.swift */; };
 		8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FD233668370081484A /* NotificationsTableViewCell.swift */; };
-		8439A900233678640081484A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FF233678640081484A /* SettingsTableViewCell.swift */; };
 		8439A902233678780081484A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A901233678780081484A /* SettingsViewController.swift */; };
 		843B671523355C3D002635EC /* MoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671423355C3D002635EC /* MoreMenuViewController.swift */; };
 		843B671923356CB5002635EC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B671823356CB5002635EC /* EditProfileViewController.swift */; };
@@ -67,6 +66,11 @@
 		84747253233BCF5900F5E2D7 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747252233BCF5900F5E2D7 /* HistoryTableViewCell.swift */; };
 		84747255233BCF8E00F5E2D7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747254233BCF8E00F5E2D7 /* HistoryViewController.swift */; };
 		847BEC7E2367107A001D1FE7 /* API+GetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */; };
+		84891C6B2372E0E2001FDCDA /* API+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C6A2372E0E2001FDCDA /* API+Country.swift */; };
+		84891C6D2372E0EB001FDCDA /* API+Search+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C6C2372E0EA001FDCDA /* API+Search+Country.swift */; };
+		84891C6F2372F0AC001FDCDA /* LogOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C6E2372F0AC001FDCDA /* LogOutModel.swift */; };
+		84891C712372F84F001FDCDA /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C702372F84F001FDCDA /* NewPasswordViewController.swift */; };
+		84891C732372F976001FDCDA /* updatePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C722372F976001FDCDA /* updatePasswordModel.swift */; };
 		8492BB7D2332676000540887 /* AskVerficationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB7C2332676000540887 /* AskVerficationModel.swift */; };
 		8492BB7F2332679B00540887 /* SendVerficationCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */; };
 		8492BB812332681500540887 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8492BB802332681500540887 /* ChangePasswordModel.swift */; };
@@ -131,7 +135,6 @@
 		84004E252367263700F5F526 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		8439A8FB233662750081484A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		8439A8FD233668370081484A /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
-		8439A8FF233678640081484A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		8439A901233678780081484A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		843B671423355C3D002635EC /* MoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreMenuViewController.swift; sourceTree = "<group>"; };
 		843B671823356CB5002635EC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +190,11 @@
 		84747252233BCF5900F5E2D7 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		84747254233BCF8E00F5E2D7 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		847BEC7D2367107A001D1FE7 /* API+GetCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+GetCategory.swift"; sourceTree = "<group>"; };
+		84891C6A2372E0E2001FDCDA /* API+Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "API+Country.swift"; path = "../../../Mtbkhna/API Service/API+City+Country/API+Country.swift"; sourceTree = "<group>"; };
+		84891C6C2372E0EA001FDCDA /* API+Search+Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "API+Search+Country.swift"; path = "../../../Mtbkhna/API Service/API+City+Country/API+Search+Country.swift"; sourceTree = "<group>"; };
+		84891C6E2372F0AC001FDCDA /* LogOutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutModel.swift; sourceTree = "<group>"; };
+		84891C702372F84F001FDCDA /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		84891C722372F976001FDCDA /* updatePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updatePasswordModel.swift; sourceTree = "<group>"; };
 		8492BB7C2332676000540887 /* AskVerficationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskVerficationModel.swift; sourceTree = "<group>"; };
 		8492BB7E2332679B00540887 /* SendVerficationCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendVerficationCodeModel.swift; sourceTree = "<group>"; };
 		8492BB802332681500540887 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
@@ -266,7 +274,7 @@
 				8439A8FB233662750081484A /* NotificationsViewController.swift */,
 				8439A8FD233668370081484A /* NotificationsTableViewCell.swift */,
 				8439A901233678780081484A /* SettingsViewController.swift */,
-				8439A8FF233678640081484A /* SettingsTableViewCell.swift */,
+				84891C702372F84F001FDCDA /* NewPasswordViewController.swift */,
 				84747252233BCF5900F5E2D7 /* HistoryTableViewCell.swift */,
 				84747254233BCF8E00F5E2D7 /* HistoryViewController.swift */,
 				84AEC32A233E5F12006B67FF /* AboutViewController.swift */,
@@ -367,6 +375,8 @@
 				84AD3FD1234F6D0F001CF107 /* SelectAreaTableViewCell.swift */,
 				8443679B234F733A0083DEBC /* AreaModel.swift */,
 				8443679F234F746E0083DEBC /* GetAreaExtension.swift */,
+				84891C6C2372E0EA001FDCDA /* API+Search+Country.swift */,
+				84891C6A2372E0E2001FDCDA /* API+Country.swift */,
 			);
 			path = "signIn+signUp";
 			sourceTree = "<group>";
@@ -486,6 +496,8 @@
 				84526CB323436C2F000E7B50 /* GetOrderModel.swift */,
 				84411461235DC8A9002929B8 /* ChangeOrderStatusModel.swift */,
 				84FE52AB236B032A002E8A04 /* InformationModel.swift */,
+				84891C6E2372F0AC001FDCDA /* LogOutModel.swift */,
+				84891C722372F976001FDCDA /* updatePasswordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -820,6 +832,7 @@
 				84F7457A233102C300C00AD8 /* SendPhoneNumViewController.swift in Sources */,
 				84FB8577233287F9002B9BF4 /* APIDishesDataResturantDetailes.swift in Sources */,
 				84CFF306233A364100717753 /* OrderTableViewCell.swift in Sources */,
+				84891C712372F84F001FDCDA /* NewPasswordViewController.swift in Sources */,
 				8460FD79234E1A0E0081F2FB /* SetWorkingTimeApi.swift in Sources */,
 				84747243233B782D00F5E2D7 /* PricePopUpViewController.swift in Sources */,
 				84681E17232FCF6200BB3CA3 /* ViewCornerRadios.swift in Sources */,
@@ -831,12 +844,13 @@
 				8464A1F823410A1C0095F516 /* SetWorkingDaysViewController.swift in Sources */,
 				84004E262367263700F5F526 /* CategoryTableViewCell.swift in Sources */,
 				84FB857E23328815002B9BF4 /* GetDishes_Model.swift in Sources */,
+				84891C732372F976001FDCDA /* updatePasswordModel.swift in Sources */,
 				84411464235DC991002929B8 /* ChangeOrderStatusAPI.swift in Sources */,
+				84891C6D2372E0EB001FDCDA /* API+Search+Country.swift in Sources */,
 				8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */,
 				84747255233BCF8E00F5E2D7 /* HistoryViewController.swift in Sources */,
 				8464A1F42340C7B70095F516 /* MyWalletViewController.swift in Sources */,
 				845DB47B2357517F001C03B2 /* ExtraItemsViewController.swift in Sources */,
-				8439A900233678640081484A /* SettingsTableViewCell.swift in Sources */,
 				8492BB7F2332679B00540887 /* SendVerficationCodeModel.swift in Sources */,
 				84E07FC6232F841700ED6AAA /* signInViewController.swift in Sources */,
 				84F7457C2331045C00C00AD8 /* SendVerficationCodeViewController.swift in Sources */,
@@ -863,6 +877,7 @@
 				8492BB7D2332676000540887 /* AskVerficationModel.swift in Sources */,
 				84FE52AC236B032A002E8A04 /* InformationModel.swift in Sources */,
 				84FB857F23328815002B9BF4 /* resturantDetailes_Model.swift in Sources */,
+				84891C6F2372F0AC001FDCDA /* LogOutModel.swift in Sources */,
 				84FB856D233287DD002B9BF4 /* RAReviewsCVC.swift in Sources */,
 				84FF2BD7235CA26700529ACF /* OrderDetailsViewController.swift in Sources */,
 				845DB47D23575442001C03B2 /* AddExtraDishes.swift in Sources */,
@@ -881,6 +896,7 @@
 				84FB858823328A23002B9BF4 /* TextImage.swift in Sources */,
 				84FA68AE2357695400564C38 /* ExtraItem+API.swift in Sources */,
 				8474724B233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift in Sources */,
+				84891C6B2372E0E2001FDCDA /* API+Country.swift in Sources */,
 				8474724F233BAC1800F5E2D7 /* SearchViewController.swift in Sources */,
 				84FB856C233287DD002B9BF4 /* RADishesCVC.swift in Sources */,
 				8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */,

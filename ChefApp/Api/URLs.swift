@@ -50,7 +50,10 @@ struct URLS {
         ///POST(TO Post user update)
         static let userUpdate = main + "users/update"
     
-    
+    ///POST(TO LOGOUT)
+    static let logOut = main + "users/logout"
+     ///POST(TO update password)
+    static let updatePassword = main + "users/updatePassword"
     
     
 
