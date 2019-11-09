@@ -13,12 +13,11 @@ class SelectAreaViewController: UIViewController, sendCountryId {
         countryId = CountryId
         countryName = CountryName
         searchTextField.text = CountryName
-    }
+    } 
  
     
-
+    @IBOutlet weak var searchTextField: TextFeildRadious!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchTextField : TextFeildRadious!
     
     
   
@@ -30,16 +29,9 @@ class SelectAreaViewController: UIViewController, sendCountryId {
     var LoadType = true
     var isLoading : Bool = false
     var keyFlag = String()
-    var countryId = Int()
+    var countryId = 1
     var countryName = String()
     
-    
-    //to make table view refresh
-//    lazy var refresher: UIRefreshControl = {
-//        let refresher = UIRefreshControl()
-//        refresher.addTarget(self, action: #selector(HandelRefresh), for: .valueChanged)
-//        return refresher
-//    }()
     
     lazy var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
@@ -66,7 +58,6 @@ class SelectAreaViewController: UIViewController, sendCountryId {
         tableView.delegate = self
         tableView.dataSource = self
         keyFlag = "country"
-        //searchTextFeild.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         handelRefresh()
         
@@ -84,31 +75,21 @@ class SelectAreaViewController: UIViewController, sendCountryId {
             self.tableView.deselectRow(at: index, animated: true)
         }
     }
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
-//        self.tabBarController?.tabBar.isHidden = true
-//    }
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        self.navigationController?.setNavigationBarHidden(false, animated: false)
-//        self.tabBarController?.tabBar.isHidden = false
-//    }
   
+
     
     @IBAction func saveAndNextBtn(_ sender: UIButton) {
 //        let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
 //        if countryId == 0 {
 //            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
 //        }else{
+//            print("id == 1")
 //            homeVC.countryName = self.countryName
 //            homeVC.countryId = self.countryId
 //            self.navigationController?.pushViewController(homeVC, animated: true)
-        
-     //   }
-
-
-    }
+//        }
+//
+   }
  
     
 }
@@ -159,17 +140,6 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         navigationController?.pushViewController(searchResult, animated: true)
         
         
-//        if self.getCurrentDeviceLanguage() == "ar" {
-//            delegate?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].title!)
-//
-//        }else if self.getCurrentDeviceLanguage() == "en"{
-//            delegate?.sendCountryId_Name(CountryId: self.countryArray[indexPath.row].id!, CountryName: self.countryArray[indexPath.row].titleEng!)
-//        }
-//        self.navigationController?.popViewController(animated: true)
-//
-
-        
-        
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 //        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
@@ -191,16 +161,6 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         
                     }
                 }
-        
-        
-//        if tableView == tableView{
-//            let count = self.countryArray.count
-//            if indexPath.row == count-1 {
-//                loadMore()
-//                print("loadmore")
-//
-//            }
-//        }
 }
 
 
@@ -214,16 +174,6 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
 
 
 extension SelectAreaViewController : UITextFieldDelegate{
-//    @objc func textFieldDidChange(_ textField: UITextField) {
-//        if textField.text!.count == 0{
-//            keyFlag = "country"
-//            handelRefresh()
-//        }else{
-//            keyFlag = "countryKey"
-//            searchKey = textField.text!
-//            print("textField \(searchKey)")
-//            handelRefresh()
-//        }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
         searchTextField.resignFirstResponder()
@@ -232,13 +182,16 @@ extension SelectAreaViewController : UITextFieldDelegate{
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         if textField.text!.count == 0{
+            keyFlag = "country"
             handelRefresh()
         }else{
+            keyFlag = "countryKey"
             searchKey = textField.text!
             print("textField \(searchKey)")
             searchHandelRefresh()
         }
     }
+ 
     
 //    @objc func textFieldDidChange(_ textField: UITextField) {
 //        if textField.text!.count == 0{

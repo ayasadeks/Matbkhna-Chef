@@ -139,8 +139,14 @@ class SignUpViewController: UIViewController {
     @IBAction func selectAreaButton(_ sender: UIButton) {
 
         print("Select Area")
-        
-        //go to next view controller
+//        
+//        let countryVC =  self.storyboard!.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
+//        countryVC.delegate = self as? sendCountryId
+//        
+//        navigationController?.pushViewController(countryVC, animated: true)
+//      
+//
+//        //go to next view controller
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
         popvc.delegate = self as? sendCountryId
 
@@ -151,9 +157,7 @@ class SignUpViewController: UIViewController {
         self.view.addSubview(popvc.view)
 
         popvc.didMove(toParent: self)
-//        let countryVC =  self.storyboard!.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
-//        countryVC.delegate = self as? sendCountryId
-//        self.navigationController?.pushViewController(countryVC, animated: true)
+
     }
 }
 

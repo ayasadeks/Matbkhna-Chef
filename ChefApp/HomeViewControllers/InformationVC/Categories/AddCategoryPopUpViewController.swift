@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AddCategoryPopUpViewController: UIViewController {
+class AddCategoryPopUpViewController: UIViewController, sentCategoryId {
+   
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,11 +20,21 @@ class AddCategoryPopUpViewController: UIViewController {
     var last_page = 1
     var isLoading : Bool = false
     
+    var categoryNamee: String?
+    
+    
+    
     lazy var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(HandelRefresh), for: .valueChanged)
         return refresher
     }()
+    func setCategoryIdFunc(categoryID: Int) {
+        categoryId = categoryID
+        print("categryIdd\(categoryId)")
+        self.isLoading = false
+        viewDidLoad()
+    }
     
     
     override func viewDidLoad() {
@@ -49,28 +60,44 @@ class AddCategoryPopUpViewController: UIViewController {
         
     }
     
-    @IBAction func savecontinueButton(_ sender: Any) {
-//        API.Category(page: current_page) { (error, categoryData, current_page) in
-//
-//            if error == nil {
-//                print("sucess category")
-//
-//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
-//                self.present(nextViewController, animated: false, completion: nil)
-//
-//            }else{
-//        self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)            }
-//
-//        }
-}
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
         self.tabBarController?.tabBar.isHidden = true
-        self.title = "Category"
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
     }
+    
+    @IBAction func savecontinueButton(_ sender: Any) {
+        if let selectedRows = tableView.indexPathsForSelectedRows {
+            // 1
+            var items = [Int]()
+            for indexPath in selectedRows  {
+                items.append(categoryArray[indexPath.row].id!)
+            }
+            // 2
+            API.SetCategory(categories: items) { (sucess) in
+                if sucess!{
+                    print("hiiiii")
+                    self.showToast(message: "Caetgory Added Sucessufly".localize)
+                    let nextVC =  self.storyboard!.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
+                    
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                }else{
+                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+                }
+            }
+            for item in items {
+                print("item = \(item)")
+                
+            }
+            
+        }else{
+            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose Your Category".localize , selfDismissing: false)
+        }
 
+}
 
     
     @IBAction func categoryActionsBtns(_ sender: UIButton ) {
@@ -116,28 +143,30 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
         
         return cell
       }//end of cellForRowAt
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
+
         return 60
-        
+
     }//end of heightForRowAt
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
-//        categoryId = categoryArray[indexPath.row].id!
-//        if delegate != nil{
-//            delegate?.setCategoryIdFunc(categoryID: categoryId)
-//        }
-//        categoryResult?.categoryId = categoryArray[indexPath.row].id!
-//        self.navigationController?.popViewController(animated: true)
-//
-//           self.navigationController?.pushViewController(categoryResult!, animated: true)
-//
+        let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
+        categoryId = categoryArray[indexPath.row].id!
+        if delegate != nil{
+            delegate?.setCategoryIdFunc(categoryID: categoryId)
+        }
+        categoryResult?.categoryId = categoryArray[indexPath.row].id!
+        self.navigationController?.popViewController(animated: true)
+
+           self.navigationController?.pushViewController(categoryResult!, animated: true)
+        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.white
+
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//                var cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
-//                cellToDeSelect.contentView.backgroundColor = UIColor.white
+                let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+                cellToDeSelect.contentView.backgroundColor = UIColor.white
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
