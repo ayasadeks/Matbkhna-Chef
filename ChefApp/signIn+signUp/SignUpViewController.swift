@@ -12,18 +12,14 @@ import CodableAlamofire
 
 class SignUpViewController: UIViewController {
 
-  //  var countryryId = -1
     var countryId = Int()
     var countryName = String()
     var delegate : sendCountryId?
 
-
     @IBOutlet weak var nameTxtField: UITextField!
- 
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var numberTxtField: UITextField!
     @IBOutlet weak var confirmPassTxtfield: UITextField!
-    
     @IBOutlet weak var showBtn0: UIButton!
     @IBOutlet weak var shoBtn1: UIButton!
     @IBOutlet weak var passwordTxtField: UITextField!
@@ -35,16 +31,11 @@ class SignUpViewController: UIViewController {
         //localize()
         nextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if  let verficationViewControler = segue.destination as? SendVerficationCodeViewController{
-//            SendVerficationCodeViewController.code = self.code
-//        }
-//    }
-//    
+
     @IBAction func showPassword(_ sender: UIButton) {
         let showImage = UIImage(named: "active_eye")
         let unShowImage = UIImage(named: "b-preview-outline-24")
-
+        
         if sender.tag == 0{
             if passwordTxtField.isSecureTextEntry == true{
                 passwordTxtField.isSecureTextEntry = false
@@ -62,7 +53,6 @@ class SignUpViewController: UIViewController {
                 shoBtn1.setImage(unShowImage, for: .normal)
             }
         }
-
     }
     //email validation
     func isValidEmail(testStr:String) -> Bool {
@@ -139,12 +129,7 @@ class SignUpViewController: UIViewController {
     @IBAction func selectAreaButton(_ sender: UIButton) {
 
         print("Select Area")
-//        
-//        let countryVC =  self.storyboard!.instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
-//        countryVC.delegate = self as? sendCountryId
-//        
-//        navigationController?.pushViewController(countryVC, animated: true)
-//      
+ 
 //
 //        //go to next view controller
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController

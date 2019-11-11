@@ -19,7 +19,6 @@ class SelectAreaViewController: UIViewController, sendCountryId {
     @IBOutlet weak var searchTextField: TextFeildRadious!
     @IBOutlet weak var tableView: UITableView!
     
-    
   
     var delegate : sendCountryId?
     var countryArray = [AreaArrayData]()
@@ -39,7 +38,6 @@ class SelectAreaViewController: UIViewController, sendCountryId {
             refresher.addTarget(self, action: #selector(handelRefresh), for: .valueChanged)
         }else{
             refresher.addTarget(self, action: #selector(searchHandelRefresh), for: .valueChanged)
-            
         }
         return refresher
     }()
@@ -89,9 +87,8 @@ class SelectAreaViewController: UIViewController, sendCountryId {
 //            self.navigationController?.pushViewController(homeVC, animated: true)
 //        }
 //
-   }
- 
-    
+     }
+
 }
 
 
@@ -123,15 +120,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     }//end of heightForRowAt
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-////
        let searchResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
-//        countryId = countryArray[indexPath.row].id!
-//        if delegate != nil{
-//            delegate?.sendCountryId_Name(CountryId: countryArray[indexPath.row].id!, CountryName: countryArray[indexPath.row].title!)
-//        }
-//        searchResult.countryryId = countryArray[indexPath.row].id!
-//        self.navigationController?.popViewController(animated: true)
-//           ///////////////////////////
        
         searchResult.countryName = countryArray[indexPath.row].title!
         searchResult.countryId = countryArray[indexPath.row].id!
@@ -141,10 +130,12 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         
         
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
-//        cellToDeSelect.contentView.backgroundColor = UIColor.white
+    
+    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("selected cell \(indexPath.row)")
     }
+    
+
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
