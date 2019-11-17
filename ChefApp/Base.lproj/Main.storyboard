@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-URW-DIN-Arabic-Black.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
@@ -7267,7 +7267,7 @@ to refuse order</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="319" height="64.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbS-NV-ap4">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbS-NV-ap4" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X74-uA-YYR">
@@ -7285,6 +7285,14 @@ to refuse order</string>
                                                                 <constraint firstAttribute="bottom" secondItem="X74-uA-YYR" secondAttribute="bottom" constant="5" id="sqi-09-HbJ"/>
                                                                 <constraint firstItem="X74-uA-YYR" firstAttribute="leading" secondItem="VbS-NV-ap4" secondAttribute="leading" id="ydM-r6-rWG"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
@@ -7361,7 +7369,7 @@ to refuse order</string>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="searchTextField" destination="sK4-zC-sVk" id="PUL-aT-bys"/>
+                        <outlet property="searchTextField" destination="sK4-zC-sVk" id="s3z-Ci-S4P"/>
                         <outlet property="tableView" destination="krl-Vt-zoq" id="Wcf-Xc-WFB"/>
                     </connections>
                 </viewController>

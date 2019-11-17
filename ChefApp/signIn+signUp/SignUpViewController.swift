@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController {
     var countryId = Int()
     var countryName = String()
     var delegate : sendCountryId?
+    var areaName = SelectAreaViewController()
+    
 
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var emailTxtField: UITextField!
@@ -30,6 +32,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         //localize()
         nextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
+        areaTxtField.text = areaName.countryName
     }
 
     @IBAction func showPassword(_ sender: UIButton) {

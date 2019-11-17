@@ -160,7 +160,7 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
         self.navigationController?.popViewController(animated: true)
 
            self.navigationController?.pushViewController(categoryResult!, animated: true)
-        var selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = UIColor.white
 
     }

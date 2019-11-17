@@ -30,6 +30,7 @@ class SelectAreaViewController: UIViewController, sendCountryId {
     var keyFlag = String()
     var countryId = 1
     var countryName = String()
+   // var areaField = SignUpViewController()
     
     
     lazy var refresher: UIRefreshControl = {
@@ -58,6 +59,8 @@ class SelectAreaViewController: UIViewController, sendCountryId {
         keyFlag = "country"
         searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         handelRefresh()
+       // tableView.register(SelectAreaTableViewCell.self,forCellReuseIdentifier: "cityCell")
+
         
         //HandelRefresh()
 //        if let index = self.tableView.indexPathForSelectedRow{
@@ -77,15 +80,17 @@ class SelectAreaViewController: UIViewController, sendCountryId {
 
     
     @IBAction func saveAndNextBtn(_ sender: UIButton) {
-//        let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
-//        if countryId == 0 {
-//            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
-//        }else{
-//            print("id == 1")
-//            homeVC.countryName = self.countryName
-//            homeVC.countryId = self.countryId
-//            self.navigationController?.pushViewController(homeVC, animated: true)
-//        }
+        let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
+        if countryId == 0 {
+            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
+        }else{
+            print("id == 1")
+            homeVC.countryName = self.countryName
+            homeVC.countryId = self.countryId
+            self.present(homeVC, animated: false, completion: nil)
+
+          //  self.navigationController?.pushViewController(homeVC, animated: true)
+        }
 //
      }
 
@@ -120,20 +125,29 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     }//end of heightForRowAt
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       let searchResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
-       
-        searchResult.countryName = countryArray[indexPath.row].title!
-        searchResult.countryId = countryArray[indexPath.row].id!
-        
-        searchResult.delegate = self as sendCountryId
-        navigationController?.pushViewController(searchResult, animated: true)
-        
-        
+
+        let searchResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goSIgnUp") as? SignUpViewController
+        countryId = countryArray[indexPath.row].id!
+        if delegate != nil{
+            delegate?.sendCountryId_Name(CountryId: countryId, CountryName: countryName)
+        }
+        searchResult?.countryId = countryArray[indexPath.row].id!
+        self.navigationController?.popViewController(animated: true)
+
     }
     
-    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("selected cell \(indexPath.row)")
+//    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+//        print("selected cell")
+//    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        cellToDeSelect.contentView.backgroundColor = UIColor.white
+        
+        print("selected cell")
+
     }
+
+    
     
 
     
@@ -149,9 +163,8 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
                     }else{
                         SearchLoadMore()
                         print("searchloadmore")
-        
                     }
-                }
+            }
 }
 
 
