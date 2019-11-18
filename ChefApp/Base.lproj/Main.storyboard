@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aRD-8B-A5I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-lt-jgo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
+            <string>URWDINArabic-Regular</string>
+        </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
@@ -22,9 +25,6 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
-        </array>
-        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
-            <string>URWDINArabic-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -168,7 +168,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bWO-nM-j2x"/>
-                                    <segue destination="aRD-8B-A5I" kind="show" identifier="signUp" id="61r-HP-XSf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -6479,14 +6478,14 @@ to refuse order</string>
                                         <rect key="frame" x="25" y="60" width="325" height="205"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="65" id="BpX-Zv-nEi" customClass="CategoryTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="325" height="65"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="72" id="BpX-Zv-nEi" customClass="CategoryTableViewCell" customModule="ChefApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="325" height="72"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpX-Zv-nEi" id="NmJ-IA-sqf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="65"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="72"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-LM-Twh" customClass="FormViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-LM-Twh" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="325" height="60"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQk-fP-Cc6">
@@ -6537,7 +6536,10 @@ to refuse order</string>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="20"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
@@ -6561,6 +6563,7 @@ to refuse order</string>
                                 <constraints>
                                     <constraint firstItem="5ee-kb-m6K" firstAttribute="centerX" secondItem="sQ4-eX-Nej" secondAttribute="centerX" id="7hO-aE-gEm"/>
                                     <constraint firstAttribute="bottom" secondItem="5ee-kb-m6K" secondAttribute="bottom" constant="45" id="7vH-Uh-WRH"/>
+                                    <constraint firstItem="3ez-c7-RQT" firstAttribute="top" secondItem="WwK-sX-BL2" secondAttribute="bottom" constant="21.5" id="AoH-8T-5Af"/>
                                     <constraint firstItem="3ez-c7-RQT" firstAttribute="centerX" secondItem="sQ4-eX-Nej" secondAttribute="centerX" id="CJU-Td-0iU"/>
                                     <constraint firstItem="WwK-sX-BL2" firstAttribute="top" secondItem="sQ4-eX-Nej" secondAttribute="top" constant="19" id="Frl-hR-X0t"/>
                                     <constraint firstItem="5ee-kb-m6K" firstAttribute="leading" secondItem="sQ4-eX-Nej" secondAttribute="leading" constant="27" id="OK9-0P-unR"/>
@@ -6568,7 +6571,6 @@ to refuse order</string>
                                     <constraint firstItem="WwK-sX-BL2" firstAttribute="centerX" secondItem="sQ4-eX-Nej" secondAttribute="centerX" id="SEJ-aU-aOc"/>
                                     <constraint firstAttribute="trailing" secondItem="Du0-12-I8Q" secondAttribute="trailing" constant="32" id="aS5-uk-Owt"/>
                                     <constraint firstAttribute="height" constant="370" id="c3t-zK-I3Y"/>
-                                    <constraint firstItem="3ez-c7-RQT" firstAttribute="top" secondItem="Du0-12-I8Q" secondAttribute="bottom" constant="20" id="lBT-Ag-dec"/>
                                     <constraint firstAttribute="trailing" secondItem="5ee-kb-m6K" secondAttribute="trailing" constant="27" id="onN-vO-hIL"/>
                                     <constraint firstAttribute="trailing" secondItem="3ez-c7-RQT" secondAttribute="trailing" constant="25" id="sf0-q2-mUj"/>
                                     <constraint firstItem="Du0-12-I8Q" firstAttribute="top" secondItem="sQ4-eX-Nej" secondAttribute="top" constant="20" id="tI4-oU-wHe"/>

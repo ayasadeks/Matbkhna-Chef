@@ -413,7 +413,6 @@
 				8474724E233BAC1800F5E2D7 /* SearchViewController.swift */,
 				84747250233BAC3E00F5E2D7 /* SearchTableViewCell.swift */,
 				84AF652F233A91C4007FE38F /* AddDishesViewControllers */,
-				84AF6530233A9229007FE38F /* InformationVC */,
 			);
 			path = HomeViewControllers;
 			sourceTree = "<group>";
@@ -451,6 +450,7 @@
 				84E4DC232331133E001B935A /* VerficationViewControllers */,
 				84EDDA5F233A3CE00075D4C7 /* Order */,
 				84B9C0A1233398C1008CA072 /* HomeViewControllers */,
+				84AF6530233A9229007FE38F /* InformationVC */,
 				843B671323355BFF002635EC /* MoreViewControllers */,
 				84FE6710233E5BC7002810B4 /* Designs */,
 				843EBBBC23324CC600C75BC8 /* LaunchScreen.storyboard */,

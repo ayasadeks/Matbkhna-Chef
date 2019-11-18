@@ -110,8 +110,9 @@ class signInViewController: UIViewController {
     }
 
     @IBAction func signUpButton(_ sender: Any) {
-   performSegue(withIdentifier: "signUp", sender: self)
-
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
+        self.present(nextViewController, animated: false, completion: nil)
     }
 }
 

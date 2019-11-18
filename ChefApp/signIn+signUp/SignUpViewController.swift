@@ -10,13 +10,17 @@ import UIKit
 import Alamofire
 import CodableAlamofire
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, sendCountryId {
 
     var countryId = Int()
     var countryName = String()
     var delegate : sendCountryId?
-    var areaName = SelectAreaViewController()
     
+    func sendCountryId_Name(CountryId: Int, CountryName: String) {
+        countryId = CountryId
+        countryName = CountryName
+        areaTxtField.text = CountryName
+    }
 
     @IBOutlet weak var nameTxtField: UITextField!
     @IBOutlet weak var emailTxtField: UITextField!
@@ -32,7 +36,6 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         //localize()
         nextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
-        areaTxtField.text = areaName.countryName
     }
 
     @IBAction func showPassword(_ sender: UIButton) {
@@ -71,6 +74,9 @@ class SignUpViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
        
+    
+        
+       
         guard let name = nameTxtField.text , !name.isEmpty, let email = emailTxtField.text , !email.isEmpty , let phone = numberTxtField.text, !phone.isEmpty , let area = areaTxtField.text , !area.isEmpty, let password = passwordTxtField.text, !password.isEmpty , let confirmPassword = confirmPassTxtfield.text , !confirmPassword.isEmpty else{
 
             self.showAlert(title: "Error".localize, messages: nil, message: "Enter All Empty  Data".localize, selfDismissing: false)
@@ -107,6 +113,10 @@ class SignUpViewController: UIViewController {
                             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "verfication") as! SendVerficationCodeViewController
                             self.present(nextViewController, animated: false, completion: nil)
+                            
+                         
+                            
+                            
 
                         }else{
                             self.showAlert(title: "Error11".localize, messages: nil, message: model.status_message!, selfDismissing: false)
@@ -121,22 +131,13 @@ class SignUpViewController: UIViewController {
        }
    }
     
-    
-    func sendCountryId_Name(CountryId: Int, CountryName: String) {
-        countryId = CountryId
-        countryName = CountryName
-        areaTxtField.text = CountryName
-    }
-    
-    
     @IBAction func selectAreaButton(_ sender: UIButton) {
 
         print("Select Area")
  
-//
 //        //go to next view controller
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selectArea") as! SelectAreaViewController
-        popvc.delegate = self as? sendCountryId
+        popvc.delegate = self
 
         self.addChild(popvc)
 

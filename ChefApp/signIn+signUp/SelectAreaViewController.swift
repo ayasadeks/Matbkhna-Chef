@@ -9,12 +9,7 @@
 import UIKit
 
 class SelectAreaViewController: UIViewController, sendCountryId {
-    func sendCountryId_Name(CountryId: Int, CountryName: String) {
-        countryId = CountryId
-        countryName = CountryName
-        searchTextField.text = CountryName
-    } 
- 
+   
     
     @IBOutlet weak var searchTextField: TextFeildRadious!
     @IBOutlet weak var tableView: UITableView!
@@ -28,7 +23,7 @@ class SelectAreaViewController: UIViewController, sendCountryId {
     var LoadType = true
     var isLoading : Bool = false
     var keyFlag = String()
-    var countryId = 1
+    var countryId = Int()
     var countryName = String()
    // var areaField = SignUpViewController()
     
@@ -43,6 +38,12 @@ class SelectAreaViewController: UIViewController, sendCountryId {
         return refresher
     }()
 
+    func sendCountryId_Name(CountryId: Int, CountryName: String) {
+        countryId = CountryId
+        countryName = CountryName
+        searchTextField.text = "\(CountryName)"
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,13 +81,17 @@ class SelectAreaViewController: UIViewController, sendCountryId {
 
     
     @IBAction func saveAndNextBtn(_ sender: UIButton) {
+        print("area id = \(countryId)" )
+
         let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goSIgnUp") as! SignUpViewController
         if countryId == 0 {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
         }else{
-            print("id == 1")
+           // print("id == 1")
             homeVC.countryName = self.countryName
             homeVC.countryId = self.countryId
+            
+            print("name is \(countryName)")
             self.present(homeVC, animated: false, completion: nil)
 
           //  self.navigationController?.pushViewController(homeVC, animated: true)
@@ -128,6 +133,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
 
         let searchResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goSIgnUp") as? SignUpViewController
         countryId = countryArray[indexPath.row].id!
+        countryName = countryArray[indexPath.row].titleEng!
         if delegate != nil{
             delegate?.sendCountryId_Name(CountryId: countryId, CountryName: countryName)
         }

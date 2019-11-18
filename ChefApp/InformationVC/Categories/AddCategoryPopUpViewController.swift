@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCategoryPopUpViewController: UIViewController, sentCategoryId {
+class AddCategoryPopUpViewController: UIViewController {
    
 
     @IBOutlet weak var tableView: UITableView!
@@ -29,12 +29,12 @@ class AddCategoryPopUpViewController: UIViewController, sentCategoryId {
         refresher.addTarget(self, action: #selector(HandelRefresh), for: .valueChanged)
         return refresher
     }()
-    func setCategoryIdFunc(categoryID: Int) {
-        categoryId = categoryID
-        print("categryIdd\(categoryId)")
-        self.isLoading = false
-        viewDidLoad()
-    }
+//    func setCategoryIdFunc(categoryID: Int) {
+//        categoryId = categoryID
+//        print("categryIdd\(categoryId)")
+//        self.isLoading = false
+//        viewDidLoad()
+//    }
     
     
     override func viewDidLoad() {
@@ -157,16 +157,14 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
             delegate?.setCategoryIdFunc(categoryID: categoryId)
         }
         categoryResult?.categoryId = categoryArray[indexPath.row].id!
-        self.navigationController?.popViewController(animated: true)
-
-           self.navigationController?.pushViewController(categoryResult!, animated: true)
-        let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor.white
-
+        self.navigationController?.pushViewController(categoryResult!, animated: true)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-                let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
-                cellToDeSelect.contentView.backgroundColor = UIColor.white
+        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        cellToDeSelect.contentView.backgroundColor = UIColor.white
+        
+        print("selected cell")
+        
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
