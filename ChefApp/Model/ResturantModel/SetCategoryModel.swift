@@ -44,5 +44,7 @@ struct AllSetCategoryResponseData: Codable {
     let status_code : Int?
     let message : String?
     let data : SetCategoryDataModel?
+    let paginate : CategoryPaginate?
+
 }
 

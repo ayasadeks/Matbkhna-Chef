@@ -24,7 +24,7 @@ class SelectAreaViewController: UIViewController, sendCountryId {
     var isLoading : Bool = false
     var keyFlag = String()
     var countryId = Int()
-    var countryName = String()
+    var countryName : String?
    // var areaField = SignUpViewController()
     
     
@@ -88,7 +88,8 @@ class SelectAreaViewController: UIViewController, sendCountryId {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
         }else{
            // print("id == 1")
-            homeVC.countryName = self.countryName
+           // homeVC.areaTxtField.text = self.countryName
+            homeVC.countryName = self.countryName!
             homeVC.countryId = self.countryId
             
             print("name is \(countryName)")
@@ -125,7 +126,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 50
+        return 60
         
     }//end of heightForRowAt
     
@@ -135,9 +136,11 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         countryId = countryArray[indexPath.row].id!
         countryName = countryArray[indexPath.row].titleEng!
         if delegate != nil{
-            delegate?.sendCountryId_Name(CountryId: countryId, CountryName: countryName)
+            delegate?.sendCountryId_Name(CountryId: countryId, CountryName: countryName!)
         }
         searchResult?.countryId = countryArray[indexPath.row].id!
+        searchResult?.countryName = countryArray[indexPath.row].titleEng!
+
         self.navigationController?.popViewController(animated: true)
 
     }

@@ -8,16 +8,18 @@
 
 import UIKit
 
-class KitchenInformationViewController: UIViewController, sentCategoryId {
-    var api_token = UserDefaultData.get_user_string_data(key: "userToken")
-    var phone : String?
-    
-    func setCategoryIdFunc(categoryID: Int) {
-        categoryId = categoryID
+class KitchenInformationViewController: UIViewController, sendCategoryId {
+    func setCategoryIdFunc(CategoryID: Int, CategotryName: String) {
+        categoryId = CategoryID
+        categoryName = CategotryName
         print("categryIdd\(categoryId)")
+        categoryTxtField.text = CategotryName
         self.isLoading = false
         viewDidLoad()
     }
+    
+    var api_token = UserDefaultData.get_user_string_data(key: "userToken")
+    var phone : String?
     
     @IBOutlet weak var viewOfImage: UIView!
     @IBOutlet weak var saveAndnextOutlet: ButtonCornerRadious!
@@ -28,8 +30,9 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     @IBOutlet weak var timeTxtField: UITextField!
     
     var kitchenPhoto = UIImage()
-    var delegate : sentCategoryId?
+    var delegate : sendCategoryId?
     var categoryId = -1
+    var categoryName = String()
     var current_page = 1
     var last_page = 1
     var isLoading : Bool = false
@@ -50,7 +53,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
     @IBAction func categoryButton(_ sender: Any) {
         print("set category")
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addCategoryPopUp") as! AddCategoryPopUpViewController
-        popvc.delegate = self
+        popvc.delegate = self as sendCategoryId
 
         self.addChild(popvc)
 
@@ -85,7 +88,7 @@ class KitchenInformationViewController: UIViewController, sentCategoryId {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter empty fields".localize, selfDismissing: false)
             return
         }
-        API.GetData(AllUserUpdateResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.userUpdate, method: .post, parameters : ["name" : name,"description" : about, "api_token" : api_token, "phone" : phone], userToken: nil) {[weak self] (result) in
+        API.GetData(AllUserUpdateResponseData.self,language: self.getCurrentDeviceLanguage(), url: URLS.userUpdate, method: .post, parameters : ["name" : name,"description" : about, "api_token" : api_token!, "phone" : phone!], userToken: nil) {[weak self] (result) in
             guard let self = self else {return}
             switch result {
             case .success(let model):

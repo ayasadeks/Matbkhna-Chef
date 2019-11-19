@@ -13,6 +13,6 @@ protocol sendCountryId {
     func sendCountryId_Name(CountryId: Int , CountryName : String)
 }
 
-protocol sentCategoryId {
-    func setCategoryIdFunc(categoryID: Int)
+protocol sendCategoryId {
+    func setCategoryIdFunc(CategoryID: Int, CategotryName : String)
 }

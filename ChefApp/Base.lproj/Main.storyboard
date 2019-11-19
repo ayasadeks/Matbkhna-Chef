@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bad-lt-jgo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jj8-EF-UCh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,13 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
-            <string>URWDINArabic-Regular</string>
-        </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -25,6 +22,9 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
+        </array>
+        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
+            <string>URWDINArabic-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -6439,7 +6439,7 @@ to refuse order</string>
                                             <constraint firstAttribute="height" constant="45" id="1bq-hl-nFK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="17"/>
-                                        <state key="normal" title="Save &amp; continue">
+                                        <state key="normal" title="Add &amp; Save">
                                             <color key="titleColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -6474,39 +6474,28 @@ to refuse order</string>
                                             <action selector="closeButton:" destination="bad-lt-jgo" eventType="touchUpInside" id="mea-iH-bxv"/>
                                         </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ez-c7-RQT">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ez-c7-RQT">
                                         <rect key="frame" x="25" y="60" width="325" height="205"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="72" id="BpX-Zv-nEi" customClass="CategoryTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="325" height="72"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="65" id="BpX-Zv-nEi" customClass="CategoryTableViewCell" customModule="ChefApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="325" height="65"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpX-Zv-nEi" id="NmJ-IA-sqf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="72"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BpX-Zv-nEi" id="NmJ-IA-sqf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="64.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRr-LM-Twh" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQk-fP-Cc6">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="60"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
                                                                             <real key="value" value="0.0"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
-                                                                    <connections>
-                                                                        <action selector="categoryActionsBtns:" destination="bad-lt-jgo" eventType="touchUpInside" id="8zA-QK-gcj"/>
-                                                                    </connections>
                                                                 </button>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fgk-sZ-icu">
-                                                                    <rect key="frame" x="0.0" y="52" width="319" height="1"/>
-                                                                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="1" id="BtQ-7s-LAS"/>
-                                                                        <constraint firstAttribute="width" constant="319" id="D73-4X-8vo"/>
-                                                                    </constraints>
-                                                                </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvu-gQ-1Hj">
                                                                     <rect key="frame" x="40" y="11" width="277" height="35"/>
                                                                     <constraints>
@@ -6521,17 +6510,16 @@ to refuse order</string>
                                                                     <rect key="frame" x="9" y="20" width="21" height="21"/>
                                                                 </imageView>
                                                             </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="60" id="GOC-Sf-FDL"/>
+                                                                <constraint firstAttribute="height" constant="50" id="GOC-Sf-FDL"/>
                                                                 <constraint firstItem="GQk-fP-Cc6" firstAttribute="leading" secondItem="hRr-LM-Twh" secondAttribute="leading" id="J9g-EW-OEX"/>
                                                                 <constraint firstAttribute="bottom" secondItem="GQk-fP-Cc6" secondAttribute="bottom" id="JaM-ES-wR9"/>
                                                                 <constraint firstAttribute="trailing" secondItem="GQk-fP-Cc6" secondAttribute="trailing" id="KdO-qp-fiJ"/>
-                                                                <constraint firstItem="fgk-sZ-icu" firstAttribute="top" secondItem="fvu-gQ-1Hj" secondAttribute="bottom" constant="6" id="P7w-Ao-grH"/>
                                                                 <constraint firstItem="fvu-gQ-1Hj" firstAttribute="top" secondItem="hRr-LM-Twh" secondAttribute="top" constant="11" id="VGm-Tl-Eb3"/>
                                                                 <constraint firstItem="aGy-4J-SlY" firstAttribute="leading" secondItem="hRr-LM-Twh" secondAttribute="leading" constant="9" id="cA2-cR-e8V"/>
                                                                 <constraint firstItem="aGy-4J-SlY" firstAttribute="top" secondItem="hRr-LM-Twh" secondAttribute="top" constant="20" id="htd-BD-3ov"/>
                                                                 <constraint firstItem="GQk-fP-Cc6" firstAttribute="top" secondItem="hRr-LM-Twh" secondAttribute="top" id="vO5-V8-h4A"/>
-                                                                <constraint firstItem="fgk-sZ-icu" firstAttribute="leading" secondItem="hRr-LM-Twh" secondAttribute="leading" id="vtc-Nu-j6z"/>
                                                                 <constraint firstItem="fvu-gQ-1Hj" firstAttribute="leading" secondItem="aGy-4J-SlY" secondAttribute="trailing" constant="10" id="xXz-LU-Qm3"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
@@ -6546,7 +6534,6 @@ to refuse order</string>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="hRr-LM-Twh" firstAttribute="leading" secondItem="NmJ-IA-sqf" secondAttribute="leading" id="F9o-6E-yZn"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hRr-LM-Twh" secondAttribute="bottom" id="Fh9-O6-4KR"/>
                                                         <constraint firstItem="hRr-LM-Twh" firstAttribute="top" secondItem="NmJ-IA-sqf" secondAttribute="top" id="a28-Qo-7Cl"/>
                                                         <constraint firstAttribute="trailing" secondItem="hRr-LM-Twh" secondAttribute="trailing" id="mMi-BL-kfU"/>
                                                     </constraints>
@@ -7262,11 +7249,11 @@ to refuse order</string>
                                         <rect key="frame" x="28" y="112.5" width="319" height="199.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cityCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" rowHeight="65" id="tMv-t1-uiX" customClass="SelectAreaTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="319" height="65"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cityCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" rowHeight="60" id="tMv-t1-uiX" customClass="SelectAreaTableViewCell" customModule="ChefApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="319" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tMv-t1-uiX" id="g0n-Og-gba">
-                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="64.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbS-NV-ap4" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">

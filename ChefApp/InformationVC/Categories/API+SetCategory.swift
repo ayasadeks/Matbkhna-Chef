@@ -18,7 +18,7 @@ extension API {
         var parameters = [
             //"categories[0]" : 1,
             "api_token": api_token
-            ] as! [String : Any]
+            ] as [String : Any]
         
         for (index, element) in categories!.enumerated() {
             parameters["categories[\(index)]"] = element
@@ -32,7 +32,6 @@ extension API {
         API.showSVProgress()
         let decoder = JSONDecoder()
         Alamofire.request(url,method: .post , parameters: parameters).responseDecodableObject(decoder: decoder) { (response: DataResponse<AllSetCategoryResponseData> ) in
-            print("rania\(response)")
             let responseStatus = response.result
             print("responseStatus\(responseStatus)")
             ///ResponseStatus check there is connection or not
@@ -44,7 +43,7 @@ extension API {
                 //print("repo\(repo?.data)")
                 if repo?.status_code == 200{
                     let arrayData = repo?.data
-                    // let totalPages = repo?.paginate!.total_pages
+                    let totalPages = repo?.paginate!.total_pages
                     API.dismissSVProgress()
                     completion(true)
                 }else{

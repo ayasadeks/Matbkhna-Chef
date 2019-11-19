@@ -15,11 +15,16 @@ class SignUpViewController: UIViewController, sendCountryId {
     var countryId = Int()
     var countryName = String()
     var delegate : sendCountryId?
+    var isLoading : Bool = false
+
     
     func sendCountryId_Name(CountryId: Int, CountryName: String) {
         countryId = CountryId
         countryName = CountryName
         areaTxtField.text = CountryName
+        print("categryIdd\(countryId)")
+        self.isLoading = false
+        viewDidLoad()
     }
 
     @IBOutlet weak var nameTxtField: UITextField!

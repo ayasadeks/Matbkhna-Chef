@@ -14,13 +14,13 @@ class AddCategoryPopUpViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var categoryArray = [CategoryData]()
-    var delegate : sentCategoryId?
+    var delegate : sendCategoryId?
     var categoryId = Int()
     var current_page = 1
     var last_page = 1
     var isLoading : Bool = false
     
-    var categoryNamee: String?
+    var categoryName: String?
     
     
     
@@ -70,57 +70,53 @@ class AddCategoryPopUpViewController: UIViewController {
     }
     
     @IBAction func savecontinueButton(_ sender: Any) {
-        if let selectedRows = tableView.indexPathsForSelectedRows {
-            // 1
-            var items = [Int]()
-            for indexPath in selectedRows  {
-                items.append(categoryArray[indexPath.row].id!)
-            }
-            // 2
-            API.SetCategory(categories: items) { (sucess) in
-                if sucess!{
-                    print("hiiiii")
-                    self.showToast(message: "Caetgory Added Sucessufly".localize)
-                    let nextVC =  self.storyboard!.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
-                    
-                    self.navigationController?.pushViewController(nextVC, animated: true)
-                }else{
-                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
-                }
-            }
-            for item in items {
-                print("item = \(item)")
-                
-            }
-            
+        print("area id = \(categoryId)" )
+        
+        let homeVC =  self.storyboard!.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
+        if categoryId == 0 {
+            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
         }else{
-            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose Your Category".localize , selfDismissing: false)
+            // print("id == 1")
+            // homeVC.categoryTxtField.text = self.categoryName
+            homeVC.categoryName = self.categoryName!
+            homeVC.categoryId = self.categoryId
+            
+            print("name is \(categoryName)")
+            self.present(homeVC, animated: false, completion: nil)
+            
+            //  self.navigationController?.pushViewController(homeVC, animated: true)
         }
+//        if let selectedRows = tableView.indexPathsForSelectedRows {
+//            // 1
+//            var items = [Int]()
+//            for indexPath in selectedRows  {
+//                items.append(categoryArray[indexPath.row].id!)
+//            }
+//          //   2
+//            API.SetCategory(categories: items) { (sucess) in
+//                if sucess!{
+//                    print("hiiiii")
+//                    self.showToast(message: "Caetgory Added Sucessufly".localize)
+//                    let nextVC =  self.storyboard!.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
+//                    nextVC.categoryTxtField.text = self.categoryName
+//                    print("name is \(self.categoryName)")
+//
+//                    self.navigationController?.pushViewController(nextVC, animated: true)
+//                }else{
+//                    self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+//                }
+//            }
+//            for item in items {
+//                print("item = \(item)")
+//            }
+//
+//        }else{
+//            self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose Your Category".localize , selfDismissing: false)
+//        }
 
 }
 
-    
-    @IBAction func categoryActionsBtns(_ sender: UIButton ) {
-//        if sender.tag == 0 {
-//            firstImage.image = UIImage(named: "success_active")
-//            secondImage.image = UIImage(named: "success")
-//            thirdImage.image = UIImage(named: "success")
-//            print("first btn")
-//
-//        }else if sender.tag == 1  {
-//            secondImage.image = UIImage(named: "success_active")
-//            firstImage.image = UIImage(named: "success")
-//            thirdImage.image = UIImage(named: "success")
-//            print("second btn")
-//
-//
-//        }else if sender.tag == 2 {
-//            thirdImage.image = UIImage(named: "success_active")
-//            firstImage.image = UIImage(named: "success")
-//            secondImage.image = UIImage(named: "success")
-//            print("third btn")
-//        }
-    }
+
     
     
 }
@@ -153,10 +149,13 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let categoryResult = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "goInformation") as? KitchenInformationViewController
         categoryId = categoryArray[indexPath.row].id!
+        categoryName = categoryArray[indexPath.row].titleEng!
         if delegate != nil{
-            delegate?.setCategoryIdFunc(categoryID: categoryId)
+            delegate?.setCategoryIdFunc(CategoryID: categoryId, CategotryName: categoryName!)
         }
         categoryResult?.categoryId = categoryArray[indexPath.row].id!
+        categoryResult?.categoryName = categoryArray[indexPath.row].titleEng!
+
         self.navigationController?.pushViewController(categoryResult!, animated: true)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
