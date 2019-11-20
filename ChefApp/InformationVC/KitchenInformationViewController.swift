@@ -32,7 +32,7 @@ class KitchenInformationViewController: UIViewController, sendCategoryId {
     var kitchenPhoto = UIImage()
     var delegate : sendCategoryId?
     var categoryId = -1
-    var categoryName = String()
+    var categoryName : String?
     var current_page = 1
     var last_page = 1
     var isLoading : Bool = false
@@ -42,8 +42,9 @@ class KitchenInformationViewController: UIViewController, sendCategoryId {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-//     saveAndnextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
-    viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
+    // saveAndnextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
+   // viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
+
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -54,6 +55,8 @@ class KitchenInformationViewController: UIViewController, sendCategoryId {
         print("set category")
         let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addCategoryPopUp") as! AddCategoryPopUpViewController
         popvc.delegate = self as sendCategoryId
+        self.categoryTxtField.text = categoryName
+
 
         self.addChild(popvc)
 
@@ -71,7 +74,7 @@ class KitchenInformationViewController: UIViewController, sendCategoryId {
         print("select working days")
         
         //go to next view controller
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "setWorkingTimeVC") as! setWorkingTimeViewController
         
         self.addChild(popvc)
         

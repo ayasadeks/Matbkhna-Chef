@@ -21,7 +21,7 @@ extension API {
         let parameters = [
             "workHours" : workHours,
             "api_token": api_token
-            ] as! [String : Any]
+            ] as [String : Any]
         for i in parameters{
             print("i\(i)")
         }

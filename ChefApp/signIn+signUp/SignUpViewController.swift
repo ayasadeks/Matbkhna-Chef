@@ -40,6 +40,7 @@ class SignUpViewController: UIViewController, sendCountryId {
     override func viewDidLoad() {
         super.viewDidLoad()
         //localize()
+        self.areaTxtField.text = countryName
         nextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
     }
 

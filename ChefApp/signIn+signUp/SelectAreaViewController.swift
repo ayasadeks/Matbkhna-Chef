@@ -87,15 +87,12 @@ class SelectAreaViewController: UIViewController, sendCountryId {
         if countryId == 0 {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
         }else{
-           // print("id == 1")
            // homeVC.areaTxtField.text = self.countryName
             homeVC.countryName = self.countryName!
             homeVC.countryId = self.countryId
             
             print("name is \(countryName)")
             self.present(homeVC, animated: false, completion: nil)
-
-          //  self.navigationController?.pushViewController(homeVC, animated: true)
         }
 //
      }
