@@ -18,7 +18,7 @@ class changePassPopUpViewController: UIViewController {
     @IBAction func doneButton(_ sender: Any) {
         //   go to next view controller
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "multiVC") as! UITabBarController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OrderVC") as! OrderViewController
         self.present(nextViewController, animated: false, completion: nil)
     }
   

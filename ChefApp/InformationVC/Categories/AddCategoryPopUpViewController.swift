@@ -29,12 +29,7 @@ class AddCategoryPopUpViewController: UIViewController {
         refresher.addTarget(self, action: #selector(HandelRefresh), for: .valueChanged)
         return refresher
     }()
-//    func setCategoryIdFunc(categoryID: Int) {
-//        categoryId = categoryID
-//        print("categryIdd\(categoryId)")
-//        self.isLoading = false
-//        viewDidLoad()
-//    }
+
     
     
     override func viewDidLoad() {
@@ -76,15 +71,24 @@ class AddCategoryPopUpViewController: UIViewController {
         if categoryId == 0 {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Choose country at first".localize, selfDismissing: false)
         }else{
-            // print("id == 1")
-            // homeVC.categoryTxtField.text = self.categoryName
-            homeVC.categoryName = self.categoryName!
-            homeVC.categoryId = self.categoryId
             
-            print("name is \(categoryName)")
-            self.present(homeVC, animated: false, completion: nil)
-            
-            //  self.navigationController?.pushViewController(homeVC, animated: true)
+            API.SetCategory(categories: [categoryId]) { (sucess) in
+            if sucess!{
+            print("hiiiii")
+                self.showToast(message: "Caetgory Added Sucessufly".localize)
+             //   let nextVC =  self.storyboard!.instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
+                    //homeVC.categoryTxtField.text = self.categoryName
+                                    
+                homeVC.categoryName = self.categoryName!
+                homeVC.categoryId = self.categoryId
+                print("name is \(self.categoryName)")
+                self.present(homeVC, animated: false, completion: nil)
+
+                //self.navigationController?.pushViewController(nextVC, animated: true)
+                    }else{
+            self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
+                }
+            }
         }
 //        if let selectedRows = tableView.indexPathsForSelectedRows {
 //            // 1
@@ -116,8 +120,6 @@ class AddCategoryPopUpViewController: UIViewController {
 
 }
 
-
-    
     
 }
 
@@ -130,7 +132,6 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CategoryTableViewCell
-        
         if self.getCurrentDeviceLanguage() == "ar"{
             cell.categoryName.text = categoryArray[indexPath.row].title
         }else if self.getCurrentDeviceLanguage() == "en"{
@@ -159,9 +160,11 @@ extension AddCategoryPopUpViewController : UITableViewDelegate, UITableViewDataS
         self.navigationController?.pushViewController(categoryResult!, animated: true)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        let cellToDeSelect:CategoryTableViewCell = tableView.cellForRow(at: indexPath)! as! CategoryTableViewCell
         cellToDeSelect.contentView.backgroundColor = UIColor.white
         
+        cellToDeSelect.checkedImage.image = UIImage(named: "success_active")
+
         print("selected cell")
         
     }

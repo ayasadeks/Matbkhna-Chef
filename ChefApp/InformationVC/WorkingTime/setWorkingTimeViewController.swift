@@ -8,7 +8,7 @@
 
 import UIKit
 
-class setWorkingTimeViewController: KitchenInformationViewController {
+class setWorkingTimeViewController: UIViewController {
 
         var dayId = Int()
         var openTime = ""
@@ -23,6 +23,7 @@ class setWorkingTimeViewController: KitchenInformationViewController {
             showDatePicker()
             let firstDate = firstPickerView.date
             let secondDate = secondPickerView.date
+            
             let components = Calendar.current.dateComponents([.hour, .minute ], from: firstDate)
             let hour = components.hour!
             let minute = components.minute!
@@ -39,8 +40,8 @@ class setWorkingTimeViewController: KitchenInformationViewController {
                 openTime = "0\(hour):\(minute)"
             }
             let components2 = Calendar.current.dateComponents([.hour, .minute ], from: secondDate)
-            let hour2 = components.hour!
-            let minute2 = components.minute!
+            let hour2 = components2.hour!
+            let minute2 = components2.minute!
             if minute2 < 10 && hour2 < 10{
                 closeTime = "0\(hour2):0\(minute2)"
                 
@@ -61,9 +62,9 @@ class setWorkingTimeViewController: KitchenInformationViewController {
                     print("hi")
                     self.showToast(message: "Time Added Sucessufly".localize)
                     self.dismiss(animated: true, completion: nil)
-                let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+                    let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+                    self.present(getWorkingTimeVC, animated: false, completion: nil)
                     
-            self.navigationController?.pushViewController(getWorkingTimeVC, animated: true)
                 }else{
                     self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
                 }
@@ -110,6 +111,7 @@ class setWorkingTimeViewController: KitchenInformationViewController {
                 openTime = "0\(hour):\(minute)"
             }
         }
+    
         @objc func closeTimeDiveChanged(sender: UIDatePicker) {
             let formatter = DateFormatter()
             formatter.timeStyle = .short
@@ -131,6 +133,10 @@ class setWorkingTimeViewController: KitchenInformationViewController {
         }
     
     @IBAction func chooseDayBtn(_ sender: Any) {
+        print("choose day")
+        let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+        
+        self.present(getWorkingTimeVC, animated: false, completion: nil)
     }
 }
 

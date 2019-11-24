@@ -44,6 +44,8 @@ class KitchenInformationViewController: UIViewController, sendCategoryId {
         super.viewDidLoad()
     // saveAndnextOutlet.layer.applySketchShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
    // viewOfImage.layer.applySketchShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
+      saveAndnextOutlet.dropShadow(color: .black, alpha: 0.06, x: 0, y: 5, blur: 4, spread: 0)
+        viewOfImage.dropShadow(color: .black, alpha: 0.14, x: 0, y: 10, blur: 15, spread: 0)
 
     }
     

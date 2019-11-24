@@ -32,6 +32,8 @@ class SetWorkingDaysViewController: UIViewController {
     }
     
     @IBAction func continuBtn(_ sender: Any) {
+        
+        
     }
     func Localize(){
         continueBtn.setTitle("Continue".localize, for: .normal)
