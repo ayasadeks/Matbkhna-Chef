@@ -70,7 +70,7 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
         
         cell.nameOfFood.text = dishArray[indexPath.row].title
         cell.descriptionOfFood.text = dishArray[indexPath.row].description
-        cell.priceOfFood.text = dishArray[indexPath.row].largePrice
+        cell.priceOfFood.text = dishArray[indexPath.row].smallPrice
         
     
         

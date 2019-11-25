@@ -62,8 +62,17 @@ class setWorkingTimeViewController: UIViewController {
                     print("hi")
                     self.showToast(message: "Time Added Sucessufly".localize)
                     self.dismiss(animated: true, completion: nil)
-                    let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
-                    self.present(getWorkingTimeVC, animated: false, completion: nil)
+//                    let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+//                    self.present(getWorkingTimeVC, animated: false, completion: nil)
+                    let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+                    
+                    self.addChild(popvc)
+                    
+                    popvc.view.frame = self.view.frame
+                    
+                    self.view.addSubview(popvc.view)
+                    
+                    popvc.didMove(toParent: self)
                     
                 }else{
                     self.showAlert(title: "Error".localize, messages: nil, message: "There Is No Internet Connection".localize , selfDismissing: false)
@@ -134,9 +143,20 @@ class setWorkingTimeViewController: UIViewController {
     
     @IBAction func chooseDayBtn(_ sender: Any) {
         print("choose day")
-        let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+//        let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+//        
+//        self.present(getWorkingTimeVC, animated: false, completion: nil)
+//        
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
         
-        self.present(getWorkingTimeVC, animated: false, completion: nil)
+        self.addChild(popvc)
+        
+        popvc.view.frame = self.view.frame
+        
+        self.view.addSubview(popvc.view)
+        
+        popvc.didMove(toParent: self)
+        
     }
 }
 

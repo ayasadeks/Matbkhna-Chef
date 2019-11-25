@@ -11,7 +11,7 @@ import Foundation
 struct AllAddDishExtraResponseData: Codable {
     let status_code : Int?
     let message : String?
-    let data : [AddDishExtraData]?
+    let data : AddDishExtraData?
     let status_message : String?
 }
 

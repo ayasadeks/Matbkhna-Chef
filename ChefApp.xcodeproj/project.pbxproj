@@ -56,7 +56,6 @@
 		84681E17232FCF6200BB3CA3 /* ViewCornerRadios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84681E14232FCF6200BB3CA3 /* ViewCornerRadios.swift */; };
 		846EC59E233CE60700B63BC8 /* WorkingHours_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC59D233CE60700B63BC8 /* WorkingHours_Model.swift */; };
 		846EC5A0233CE68200B63BC8 /* WorkHour+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC59F233CE68200B63BC8 /* WorkHour+Model.swift */; };
-		84747243233B782D00F5E2D7 /* PricePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747242233B782D00F5E2D7 /* PricePopUpViewController.swift */; };
 		84747247233B88B600F5E2D7 /* SelectAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747246233B88B600F5E2D7 /* SelectAreaViewController.swift */; };
 		84747249233BA67B00F5E2D7 /* FinishOrderPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747248233BA67B00F5E2D7 /* FinishOrderPopUpViewController.swift */; };
 		8474724B233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474724A233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift */; };
@@ -181,7 +180,6 @@
 		84681E14232FCF6200BB3CA3 /* ViewCornerRadios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCornerRadios.swift; sourceTree = "<group>"; };
 		846EC59D233CE60700B63BC8 /* WorkingHours_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkingHours_Model.swift; sourceTree = "<group>"; };
 		846EC59F233CE68200B63BC8 /* WorkHour+Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WorkHour+Model.swift"; sourceTree = "<group>"; };
-		84747242233B782D00F5E2D7 /* PricePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePopUpViewController.swift; sourceTree = "<group>"; };
 		84747246233B88B600F5E2D7 /* SelectAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAreaViewController.swift; sourceTree = "<group>"; };
 		84747248233BA67B00F5E2D7 /* FinishOrderPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOrderPopUpViewController.swift; sourceTree = "<group>"; };
 		8474724A233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOrderPopUpViewController.swift; sourceTree = "<group>"; };
@@ -388,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				84526CAD23436045000E7B50 /* AddDishes */,
-				84747242233B782D00F5E2D7 /* PricePopUpViewController.swift */,
 			);
 			path = AddDishesViewControllers;
 			sourceTree = "<group>";
@@ -838,7 +835,6 @@
 				84891C712372F84F001FDCDA /* NewPasswordViewController.swift in Sources */,
 				8460FD79234E1A0E0081F2FB /* SetWorkingTimeApi.swift in Sources */,
 				84FF96ED237773FC009CFCFC /* SetCategoryModel.swift in Sources */,
-				84747243233B782D00F5E2D7 /* PricePopUpViewController.swift in Sources */,
 				84681E17232FCF6200BB3CA3 /* ViewCornerRadios.swift in Sources */,
 				8443679E234F740E0083DEBC /* Protocols.swift in Sources */,
 				8443679C234F733A0083DEBC /* AreaModel.swift in Sources */,
