@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdN-d8-1dn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x6A-vh-OU6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,13 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ArbFONTS-URW-DIN-Arabic-1.ttf">
-            <string>URWDINArabic-Regular</string>
-        </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Black.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -25,6 +22,9 @@
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Medium.ttf">
             <string>URWDINArabic-Medium</string>
+        </array>
+        <array key="ArbFONTS-URW-DIN-Arabic.ttf">
+            <string>URWDINArabic-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -4179,39 +4179,39 @@ Chicken Rice Salad</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5S-uB-jdJ">
-                                <rect key="frame" x="164.5" y="55" width="46" height="20"/>
+                                <rect key="frame" x="164.5" y="55" width="46" height="22"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="17"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YcB-td-qAX">
-                                <rect key="frame" x="118.5" y="162" width="138" height="127"/>
+                                <rect key="frame" x="118.5" y="164" width="138" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137.53999999999999" id="3JA-VP-hVb"/>
                                     <constraint firstAttribute="height" constant="127.11" id="kHY-bC-1VH"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matbkhna" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9Z-hp-37k">
-                                <rect key="frame" x="91" y="314" width="193" height="50.5"/>
+                                <rect key="frame" x="89.5" y="316" width="196" height="55.5"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Black" family="URW DIN Arabic" pointSize="43"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvB-zD-Aw9">
-                                <rect key="frame" x="37" y="424.5" width="301" height="93"/>
+                                <rect key="frame" x="37" y="431.5" width="301" height="93"/>
                                 <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since </string>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by Mobileaders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tT-xB-Fbl">
-                                <rect key="frame" x="87.5" y="602.5" width="200" height="24"/>
+                                <rect key="frame" x="87.5" y="609.5" width="200" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDm-VQ-dhx">
-                                <rect key="frame" x="135" y="686.5" width="105" height="24"/>
+                                <rect key="frame" x="135" y="693.5" width="105" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -7016,30 +7016,25 @@ to refuse order</string>
                                             <constraint firstAttribute="height" constant="210" id="rx6-AS-vbZ"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="65" id="qSl-F9-1JJ" customClass="ExtraItemsTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="345" height="65"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="qSl-F9-1JJ" customClass="ExtraItemsTableViewCell" customModule="ChefApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="345" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qSl-F9-1JJ" id="HAJ-wF-iDa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="65"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ls6-Ux-8N9">
-                                                            <rect key="frame" x="5" y="0.0" width="335" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="75"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="spicy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yJ-pn-yOT">
-                                                                    <rect key="frame" x="40" y="13" width="137" height="27"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="spicy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yJ-pn-yOT">
+                                                                    <rect key="frame" x="38" y="4" width="148" height="65"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="14"/>
                                                                     <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rH-NK-neP">
-                                                                    <rect key="frame" x="184" y="15" width="44" height="28"/>
-                                                                    <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="14"/>
-                                                                    <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="0.61301369863013699" colorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kob-Vw-dAM">
-                                                                    <rect key="frame" x="245" y="11" width="32" height="32"/>
+                                                                    <rect key="frame" x="265" y="11" width="32" height="32"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" image="edit"/>
                                                                     <connections>
@@ -7047,7 +7042,7 @@ to refuse order</string>
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp0-4V-jhV">
-                                                                    <rect key="frame" x="298" y="11" width="32" height="32"/>
+                                                                    <rect key="frame" x="306" y="11" width="32" height="32"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" image="delete"/>
                                                                     <connections>
@@ -7055,39 +7050,42 @@ to refuse order</string>
                                                                     </connections>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzi-UX-tEM">
-                                                                    <rect key="frame" x="13" y="58" width="309" height="2"/>
+                                                                    <rect key="frame" x="13" y="73" width="319" height="2"/>
                                                                     <color key="backgroundColor" red="0.96348840000000002" green="0.96366375680000005" blue="0.97152835130000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="2" id="EaZ-LJ-BRc"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="BR1-y0-CPa">
-                                                                    <rect key="frame" x="10" y="18" width="21" height="21"/>
+                                                                    <rect key="frame" x="6" y="18" width="21" height="21"/>
                                                                 </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rH-NK-neP">
+                                                                    <rect key="frame" x="192" y="16" width="68" height="27"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="14"/>
+                                                                    <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="0.61301369863013699" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="4yJ-pn-yOT" firstAttribute="top" secondItem="ls6-Ux-8N9" secondAttribute="top" constant="13" id="16D-AW-tJc"/>
                                                                 <constraint firstItem="Hzi-UX-tEM" firstAttribute="leading" secondItem="ls6-Ux-8N9" secondAttribute="leading" constant="13" id="6Pv-Kd-kHh"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Hzi-UX-tEM" secondAttribute="trailing" constant="13" id="Fmg-ej-Kts"/>
-                                                                <constraint firstItem="BR1-y0-CPa" firstAttribute="leading" secondItem="ls6-Ux-8N9" secondAttribute="leading" constant="10" id="P3h-h8-KOa"/>
+                                                                <constraint firstItem="BR1-y0-CPa" firstAttribute="leading" secondItem="ls6-Ux-8N9" secondAttribute="leading" constant="6" id="P3h-h8-KOa"/>
                                                                 <constraint firstItem="BR1-y0-CPa" firstAttribute="top" secondItem="ls6-Ux-8N9" secondAttribute="top" constant="18" id="Rz2-fJ-tUJ"/>
-                                                                <constraint firstItem="4yJ-pn-yOT" firstAttribute="leading" secondItem="ls6-Ux-8N9" secondAttribute="leading" constant="40" id="buc-kX-YYs"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Hzi-UX-tEM" secondAttribute="bottom" id="ckg-T7-DsL"/>
-                                                                <constraint firstItem="9rH-NK-neP" firstAttribute="top" secondItem="ls6-Ux-8N9" secondAttribute="top" constant="15" id="dcn-4I-Y2X"/>
-                                                                <constraint firstAttribute="bottom" secondItem="9rH-NK-neP" secondAttribute="bottom" constant="17" id="hyf-LD-PhL"/>
-                                                                <constraint firstAttribute="height" constant="60" id="pkB-vV-6WA"/>
-                                                                <constraint firstAttribute="bottom" secondItem="4yJ-pn-yOT" secondAttribute="bottom" constant="20" id="rcj-5R-g3f"/>
+                                                                <constraint firstAttribute="height" constant="75" id="pkB-vV-6WA"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="ls6-Ux-8N9" secondAttribute="trailing" id="6e8-pp-r2k"/>
                                                         <constraint firstItem="ls6-Ux-8N9" firstAttribute="top" secondItem="HAJ-wF-iDa" secondAttribute="top" id="QfI-OO-gj7"/>
-                                                        <constraint firstItem="ls6-Ux-8N9" firstAttribute="leading" secondItem="HAJ-wF-iDa" secondAttribute="leading" constant="5" id="js5-p2-YDz"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ls6-Ux-8N9" secondAttribute="trailing" constant="5" id="oSD-vS-dBP"/>
+                                                        <constraint firstItem="ls6-Ux-8N9" firstAttribute="leading" secondItem="HAJ-wF-iDa" secondAttribute="leading" id="Zbr-Y3-r2M"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="checkedImage" destination="BR1-y0-CPa" id="cKg-fp-788"/>
                                                     <outlet property="deleteButton" destination="tp0-4V-jhV" id="S9T-iO-qh9"/>
                                                     <outlet property="editButton" destination="kob-Vw-dAM" id="HYO-uY-6sm"/>
                                                     <outlet property="itemName" destination="4yJ-pn-yOT" id="5Fl-wM-WEc"/>
