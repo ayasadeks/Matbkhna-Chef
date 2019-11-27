@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		792B9FB97D56158C82699C37 /* Pods_ChefApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096D45848449D0CE885347A5 /* Pods_ChefApp.framework */; };
 		84004E262367263700F5F526 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84004E252367263700F5F526 /* CategoryTableViewCell.swift */; };
+		840F48A1238E9A61006C8B37 /* ExtraItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497EE12238D567E00C36183 /* ExtraItemsViewController.swift */; };
 		8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FB233662750081484A /* NotificationsViewController.swift */; };
 		8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FD233668370081484A /* NotificationsTableViewCell.swift */; };
 		8439A902233678780081484A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A901233678780081484A /* SettingsViewController.swift */; };
@@ -63,6 +64,9 @@
 		84747253233BCF5900F5E2D7 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747252233BCF5900F5E2D7 /* HistoryTableViewCell.swift */; };
 		84747255233BCF8E00F5E2D7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84747254233BCF8E00F5E2D7 /* HistoryViewController.swift */; };
 		847BEC7E2367107A001D1FE7 /* API+SetCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BEC7D2367107A001D1FE7 /* API+SetCategory.swift */; };
+		8488D513238E9B0100516CEF /* ExtraItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497EE11238D567E00C36183 /* ExtraItemsTableViewCell.swift */; };
+		8488D514238E9B1100516CEF /* ExtraItem+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497EE10238D567E00C36183 /* ExtraItem+API.swift */; };
+		8488D515238E9B1100516CEF /* GetExtraItems+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497EE13238D567E00C36183 /* GetExtraItems+API.swift */; };
 		84891C6B2372E0E2001FDCDA /* API+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C6A2372E0E2001FDCDA /* API+Country.swift */; };
 		84891C6D2372E0EB001FDCDA /* API+Search+Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C6C2372E0EA001FDCDA /* API+Search+Country.swift */; };
 		84891C6F2372F0AC001FDCDA /* LogOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84891C6E2372F0AC001FDCDA /* LogOutModel.swift */; };
@@ -807,6 +811,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488D514238E9B1100516CEF /* ExtraItem+API.swift in Sources */,
+				8488D515238E9B1100516CEF /* GetExtraItems+API.swift in Sources */,
+				8488D513238E9B0100516CEF /* ExtraItemsTableViewCell.swift in Sources */,
+				840F48A1238E9A61006C8B37 /* ExtraItemsViewController.swift in Sources */,
 				84FB858723328A23002B9BF4 /* CodeTextFeild.swift in Sources */,
 				84FC94BA2354CF3D00EAA8AC /* AddDishesViewController.swift in Sources */,
 				84F745782330F8C400C00AD8 /* ApiGetData.swift in Sources */,

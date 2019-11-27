@@ -9,6 +9,7 @@
 import UIKit
 
 class ExtraItemsViewController: UIViewController {
+    
     @IBOutlet weak var extraTableView: UITableView!
     @IBOutlet weak var extraNameTxtField: UITextField!
     @IBOutlet weak var priceItemTxtField: UITextField!
@@ -19,15 +20,13 @@ class ExtraItemsViewController: UIViewController {
     var last_page = 1
     var isLoading : Bool = false
     var keyword = String()
-
+    var cellVC = ExtraItemsTableViewCell()
     override func viewDidLoad() {
         super.viewDidLoad()
         extraTableView.tableFooterView = UIView()
         extraTableView.separatorInset = .zero
         extraTableView.contentInset = .zero
         extraTableView.addSubview(refresher)
-        extraTableView.delegate = self
-        extraTableView.dataSource = self
         extraTableView.delegate = self
         extraTableView.dataSource = self
         self.extraTableView.allowsMultipleSelection = true
@@ -43,27 +42,28 @@ class ExtraItemsViewController: UIViewController {
         return refresher
     }()
     @IBAction func AddButton(_ sender: UIButton) {
-        guard let title = extraNameTxtField.text , !title.isEmpty,  let price = priceItemTxtField.text , !price.isEmpty else{
-            self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All the Data".localize, selfDismissing: false)
+      guard let title = extraNameTxtField.text , !title.isEmpty,  let price = priceItemTxtField.text , !price.isEmpty else{
+            self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All the empty fields".localize, selfDismissing: false)
             return
         }
-        extraNameTxtField.text = ""
-        priceItemTxtField.text = ""
+    
+        
+        extraNameTxtField.text = cellVC.itemName.text
+        priceItemTxtField.text = cellVC.itemPrice.text
  
     }
     
 
     @IBAction func saveButton(_ sender: UIButton) {
-        guard let title = extraNameTxtField.text , !title.isEmpty,  let price = priceItemTxtField.text , !price.isEmpty else{
-            self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All the Data".localize, selfDismissing: false)
-            return
-        }
-        API.AddDishExtra(title: title, titleEng : price) { (sucess) in
+         let title = extraNameTxtField.text
+         let price = priceItemTxtField.text
+        
+        API.AddDishExtra(title: title!, titleEng : price!) { (sucess) in
             if sucess!{
                 print("extra item added sucessfully")
-                self.LoadMore()
-                self.HandelRefresh()
-                self.extraTableView.reloadData()
+              //  self.LoadMore()
+              //  self.HandelRefresh()
+              //  self.extraTableView.reloadData()
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "addDish") as! AddDishesViewController
                 self.present(nextViewController, animated: false, completion: nil)
@@ -91,6 +91,7 @@ extension ExtraItemsViewController : UITableViewDelegate, UITableViewDataSource{
         
         cell.itemName.text = extraItemArray[indexPath.row].title
         cell.itemPrice.text = extraItemArray[indexPath.row].smallPrice
+        
     
         return cell
         
