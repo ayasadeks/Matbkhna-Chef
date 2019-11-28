@@ -14,7 +14,7 @@
         <array key="ArbFONTS-URW-DIN-Arabic-Black-1.ttf">
             <string>URWDINArabic-Black</string>
         </array>
-        <array key="ArbFONTS-URW-DIN-Arabic-Bold-1.ttf">
+        <array key="ArbFONTS-URW-DIN-Arabic-Bold.ttf">
             <string>URWDINArabic-Bold</string>
         </array>
         <array key="ArbFONTS-URW-DIN-Arabic-Demi.ttf">
@@ -5902,13 +5902,13 @@ to refuse order</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grilled Beefsteak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgX-HG-qeT">
-                                        <rect key="frame" x="115" y="287" width="145" height="22.5"/>
+                                        <rect key="frame" x="112" y="287" width="151" height="24.5"/>
                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="19"/>
                                         <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="c9Q-5j-SC8">
-                                        <rect key="frame" x="29.5" y="441" width="316" height="79"/>
+                                        <rect key="frame" x="29.5" y="447" width="316" height="79"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtu-gs-RIu" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="79"/>
@@ -6000,10 +6000,10 @@ to refuse order</string>
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auL-DE-bNW">
-                                        <rect key="frame" x="0.0" y="381" width="372" height="40"/>
+                                        <rect key="frame" x="0.0" y="387" width="372" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGU-rW-fdE">
-                                                <rect key="frame" x="142" y="9" width="88" height="19"/>
+                                                <rect key="frame" x="142" y="9" width="88" height="21"/>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="16"/>
                                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -6018,10 +6018,10 @@ to refuse order</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-Ml-5gr">
-                                        <rect key="frame" x="0.0" y="550" width="372" height="40"/>
+                                        <rect key="frame" x="0.0" y="556" width="372" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra Topping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExE-X7-J8k">
-                                                <rect key="frame" x="135" y="9" width="103" height="19"/>
+                                                <rect key="frame" x="135" y="9" width="103" height="21"/>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="16"/>
                                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -6036,10 +6036,10 @@ to refuse order</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBV-wk-mZt">
-                                        <rect key="frame" x="0.0" y="800" width="372" height="40"/>
+                                        <rect key="frame" x="0.0" y="806" width="372" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extra Topping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-Ut-4pO">
-                                                <rect key="frame" x="135" y="9" width="103" height="19"/>
+                                                <rect key="frame" x="135" y="9" width="103" height="21"/>
                                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="16"/>
                                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -6054,13 +6054,13 @@ to refuse order</string>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy these grilled beef steaks sprinkled with salt and pepper that." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pg-Rc-7OW">
-                                        <rect key="frame" x="20" y="317" width="330" height="40"/>
+                                        <rect key="frame" x="20" y="319" width="330" height="44"/>
                                         <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="17"/>
                                         <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OyO-8Z-fUt">
-                                        <rect key="frame" x="28" y="605" width="316" height="175"/>
+                                        <rect key="frame" x="28" y="611" width="316" height="175"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdl-b1-OOI" customClass="FormViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="316" height="40"/>
@@ -6074,7 +6074,7 @@ to refuse order</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhu-hr-U7J">
-                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="57" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="Fqs-8C-Fx0"/>
                                                         </constraints>
@@ -6083,7 +6083,7 @@ to refuse order</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jf-UE-7AJ">
-                                                        <rect key="frame" x="267" y="5" width="49" height="25"/>
+                                                        <rect key="frame" x="271" y="5" width="45" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="T3V-Vh-gRv"/>
                                                         </constraints>
@@ -6120,7 +6120,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Strawberry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0m-R3-H5b">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strawberry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0m-R3-H5b">
                                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="ujW-QL-z7m"/>
@@ -6129,7 +6129,7 @@ to refuse order</string>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85r-EX-X07">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85r-EX-X07">
                                                         <rect key="frame" x="271" y="5" width="45" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="z3R-Sr-9dv"/>
@@ -6168,7 +6168,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cherry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQB-rt-Ebo">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cherry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQB-rt-Ebo">
                                                         <rect key="frame" x="0.0" y="0.0" width="52.5" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="sX1-LT-tFN"/>
@@ -6177,7 +6177,7 @@ to refuse order</string>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv1-Yc-pig">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv1-Yc-pig">
                                                         <rect key="frame" x="271" y="5" width="45" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="eaS-JT-LW6"/>
@@ -6216,7 +6216,7 @@ to refuse order</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Beef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV7-jc-KK6">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV7-jc-KK6">
                                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="yhh-EO-ERe"/>
@@ -6225,7 +6225,7 @@ to refuse order</string>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUA-dw-JqT">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 QAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUA-dw-JqT">
                                                         <rect key="frame" x="271" y="5" width="45" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="EaO-ys-3f5"/>
@@ -6261,7 +6261,7 @@ to refuse order</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AFD-7T-8zo">
-                                        <rect key="frame" x="28" y="856" width="316" height="130"/>
+                                        <rect key="frame" x="28" y="862" width="316" height="130"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fR-sl-i6i" customClass="FormViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="316" height="40"/>
@@ -6275,7 +6275,7 @@ to refuse order</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweet sauce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCh-jD-rSs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="fbf-fv-aKi"/>
                                                         </constraints>
@@ -6311,7 +6311,7 @@ to refuse order</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot sauce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOQ-SV-teb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="t1l-Zl-d9m"/>
                                                         </constraints>
@@ -6347,7 +6347,7 @@ to refuse order</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salsa sauce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZO-Vh-Ljd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="25"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="T6N-qk-Z7z"/>
                                                         </constraints>
@@ -6921,6 +6921,9 @@ to refuse order</string>
                                             <constraint firstAttribute="height" constant="20" id="pPd-Ey-KIA"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="close-icon"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="GOy-sF-xis" eventType="touchUpInside" id="UA5-OH-jTG"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can add new item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oW3-Vm-l4d">
                                         <rect key="frame" x="130" y="62.5" width="115" height="15.5"/>

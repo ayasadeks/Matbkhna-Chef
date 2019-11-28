@@ -13,6 +13,7 @@ class ExtraItemsViewController: UIViewController {
     @IBOutlet weak var extraTableView: UITableView!
     @IBOutlet weak var extraNameTxtField: UITextField!
     @IBOutlet weak var priceItemTxtField: UITextField!
+    
    let api_token = UserDefaultData.get_user_string_data(key: "userToken")
     
     var extraItemArray = [ExtraItemData]()
@@ -41,15 +42,16 @@ class ExtraItemsViewController: UIViewController {
         refresher.addTarget(self, action: #selector(HandelRefresh), for: .valueChanged)
         return refresher
     }()
+    
+    
     @IBAction func AddButton(_ sender: UIButton) {
       guard let title = extraNameTxtField.text , !title.isEmpty,  let price = priceItemTxtField.text , !price.isEmpty else{
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All the empty fields".localize, selfDismissing: false)
             return
         }
     
-        
-        extraNameTxtField.text = cellVC.itemName.text
-        priceItemTxtField.text = cellVC.itemPrice.text
+        extraNameTxtField.text = ""
+        priceItemTxtField.text = ""
  
     }
     
@@ -72,6 +74,11 @@ class ExtraItemsViewController: UIViewController {
                 self.showAlert(title: "Error".localize, messages: nil, message: "No Internet Connection".localize , selfDismissing: false)
             }
         }
+    }
+    
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        dismiss(animated: false, completion: nil)
     }
     
 
