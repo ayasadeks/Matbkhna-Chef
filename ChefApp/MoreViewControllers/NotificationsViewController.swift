@@ -10,12 +10,12 @@ import UIKit
 
 class NotificationsViewController: UIViewController {
 
-    var firstLabel = ["C#120900"]
-    var orderName = ["Chicken Rice Salad"]
-    var secondLabel = ["Chicken World"]
-    var thirdLabel = ["882 Swift Courts Apt. 918"]
-    var statusLbl = ["Status : Pending"]
-    var timeLbl = ["00:00"]
+    var firstLabel = ["C#120900", "C#120900"]
+    var orderName = ["Chicken Rice Salad", "Chicken Rice Salad"]
+    var secondLabel = ["Chicken World", "Chicken World"]
+    var thirdLabel = ["882 Swift Courts Apt. 918", "882 Swift Courts Apt. 918"]
+    var statusLbl = ["Status : Pending","Status : Pending"]
+    var timeLbl = ["00:00", "00:00"]
 
 
     
@@ -44,18 +44,18 @@ extension NotificationsViewController : UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotificationsTableViewCell
-        cell.label1.text = firstLabel[indexPath.row]
-        cell.label2.text = secondLabel[indexPath.row]
-        cell.label3.text = thirdLabel[indexPath.row]
-        cell.label4.text = statusLbl[indexPath.row]
-        cell.timeLabel.text = timeLbl[indexPath.row]
-        cell.orderNameLbl.text = orderName[indexPath.row]
+        cell.orderNameLbl.text = firstLabel[indexPath.row]
+        cell.subNameLabel.text = secondLabel[indexPath.row]
+       // cell.label3.text = thirdLabel[indexPath.row]
+        cell.orderStatus.text = statusLbl[indexPath.row]
+        cell.orderTimeLbl.text = timeLbl[indexPath.row]
+        //cell.orderNameLbl.text = orderName[indexPath.row]
 
 
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 149
+        return 185
     }
     
 }

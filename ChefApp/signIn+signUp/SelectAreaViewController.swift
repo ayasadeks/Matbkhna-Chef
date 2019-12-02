@@ -145,13 +145,13 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
 //    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
 //        print("selected cell")
 //    }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        cellToDeSelect.contentView.backgroundColor = UIColor.white
-        
-        print("selected cell")
-
-    }
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        let cellToDeSelect:UITableViewCell = tableView.cellForRow(at: indexPath)!
+//        cellToDeSelect.contentView.backgroundColor = UIColor.white
+//        
+//        print("selected cell")
+//
+//    }
 
     
     

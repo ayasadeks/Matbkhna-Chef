@@ -24,6 +24,8 @@ class SelectAreaTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         //backgroundColor = selected ? .red : .clear
        // cityLabel.textColor = selected ? .white : .black
+        print("selected cell")
+
         // Configure the view for the selected state
     }
 

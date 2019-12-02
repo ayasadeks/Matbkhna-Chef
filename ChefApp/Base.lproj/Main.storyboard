@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x6A-vh-OU6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qKy-x8-Flk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -3572,76 +3572,53 @@ Chicken Rice Salad</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FG4-XR-gkG">
-                                <rect key="frame" x="28" y="147" width="319" height="520"/>
+                                <rect key="frame" x="28" y="141" width="319" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="183" id="MJH-9L-STJ" customClass="NotificationsTableViewCell" customModule="ChefApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="319" height="183"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="189" id="MJH-9L-STJ" customClass="NotificationsTableViewCell" customModule="ChefApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="319" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJH-9L-STJ" id="oai-SB-BTx">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="183"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MJH-9L-STJ" id="oai-SB-BTx">
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-wn-2hc" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="170"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9g-W9-kgQ" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
+                                                    <rect key="frame" x="3" y="3" width="313" height="159"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#120900 " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-Rh-jE6">
-                                                            <rect key="frame" x="16" y="11" width="74" height="20.5"/>
-                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chP-gy-I7N">
-                                                            <rect key="frame" x="16" y="64" width="85" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-Kz-7zA">
+                                                            <rect key="frame" x="16" y="69" width="85" height="17"/>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="13"/>
-                                                            <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="882 Swift Courts Apt. 918" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VT-kM-UR3">
-                                                            <rect key="frame" x="16" y="86" width="146" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="882 Swift Courts Apt. 918" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNT-Za-wtd">
+                                                            <rect key="frame" x="16" y="95" width="146" height="17"/>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Medium" family="URW DIN Arabic" pointSize="13"/>
-                                                            <color key="textColor" red="0.72156862745098038" green="0.73333333333333328" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status : Pending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJR-ih-LAe">
-                                                            <rect key="frame" x="16" y="107" width="96" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph7-wz-QLo">
+                                                            <rect key="frame" x="16" y="121" width="47" height="17"/>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="13"/>
-                                                            <color key="textColor" red="0.17254901960784313" green="0.76078431372549016" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.17254901959999999" green="0.76078431369999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLl-yf-ON6" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                                            <rect key="frame" x="206" y="18" width="81" height="18"/>
-                                                            <color key="backgroundColor" red="0.015686274509803921" green="0.6470588235294118" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="18" id="SjW-yq-vsb"/>
-                                                                <constraint firstAttribute="width" constant="81" id="b2Q-m6-tYM"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="10"/>
-                                                            <state key="normal" title="Pending">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                                                    <real key="value" value="9"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guK-z4-tqO">
-                                                            <rect key="frame" x="188" y="54" width="117" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-qH-4hq">
+                                                            <rect key="frame" x="183" y="58" width="127" height="20"/>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="15"/>
-                                                            <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceu-78-0XW" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                                            <rect key="frame" x="193" y="93.5" width="107" height="36"/>
-                                                            <color key="backgroundColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bla-I3-VR4" customClass="ButtonCornerRadious" customModule="ChefApp" customModuleProvider="target">
+                                                            <rect key="frame" x="187" y="101" width="107" height="36"/>
+                                                            <color key="backgroundColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="107" id="fOT-cB-ZPj"/>
-                                                                <constraint firstAttribute="height" constant="36" id="rNT-GT-NF7"/>
+                                                                <constraint firstAttribute="width" constant="107" id="1Jh-FF-dh4"/>
+                                                                <constraint firstAttribute="height" constant="36" id="8ei-fe-U9o"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="15"/>
                                                             <state key="normal" title="View">
-                                                                <color key="titleColor" red="1" green="0.87450980392156863" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="titleColor" red="1" green="0.87450980389999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
@@ -3649,36 +3626,57 @@ Chicken Rice Salad</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <action selector="viewButton:" destination="MJH-9L-STJ" eventType="touchUpInside" id="aBR-Vb-6nV"/>
+                                                                <action selector="viewButton:" destination="MJH-9L-STJ" eventType="touchUpInside" id="Cje-WO-6jX"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Rice Salad " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvq-Ds-vKj">
-                                                            <rect key="frame" x="16" y="36.5" width="151" height="20.5"/>
-                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WP-lh-jTe">
+                                                            <rect key="frame" x="16" y="15" width="145.5" height="44"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="145.5" id="fWJ-6G-2p5"/>
+                                                            </constraints>
+                                                            <string key="text">#120900
+Chicken Rice Salad</string>
+                                                            <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="17"/>
+                                                            <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-yU-bR6">
+                                                            <rect key="frame" x="201" y="22" width="81" height="18"/>
+                                                            <color key="backgroundColor" red="0.015686274510000001" green="0.64705882349999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="1MQ-Fm-9wg"/>
+                                                                <constraint firstAttribute="width" constant="81" id="vYq-O5-IZW"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obW-H1-cyS">
+                                                            <rect key="frame" x="63" y="121" width="37" height="17"/>
+                                                            <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="13"/>
+                                                            <color key="textColor" red="0.17254901959999999" green="0.76078431369999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="chP-gy-I7N" firstAttribute="top" secondItem="tvq-Ds-vKj" secondAttribute="bottom" constant="7" id="4Dn-HS-ngi"/>
-                                                        <constraint firstItem="HJR-ih-LAe" firstAttribute="leading" secondItem="BkP-wn-2hc" secondAttribute="leading" constant="16" id="5Ge-ia-9Wh"/>
-                                                        <constraint firstItem="1Ze-Rh-jE6" firstAttribute="leading" secondItem="BkP-wn-2hc" secondAttribute="leading" constant="16" id="7IR-RR-ghY"/>
-                                                        <constraint firstItem="1VT-kM-UR3" firstAttribute="top" secondItem="chP-gy-I7N" secondAttribute="bottom" constant="5" id="9Pv-EN-oS2"/>
-                                                        <constraint firstItem="guK-z4-tqO" firstAttribute="centerX" secondItem="eLl-yf-ON6" secondAttribute="centerX" id="BF5-aF-dgF"/>
-                                                        <constraint firstAttribute="trailing" secondItem="guK-z4-tqO" secondAttribute="trailing" constant="14" id="Gpm-Jn-E29"/>
-                                                        <constraint firstItem="guK-z4-tqO" firstAttribute="top" secondItem="eLl-yf-ON6" secondAttribute="bottom" constant="18" id="KlL-VI-KmD"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Ceu-78-0XW" secondAttribute="trailing" constant="19" id="Vyv-nP-TXA"/>
-                                                        <constraint firstItem="HJR-ih-LAe" firstAttribute="top" secondItem="1VT-kM-UR3" secondAttribute="bottom" constant="4" id="Vzi-5I-NSy"/>
-                                                        <constraint firstItem="chP-gy-I7N" firstAttribute="leading" secondItem="BkP-wn-2hc" secondAttribute="leading" constant="16" id="WLk-KP-Py2"/>
-                                                        <constraint firstItem="1Ze-Rh-jE6" firstAttribute="top" secondItem="BkP-wn-2hc" secondAttribute="top" constant="11" id="XND-36-8W5"/>
-                                                        <constraint firstItem="1VT-kM-UR3" firstAttribute="leading" secondItem="BkP-wn-2hc" secondAttribute="leading" constant="16" id="XSw-Ag-gO5"/>
-                                                        <constraint firstAttribute="trailing" secondItem="eLl-yf-ON6" secondAttribute="trailing" constant="32" id="YSI-jS-CZu"/>
-                                                        <constraint firstItem="eLl-yf-ON6" firstAttribute="top" secondItem="BkP-wn-2hc" secondAttribute="top" constant="18" id="YYX-92-9H0"/>
-                                                        <constraint firstItem="guK-z4-tqO" firstAttribute="leading" secondItem="tvq-Ds-vKj" secondAttribute="trailing" constant="21" id="kdj-Ag-Bvx"/>
-                                                        <constraint firstItem="tvq-Ds-vKj" firstAttribute="top" secondItem="1Ze-Rh-jE6" secondAttribute="bottom" constant="5" id="pIG-bS-JNd"/>
-                                                        <constraint firstItem="Ceu-78-0XW" firstAttribute="top" secondItem="guK-z4-tqO" secondAttribute="bottom" constant="20" id="sZU-Y2-TXU"/>
-                                                        <constraint firstItem="tvq-Ds-vKj" firstAttribute="leading" secondItem="BkP-wn-2hc" secondAttribute="leading" constant="16" id="xhk-4i-rop"/>
+                                                        <constraint firstItem="Bla-I3-VR4" firstAttribute="top" secondItem="cGb-qH-4hq" secondAttribute="bottom" constant="23" id="1C9-3t-9k9"/>
+                                                        <constraint firstAttribute="height" constant="159" id="1wB-4A-HWH"/>
+                                                        <constraint firstItem="lNT-Za-wtd" firstAttribute="leading" secondItem="T9g-W9-kgQ" secondAttribute="leading" constant="16" id="4G9-WJ-ZK6"/>
+                                                        <constraint firstItem="Ecy-yU-bR6" firstAttribute="top" secondItem="T9g-W9-kgQ" secondAttribute="top" constant="22" id="7fc-EV-0eA"/>
+                                                        <constraint firstItem="obW-H1-cyS" firstAttribute="leading" secondItem="ph7-wz-QLo" secondAttribute="trailing" id="8VD-5H-boO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cGb-qH-4hq" secondAttribute="trailing" constant="5" id="9HJ-5o-QKE"/>
+                                                        <constraint firstItem="lNT-Za-wtd" firstAttribute="top" secondItem="bX3-Kz-7zA" secondAttribute="bottom" constant="9" id="Boc-jP-IhM"/>
+                                                        <constraint firstItem="ph7-wz-QLo" firstAttribute="leading" secondItem="T9g-W9-kgQ" secondAttribute="leading" constant="16" id="KNA-W0-py1"/>
+                                                        <constraint firstItem="ph7-wz-QLo" firstAttribute="top" secondItem="lNT-Za-wtd" secondAttribute="bottom" constant="9" id="KqA-Tb-Dqz"/>
+                                                        <constraint firstItem="6WP-lh-jTe" firstAttribute="leading" secondItem="T9g-W9-kgQ" secondAttribute="leading" constant="16" id="THS-iH-7wn"/>
+                                                        <constraint firstItem="cGb-qH-4hq" firstAttribute="top" secondItem="Ecy-yU-bR6" secondAttribute="bottom" constant="18" id="Va4-wO-NbG"/>
+                                                        <constraint firstItem="bX3-Kz-7zA" firstAttribute="leading" secondItem="T9g-W9-kgQ" secondAttribute="leading" constant="16" id="Z7m-fC-1Wk"/>
+                                                        <constraint firstItem="bX3-Kz-7zA" firstAttribute="top" secondItem="6WP-lh-jTe" secondAttribute="bottom" constant="10" id="ceY-MO-xgx"/>
+                                                        <constraint firstItem="obW-H1-cyS" firstAttribute="top" secondItem="lNT-Za-wtd" secondAttribute="bottom" constant="9" id="gR4-Pd-QoZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Bla-I3-VR4" secondAttribute="trailing" constant="19" id="qXi-rc-czJ"/>
+                                                        <constraint firstItem="6WP-lh-jTe" firstAttribute="top" secondItem="T9g-W9-kgQ" secondAttribute="top" constant="15" id="vjW-Hp-M8h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Ecy-yU-bR6" secondAttribute="trailing" constant="31" id="xHk-Wb-Loj"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
@@ -3691,21 +3689,19 @@ Chicken Rice Salad</string>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BkP-wn-2hc" firstAttribute="leading" secondItem="oai-SB-BTx" secondAttribute="leading" id="1C4-Hk-wNV"/>
-                                                <constraint firstAttribute="trailing" secondItem="BkP-wn-2hc" secondAttribute="trailing" id="DpR-x4-B8I"/>
-                                                <constraint firstAttribute="bottom" secondItem="BkP-wn-2hc" secondAttribute="bottom" constant="13" id="SSK-bX-oA1"/>
-                                                <constraint firstItem="BkP-wn-2hc" firstAttribute="top" secondItem="oai-SB-BTx" secondAttribute="top" id="wds-Em-nqA"/>
+                                                <constraint firstItem="T9g-W9-kgQ" firstAttribute="top" secondItem="oai-SB-BTx" secondAttribute="top" constant="3" id="0Nl-Iy-400"/>
+                                                <constraint firstItem="T9g-W9-kgQ" firstAttribute="leading" secondItem="oai-SB-BTx" secondAttribute="leading" constant="3" id="BHn-Cw-agj"/>
+                                                <constraint firstAttribute="bottom" secondItem="T9g-W9-kgQ" secondAttribute="bottom" constant="33" id="OYi-YA-rBJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="T9g-W9-kgQ" secondAttribute="trailing" constant="3" id="Oea-OK-0p2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label1" destination="1Ze-Rh-jE6" id="SNT-Ad-EWt"/>
-                                            <outlet property="label2" destination="chP-gy-I7N" id="zdh-HP-Rbe"/>
-                                            <outlet property="label3" destination="1VT-kM-UR3" id="Mxc-2V-KqW"/>
-                                            <outlet property="label4" destination="HJR-ih-LAe" id="Yht-P5-aJR"/>
-                                            <outlet property="orderNameLbl" destination="tvq-Ds-vKj" id="eEH-KX-jyQ"/>
-                                            <outlet property="pendingButton" destination="eLl-yf-ON6" id="I4C-sA-1LX"/>
-                                            <outlet property="timeLabel" destination="guK-z4-tqO" id="4Lj-oC-x3m"/>
-                                            <outlet property="viewOfCell" destination="BkP-wn-2hc" id="OD8-b0-GOw"/>
+                                            <outlet property="orderNameLbl" destination="6WP-lh-jTe" id="FZG-Dy-8kb"/>
+                                            <outlet property="orderStatus" destination="obW-H1-cyS" id="vh4-qw-dNV"/>
+                                            <outlet property="orderTimeLbl" destination="cGb-qH-4hq" id="TyZ-dE-BHl"/>
+                                            <outlet property="statusLabel" destination="Ecy-yU-bR6" id="QhK-hz-6G1"/>
+                                            <outlet property="subNameLabel" destination="bX3-Kz-7zA" id="hv3-6s-9um"/>
+                                            <outlet property="viewOfCell" destination="T9g-W9-kgQ" id="4Z5-GQ-Zvh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -3715,7 +3711,7 @@ Chicken Rice Salad</string>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="c5Z-mR-Y2L" secondAttribute="trailing" constant="137" id="2oC-wg-KDr"/>
                             <constraint firstItem="FG4-XR-gkG" firstAttribute="leading" secondItem="K5Z-LN-lGX" secondAttribute="leading" constant="28" id="49U-vB-ALI"/>
-                            <constraint firstItem="FG4-XR-gkG" firstAttribute="top" secondItem="c5Z-mR-Y2L" secondAttribute="bottom" constant="71" id="T2e-ak-Zuz"/>
+                            <constraint firstItem="FG4-XR-gkG" firstAttribute="top" secondItem="c5Z-mR-Y2L" secondAttribute="bottom" constant="65" id="T2e-ak-Zuz"/>
                             <constraint firstItem="VAi-mn-ml2" firstAttribute="top" secondItem="K5Z-LN-lGX" secondAttribute="top" constant="60" id="Tai-Fo-rkV"/>
                             <constraint firstAttribute="trailing" secondItem="FG4-XR-gkG" secondAttribute="trailing" constant="28" id="dgO-8S-5y5"/>
                             <constraint firstItem="VAi-mn-ml2" firstAttribute="leading" secondItem="K5Z-LN-lGX" secondAttribute="leading" constant="27" id="f9d-bc-hMy"/>
@@ -3749,7 +3745,6 @@ Chicken Rice Salad</string>
                                 </constraints>
                                 <state key="normal" image="arrow-back"/>
                                 <connections>
-                                    <action selector="backButton:" destination="qKy-x8-Flk" eventType="touchUpInside" id="acG-y9-7ag"/>
                                     <action selector="backButton:" destination="heW-dJ-yXz" eventType="touchUpInside" id="cd2-9n-Umg"/>
                                 </connections>
                             </button>
@@ -4176,7 +4171,6 @@ Chicken Rice Salad</string>
                                 </constraints>
                                 <state key="normal" image="arrow-back"/>
                                 <connections>
-                                    <action selector="backButton:" destination="qKy-x8-Flk" eventType="touchUpInside" id="ekx-pg-xxf"/>
                                     <action selector="backButton:" destination="heW-dJ-yXz" eventType="touchUpInside" id="mKz-q1-GrX"/>
                                     <action selector="backButton:" destination="WqN-Pb-Ho2" eventType="touchUpInside" id="nQJ-OY-Yjd"/>
                                 </connections>
@@ -4261,9 +4255,6 @@ Chicken Rice Salad</string>
                                     <constraint firstAttribute="width" constant="20" id="Oxr-gI-EHr"/>
                                 </constraints>
                                 <state key="normal" image="arrow-back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="qKy-x8-Flk" eventType="touchUpInside" id="WSg-Il-fXA"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPq-oo-TwH">
                                 <rect key="frame" x="160" y="55" width="55" height="22"/>
@@ -4988,9 +4979,6 @@ Chicken Rice Salad</string>
                                     <constraint firstAttribute="height" constant="14" id="ZTp-Xn-eEh"/>
                                 </constraints>
                                 <state key="normal" image="arrow-back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="qKy-x8-Flk" eventType="touchUpInside" id="h2g-Xo-SpU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -7819,21 +7807,18 @@ to order is done?</string>
                                     <constraint firstAttribute="width" constant="20" id="iCK-hC-5RB"/>
                                 </constraints>
                                 <state key="normal" image="arrow-back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="qKy-x8-Flk" eventType="touchUpInside" id="fkB-RW-SGi"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-aF-6br">
-                                <rect key="frame" x="160" y="55" width="55" height="22"/>
+                                <rect key="frame" x="161.5" y="55" width="52" height="20"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="17"/>
                                 <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-lU-bVY" customClass="ViewCornerRadious" customModule="ChefApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="172.5" width="343" height="561"/>
+                                <rect key="frame" x="16" y="168" width="343" height="561"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kig-6Y-SIE">
-                                        <rect key="frame" x="13" y="23" width="314" height="26"/>
+                                        <rect key="frame" x="13" y="23" width="314" height="23.5"/>
                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="20"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -7845,31 +7830,31 @@ to order is done?</string>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="1Pf-I0-MU8">
-                                        <rect key="frame" x="15" y="324" width="315" height="2"/>
+                                        <rect key="frame" x="15" y="321.5" width="315" height="2"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="ORf-S4-4mW"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oHR-aV-AER">
-                                        <rect key="frame" x="16" y="89" width="311" height="195"/>
+                                        <rect key="frame" x="16" y="86.5" width="311" height="195"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4k0-mt-nda">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Gajananad Bhel x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2U-hz-RIL">
-                                                        <rect key="frame" x="0.0" y="2" width="177.5" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="2" width="181" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="15"/>
                                                         <color key="textColor" red="0.45098039220000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixed vegetables, Chicken Egg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgC-uA-vbn">
-                                                        <rect key="frame" x="0.0" y="24.5" width="181" height="17"/>
+                                                        <rect key="frame" x="0.0" y="22.5" width="183.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 17.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dr6-5X-XFK">
-                                                        <rect key="frame" x="261" y="22" width="35" height="17"/>
+                                                        <rect key="frame" x="259.5" y="22" width="36.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -7890,19 +7875,19 @@ to order is done?</string>
                                                 <rect key="frame" x="0.0" y="70" width="311" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Gajananad Bhel x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAY-5o-onz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="181" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="15"/>
                                                         <color key="textColor" red="0.45098039220000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixed vegetables, Chicken Egg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4O-DS-xhO">
-                                                        <rect key="frame" x="0.0" y="22.5" width="181" height="17"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="183.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 17.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xZ-dE-FjY">
-                                                        <rect key="frame" x="261" y="22" width="35" height="17"/>
+                                                        <rect key="frame" x="259.5" y="22" width="36.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -7923,19 +7908,19 @@ to order is done?</string>
                                                 <rect key="frame" x="0.0" y="140" width="311" height="55"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Gajananad Bhel x2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-UA-FJa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="181" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="15"/>
                                                         <color key="textColor" red="0.45098039220000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixed vegetables, Chicken Egg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUT-tL-vYD">
-                                                        <rect key="frame" x="0.0" y="22.5" width="181" height="17"/>
+                                                        <rect key="frame" x="0.0" y="20.5" width="183.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 17.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64U-rj-3ri">
-                                                        <rect key="frame" x="261" y="22" width="35" height="17"/>
+                                                        <rect key="frame" x="259.5" y="22" width="36.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -7960,19 +7945,19 @@ to order is done?</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RIK-NI-qnK">
-                                        <rect key="frame" x="16" y="346" width="311" height="72"/>
+                                        <rect key="frame" x="16" y="343.5" width="311" height="72"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcr-Bc-lXE">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="72"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vannessa Jill " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWm-yy-l75">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="26"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Bold" family="URW DIN Arabic" pointSize="20"/>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="856 Esta Underpass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fon-ly-adZ">
-                                                        <rect key="frame" x="0.0" y="29" width="116" height="17"/>
+                                                        <rect key="frame" x="0.0" y="26.5" width="118" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="13"/>
                                                         <color key="textColor" red="0.72156862749999995" green="0.73333333329999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -8000,13 +7985,13 @@ to order is done?</string>
                                         </constraints>
                                     </stackView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="vff-9x-Itx">
-                                        <rect key="frame" x="15" y="441" width="315" height="2"/>
+                                        <rect key="frame" x="15" y="438.5" width="315" height="2"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="tUi-YT-B8E"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H20-vC-kC7">
-                                        <rect key="frame" x="16" y="463" width="311" height="72"/>
+                                        <rect key="frame" x="16" y="460.5" width="311" height="72"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFz-K3-WjK">
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="72"/>
@@ -8086,7 +8071,7 @@ to order is done?</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time : 30:04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hja-mg-eKk">
-                                <rect key="frame" x="138" y="116" width="99" height="23.5"/>
+                                <rect key="frame" x="138" y="114" width="99" height="21"/>
                                 <fontDescription key="fontDescription" name="URWDINArabic-Demi" family="URW DIN Arabic" pointSize="18"/>
                                 <color key="textColor" red="0.23921568627450979" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -8139,7 +8124,6 @@ to order is done?</string>
                                 </constraints>
                                 <state key="normal" image="arrow-back"/>
                                 <connections>
-                                    <action selector="backButton:" destination="qKy-x8-Flk" eventType="touchUpInside" id="5aI-dO-MQ2"/>
                                     <action selector="backButton:" destination="SCD-4O-9Cg" eventType="touchUpInside" id="BLa-ng-CqM"/>
                                 </connections>
                             </button>
