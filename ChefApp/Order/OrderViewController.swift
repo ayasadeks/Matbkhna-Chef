@@ -60,13 +60,18 @@ extension OrderViewController : UITableViewDataSource, UITableViewDelegate{
 
         if  orderArray[indexPath.row].status == "2" {
             cell.statusLabel.text = "pending"
+            cell.statusOfOrder.text = "pending"
+
         }else if  orderArray[indexPath.row].status == "3" {
             cell.statusLabel.text = "preparing"
+            cell.statusOfOrder.text = "preparing"
+
         }else if  orderArray[indexPath.row].status == "6" {
             cell.statusLabel.text = "Done"
+            cell.statusOfOrder.text = "Done"
+
         }
         
-
       
         return cell
     }

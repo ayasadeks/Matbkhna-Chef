@@ -16,7 +16,7 @@ class HomeKitchenViewController: UIViewController{
     var current_page = 1
     var last_page = 1
     var isLoading : Bool = false
-    var dishImageUrl = ""
+    var dishImageUrl = String()
 
 
     var api_token = UserDefaultData.get_user_string_data(key: "userToken")
@@ -60,54 +60,51 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("dishArray.count\(dishArray.count)")
         return dishArray.count
+
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeKitchenTableViewCell
         cell.delegate = self
-        
+      //  cell.configure(item: dishArray.self, index: indexPath, imageUrl: dishImageUrl)
+
         
         cell.nameOfFood.text = dishArray[indexPath.row].title
         cell.descriptionOfFood.text = dishArray[indexPath.row].description
         cell.priceOfFood.text = dishArray[indexPath.row].smallPrice
         
+        
+ //       cell.imageOfFood.image = UIImage(named: "\(dishArray[indexPath.row].photos!.count)")
     
-        
-//        if dishArray[indexPath.row].photos != nil{
-//            let dishImageName = dishImageUrl  +  "/" + (dishArray[indexPath.row].photos![0].url!)
-//            self.LoadImage(imageName: dishImageName, imageView: cell.imageOfFood)
-//
-//        }
-        
-////
-//        //there is no image
 //        if dishArray[indexPath.row].photos!.count == 0{
 //            var dishName = dishArray[indexPath.row].title
 //            let fullNameArr = dishName!.characters.split{$0 == " "}.map(String.init)
 //            for i in 0...fullNameArr.count-1{
 //                if i == 0{
 //                    let firstWord = fullNameArr[0].first
-//                    cell.dishImageName.text = "\(firstWord!)"
+//                  //  cell.dishImageName.text = "\(firstWord!)"
 //                }else if i == 1{
 //                    let firstWord = fullNameArr[0].first
 //                    let secondWord = fullNameArr[1].first
-//                    getAllDishesTVC.dishImageName.text = "\(firstWord!) \(secondWord!)"
-//                    getAllDishesTVC.dishImage.isHidden = true
+//                   // foodMenueCell.dishImageName.text = "\(firstWord!) \(secondWord!)"
+//                    cell.imageOfFood.isHidden = true
 //
 //                }
 //            }
 //
 //        }else{
-//            getAllDishesTVC.dishImage.isHidden = false
-//            getAllDishesTVC.dishImageName.isHidden = true
-//            getAllDishesTVC.dishImageName.text = ""
-//
-//            var urlString = "http://mobileaders.com/mtbkhna/public/media/dishPhotos/" + "\(dishArray[indexPath.row].photos![0].url!)"
+//            cell.imageOfFood.isHidden = false
+////            foodMenueCell.dishImageName.isHidden = true
+////            foodMenueCell.dishImageName.text = ""
+////
+//            var urlString = dishImageUrl + "\(dishArray[indexPath.row].photos![0].url!)"
 //            print("urlString\(urlString)")
 //            let url = URL(string: urlString)
-//            getAllDishesTVC.dishImage.kf.indicatorType = .activity
-//            getAllDishesTVC.dishImage.kf.setImage(with: url)
+//
+//
+//            cell.imageOfFood.kf.indicatorType = .activity
+//            cell.imageOfFood.kf.setImage(with: url)
 //            {
 //                result in
 //                switch result {
@@ -117,8 +114,7 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
 //                    print("Job failed: \(error.localizedDescription)")
 //                }
 //            }
-  //      }
-        
+//        }
         
         return cell
     }

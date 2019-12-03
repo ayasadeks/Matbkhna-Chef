@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 extension HomeKitchenViewController{
     //to handel refresh for frist time
@@ -21,7 +20,7 @@ extension HomeKitchenViewController{
             case .success(let model):
                 self.isLoading = false
                 if model.data?.count != 0{
-                    //       print("model = \(model)")
+                   print("model = \(model.imageUrl)")
                     self.dishArray = model.data!
                     self.dishImageUrl = model.imageUrl!
                     self.tableView.reloadData()
@@ -29,6 +28,7 @@ extension HomeKitchenViewController{
                     self.last_page = (model.paginate?.total_pages!)!
                     self.dishImageUrl = model.imageUrl!
                 
+                    
                 }
                 break
             case .failure(let err):

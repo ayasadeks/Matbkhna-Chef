@@ -22,19 +22,18 @@ class HomeKitchenTableViewCell: SwipeTableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-  
-//    
-//    func configure(item: [DishDataArray], index: IndexPath, imageUrl : String) {
+//    func configure(item: [DishDataArray], index: IndexPath , imageUrl : String) {
 //        //product name
-//        nameOfFood.text = item[index.row].title
-//        descriptionOfFood.text = item[index.row].description
-//        priceOfFood.text = "\(item[index.row].smallPrice)"
+//        nameOfFood.text = item[index.row].title!
+//        descriptionOfFood.text = item[index.row].description!
+//        priceOfFood.text = "\(item[index.row].smallPrice!)"
 //
 //        //product image
 //        let url = imageUrl + "/\(item[index.row].photos![0].url!)"
 //        imageOfFood.kf.indicatorType = .activity
 //        imageOfFood.kf.setImage(with: URL(string: url))
 //    }
+
     
 
     override func setSelected(_ selected: Bool, animated: Bool) {
