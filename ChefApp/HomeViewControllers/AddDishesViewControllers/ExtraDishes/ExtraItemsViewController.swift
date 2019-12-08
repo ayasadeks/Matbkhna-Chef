@@ -11,6 +11,7 @@ import UIKit
 class ExtraItemsViewController: UIViewController {
     
     @IBOutlet weak var extraTableView: UITableView!
+    
     @IBOutlet weak var extraNameTxtField: UITextField!
     @IBOutlet weak var priceItemTxtField: UITextField!
     
@@ -99,7 +100,11 @@ extension ExtraItemsViewController : UITableViewDelegate, UITableViewDataSource{
         cell.itemName.text = extraItemArray[indexPath.row].title
         cell.itemPrice.text = extraItemArray[indexPath.row].smallPrice
         
-    
+//        cell.itemName.text = extraNameTxtField.text
+//        cell.itemPrice.text = priceItemTxtField.text
+//
+        
+        
         return cell
         
     }

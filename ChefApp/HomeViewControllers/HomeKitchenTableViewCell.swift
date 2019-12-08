@@ -44,7 +44,7 @@ class HomeKitchenTableViewCell: SwipeTableViewCell {
     @IBAction func editButton(_ sender: Any) {
 //        //go to next view controller
 //        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goMenu") as! MenuViewController
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "goMenu") as! HomeKitchenViewController
 //        self.present(nextViewController, animated: true, completion: nil)
     }
     

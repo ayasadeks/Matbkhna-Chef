@@ -137,7 +137,7 @@ extension SelectAreaViewController : UITableViewDelegate, UITableViewDataSource{
         }
         searchResult?.countryId = countryArray[indexPath.row].id!
         searchResult?.countryName = countryArray[indexPath.row].titleEng!
-
+      
         self.navigationController?.popViewController(animated: true)
 
     }

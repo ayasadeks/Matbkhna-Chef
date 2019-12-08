@@ -64,7 +64,7 @@ class setWorkingTimeViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
 //                    let getWorkingTimeVC =  self.storyboard!.instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
 //                    self.present(getWorkingTimeVC, animated: false, completion: nil)
-                    let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workingDays") as! SetWorkingDaysViewController
+                    let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "goInformation") as! KitchenInformationViewController
                     
                     self.addChild(popvc)
                     

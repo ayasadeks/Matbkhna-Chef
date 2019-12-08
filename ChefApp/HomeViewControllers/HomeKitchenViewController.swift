@@ -29,7 +29,6 @@ class HomeKitchenViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
-
         HandelRefresh()
     }
     //to make table view refresh
@@ -75,7 +74,7 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
         cell.priceOfFood.text = dishArray[indexPath.row].smallPrice
         
         
- //       cell.imageOfFood.image = UIImage(named: "\(dishArray[indexPath.row].photos!.count)")
+        //cell.imageOfFood.image = UIImage(named: "\(dishArray[indexPath.row].photos![0].url)")
     
 //        if dishArray[indexPath.row].photos!.count == 0{
 //            var dishName = dishArray[indexPath.row].title
@@ -138,15 +137,15 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
             // handle action by updating model with deletion
             
             //go to next view controller
-//            let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "deleteItemPopUp") as! DeleteItemPopUpViewController
-//
-//            self.addChild(popvc)
-//
-//            popvc.view.frame = self.view.frame
-//
-//            self.view.addSubview(popvc.view)
-//
-//            popvc.didMove(toParent: self)
+            let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "deleteItemPopUp") as! DeleteItemPopUpViewController
+
+            self.addChild(popvc)
+
+            popvc.view.frame = self.view.frame
+
+            self.view.addSubview(popvc.view)
+
+            popvc.didMove(toParent: self)
           
             
         }

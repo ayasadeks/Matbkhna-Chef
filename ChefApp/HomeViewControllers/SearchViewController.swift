@@ -10,9 +10,9 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var images = ["default"]
-    var kitchenNames = ["Reham Kitchen"]
-    var foodNames = ["Pizza - Chicken - Pasta"]
+    var images = ["default", "default"]
+    var kitchenNames = ["pizza Kitchen", "pizza Kitchen"]
+    var foodNames = ["Pizza - Chicken - Pasta", "Pizza - Chicken - Pasta"]
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -45,7 +45,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 105
+        return 150
     }
 
 }

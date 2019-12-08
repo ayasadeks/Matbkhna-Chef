@@ -9,6 +9,8 @@
 import UIKit
 
 class KitchenInformationViewController: UIViewController, sendCategoryId {
+    
+    
     func setCategoryIdFunc(CategoryID: Int, CategotryName: String) {
         categoryId = CategoryID
         categoryName = CategotryName

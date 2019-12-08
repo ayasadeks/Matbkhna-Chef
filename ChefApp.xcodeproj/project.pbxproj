@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		792B9FB97D56158C82699C37 /* Pods_ChefApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096D45848449D0CE885347A5 /* Pods_ChefApp.framework */; };
 		84004E262367263700F5F526 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84004E252367263700F5F526 /* CategoryTableViewCell.swift */; };
+		8403CDA62397D80F0095580E /* SearchResturantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403CDA52397D80F0095580E /* SearchResturantsModel.swift */; };
 		840F48A1238E9A61006C8B37 /* ExtraItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497EE12238D567E00C36183 /* ExtraItemsViewController.swift */; };
 		8439A8FC233662750081484A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FB233662750081484A /* NotificationsViewController.swift */; };
 		8439A8FE233668370081484A /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A8FD233668370081484A /* NotificationsTableViewCell.swift */; };
@@ -133,6 +134,7 @@
 		50D3C3C60D7C7C6E804B82A3 /* Pods-ChefApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefApp.release.xcconfig"; path = "Target Support Files/Pods-ChefApp/Pods-ChefApp.release.xcconfig"; sourceTree = "<group>"; };
 		629C7E9BAE82C2F95C37DE1D /* Pods-ChefApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChefApp.debug.xcconfig"; path = "Target Support Files/Pods-ChefApp/Pods-ChefApp.debug.xcconfig"; sourceTree = "<group>"; };
 		84004E252367263700F5F526 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		8403CDA52397D80F0095580E /* SearchResturantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResturantsModel.swift; sourceTree = "<group>"; };
 		8439A8FB233662750081484A /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		8439A8FD233668370081484A /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
 		8439A901233678780081484A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -506,6 +508,7 @@
 				84FE52AB236B032A002E8A04 /* InformationModel.swift */,
 				84891C6E2372F0AC001FDCDA /* LogOutModel.swift */,
 				84891C722372F976001FDCDA /* updatePasswordModel.swift */,
+				8403CDA52397D80F0095580E /* SearchResturantsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -904,6 +907,7 @@
 				8456249E235603AA008FEE23 /* ForgotPasswordModel.swift in Sources */,
 				84FB858823328A23002B9BF4 /* TextImage.swift in Sources */,
 				8474724B233BA6BC00F5E2D7 /* SuccessOrderPopUpViewController.swift in Sources */,
+				8403CDA62397D80F0095580E /* SearchResturantsModel.swift in Sources */,
 				84891C6B2372E0E2001FDCDA /* API+Country.swift in Sources */,
 				8474724F233BAC1800F5E2D7 /* SearchViewController.swift in Sources */,
 				84FB856C233287DD002B9BF4 /* RADishesCVC.swift in Sources */,

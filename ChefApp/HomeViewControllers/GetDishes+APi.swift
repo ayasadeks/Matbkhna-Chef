@@ -20,7 +20,7 @@ extension HomeKitchenViewController{
             case .success(let model):
                 self.isLoading = false
                 if model.data?.count != 0{
-                   print("model = \(model.imageUrl)")
+                   print("model url = \(model.imageUrl)")
                     self.dishArray = model.data!
                     self.dishImageUrl = model.imageUrl!
                     self.tableView.reloadData()
