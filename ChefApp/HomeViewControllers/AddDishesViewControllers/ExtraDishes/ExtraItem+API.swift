@@ -13,9 +13,9 @@ import Alamofire
 extension API {
     class func AddDishExtra(title: String , titleEng: String , completion: @escaping (_ sucess: Bool? ) -> Void){
         
-        let url = URLS.addDishesExetra
+        let url = URLS.addDishesExtra
         print(url)
-         let api_token = "UzJMtttbYhAbfsD4GbChQjtf4KgYQPTPCSUKESBGgcGCQnCQ0zS5PTU6oQSwlmZDSoso9EBmNa5cklmAwIn5i8X9Ftw1Hnk9UuQsS1pGAU8wZWs7dPA3IsGFx4KTZNlSyKNN0AouUzruj2QTMFA73H"
+        let api_token = "UzJMtttbYhAbfsD4GbChQjtf4KgYQPTPCSUKESBGgcGCQnCQ0zS5PTU6oQSwlmZDSoso9EBmNa5cklmAwIn5i8X9Ftw1Hnk9UuQsS1pGAU8wZWs7dPA3IsGFx4KTZNlSyKNN0AouUzruj2QTMFA73H"
             //UserDefaultData.get_user_string_data(key: "userToken")  else{return}
         print("api_token\(api_token)")
         

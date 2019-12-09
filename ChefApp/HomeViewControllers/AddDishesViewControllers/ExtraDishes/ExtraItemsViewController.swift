@@ -10,12 +10,11 @@ import UIKit
 
 class ExtraItemsViewController: UIViewController {
     
-    @IBOutlet weak var extraTableView: UITableView!
-    
+    @IBOutlet weak var extraTableView: UITableView!    
     @IBOutlet weak var extraNameTxtField: UITextField!
     @IBOutlet weak var priceItemTxtField: UITextField!
     
-   let api_token = UserDefaultData.get_user_string_data(key: "userToken")
+    let api_token = UserDefaultData.get_user_string_data(key: "userToken")
     
     var extraItemArray = [ExtraItemData]()
     var current_page = 1
@@ -50,38 +49,55 @@ class ExtraItemsViewController: UIViewController {
             self.showAlert(title: "Error".localize, messages: nil, message: "Please Enter All the empty fields".localize, selfDismissing: false)
             return
         }
-    
-        extraNameTxtField.text = ""
-        priceItemTxtField.text = ""
- 
-    }
-    
-
-    @IBAction func saveButton(_ sender: UIButton) {
-         let title = extraNameTxtField.text
-         let price = priceItemTxtField.text
-        
-        API.AddDishExtra(title: title!, titleEng : price!) { (sucess) in
+        API.AddDishExtra(title: title, titleEng : price) { (sucess) in
             if sucess!{
                 print("extra item added sucessfully")
-              //  self.LoadMore()
-              //  self.HandelRefresh()
-              //  self.extraTableView.reloadData()
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "addDish") as! AddDishesViewController
-                self.present(nextViewController, animated: false, completion: nil)
+                //  self.LoadMore()
+                //  self.HandelRefresh()
+                //  self.extraTableView.reloadData()
                 
+                self.showToast(message: "extra item added sucessfully")
+                
+                self.extraNameTxtField.text = self.cellVC.itemName?.text
+                self.priceItemTxtField.text = self.cellVC.itemPrice?.text
+
+
+
             }else{
                 self.showAlert(title: "Error".localize, messages: nil, message: "No Internet Connection".localize , selfDismissing: false)
             }
         }
+    
+
+
     }
+    
+
+    @IBAction func saveButton(_ sender: UIButton) {
+      
+        
+//        API.AddDishExtra(title: title!, titleEng : price!) { (sucess) in
+//            if sucess!{
+//                print("extra item added sucessfully")
+//              //  self.LoadMore()
+//              //  self.HandelRefresh()
+//              //  self.extraTableView.reloadData()
+//                self.showToast(message: "extra item added sucessfully")
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "addDish") as! AddDishesViewController
+//                self.present(nextViewController, animated: false, completion: nil)
+//
+//            }else{
+//                self.showAlert(title: "Error".localize, messages: nil, message: "No Internet Connection".localize , selfDismissing: false)
+//            }
+//        }
+    }
+    
     
     
     @IBAction func backButton(_ sender: UIButton) {
         dismiss(animated: false, completion: nil)
     }
-    
 
 }
 
@@ -95,7 +111,6 @@ extension ExtraItemsViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExtraItemsTableViewCell
-        
         
         cell.itemName.text = extraItemArray[indexPath.row].title
         cell.itemPrice.text = extraItemArray[indexPath.row].smallPrice

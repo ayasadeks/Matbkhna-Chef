@@ -19,5 +19,7 @@ pod 'MaterialTextField'
 pod 'SwipeCellKit'
 pod 'LGViews', '~> 1.0.0'
 pod 'MaterialComponents/BottomSheet'
+pod 'UIDrawer', :git => 'https://github.com/Que20/UIDrawer.git', :tag => '1.0'
+
 
 end
