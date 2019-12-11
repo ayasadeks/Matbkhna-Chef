@@ -61,15 +61,11 @@ class ExtraItemsViewController: UIViewController {
                 self.extraNameTxtField.text = self.cellVC.itemName?.text
                 self.priceItemTxtField.text = self.cellVC.itemPrice?.text
 
-
-
             }else{
                 self.showAlert(title: "Error".localize, messages: nil, message: "No Internet Connection".localize , selfDismissing: false)
             }
         }
     
-
-
     }
     
 
@@ -115,10 +111,7 @@ extension ExtraItemsViewController : UITableViewDelegate, UITableViewDataSource{
         cell.itemName.text = extraItemArray[indexPath.row].title
         cell.itemPrice.text = extraItemArray[indexPath.row].smallPrice
         
-//        cell.itemName.text = extraNameTxtField.text
-//        cell.itemPrice.text = priceItemTxtField.text
-//
-        
+    
         
         return cell
         
