@@ -22,6 +22,8 @@ class ExtraItemsViewController: UIViewController {
     var isLoading : Bool = false
     var keyword = String()
     var cellVC = ExtraItemsTableViewCell()
+    var extraItem : ExtraItemData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         extraTableView.tableFooterView = UIView()
@@ -51,15 +53,19 @@ class ExtraItemsViewController: UIViewController {
         }
         API.AddDishExtra(title: title, titleEng : price) { (sucess) in
             if sucess!{
-                print("extra item added sucessfully")
-                //  self.LoadMore()
-                //  self.HandelRefresh()
-                //  self.extraTableView.reloadData()
-                
+               // print("extra item added sucessfully")
                 self.showToast(message: "extra item added sucessfully")
                 
-                self.extraNameTxtField.text = self.cellVC.itemName?.text
-                self.priceItemTxtField.text = self.cellVC.itemPrice?.text
+                self.extraItemArray.append(self.extraItem!)
+
+                self.extraTableView.beginUpdates()
+                self.extraTableView.insertRows(at: [
+                    NSIndexPath(row: self.extraItemArray.count-1, section: 0) as IndexPath], with: .automatic)
+                self.extraTableView.endUpdates()
+                
+                self.extraNameTxtField.text = ""
+                self.priceItemTxtField.text = ""
+                self.extraTableView.reloadData()
 
             }else{
                 self.showAlert(title: "Error".localize, messages: nil, message: "No Internet Connection".localize , selfDismissing: false)
@@ -103,18 +109,30 @@ extension ExtraItemsViewController : UITableViewDelegate, UITableViewDataSource{
         print("extraItemArray.count\(extraItemArray.count)")
         return extraItemArray.count
     }
-    
+   
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExtraItemsTableViewCell
         
         cell.itemName.text = extraItemArray[indexPath.row].title
         cell.itemPrice.text = extraItemArray[indexPath.row].smallPrice
-        
+     //   extraItemArray.append(extraNameTxtField!.text)
     
         
         return cell
         
+    }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            
+            extraItemArray.remove(at: indexPath.row) //Remove element from your array
+            self.extraTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
