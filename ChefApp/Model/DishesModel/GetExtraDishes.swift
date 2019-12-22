@@ -14,6 +14,7 @@ struct AllGetExtraResponseData : Codable {
     let status_code : Int?
     let status_message : String?
 }
+
 struct ExtraPaginate : Codable {
     let total_count: Int?
     let total_pages: Int?

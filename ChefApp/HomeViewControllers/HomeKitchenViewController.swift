@@ -161,6 +161,11 @@ extension HomeKitchenViewController : UITableViewDelegate, UITableViewDataSource
         options.transitionStyle = .border
         return options
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        dishArray.remove(at: indexPath.row)
+    }
 
     
 
