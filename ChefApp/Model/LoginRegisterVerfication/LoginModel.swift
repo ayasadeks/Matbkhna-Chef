@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+
 struct  AllLoginResponseData: Codable {
     let status_code : Int?
     let data : LoginDataModel?
